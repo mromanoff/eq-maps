@@ -1,0 +1,26 @@
+{
+    "errorMessages": null,
+    "currentBalance": -1574.00,
+    "cardLastFourDigits": "1111",
+    "email": "myeqtestuser1@equinox.com",
+    "isCardExpired": false,
+    "cardType": "VISA",
+    "accountType": "residential",
+    "company": null,
+    "eftAuthorizationMsg": "<p><span style=\"font-family: 'trebuchet ms', sans-serif; color: rgb(34, 34, 34); font-size: 13px;\">Additional Goods and Services - In addition to monthly payments for membership fees and dues (if applicable), I,&nbsp;</span><span style=\"font-size: 10pt; font-family: 'Trebuchet MS', sans-serif; color: rgb(34, 34, 34); background-position: initial initial; background-repeat: initial initial;\">Amazon Kindle</span><span style=\"font-family: 'trebuchet ms', sans-serif; color: rgb(34, 34, 34); font-size: 13px;\">, authorize Equinox to keep my credit card or bank account information identified below on file and to post charges to such account for the cost of additional goods and services which I, Buyer, purchase at an Equinox Club. These other charges may include fees for personal training, spa and/or fitness training sessions, retail apparel and other similar items, and food and beverage items. Buyer recognizes and agrees that Equinox will maintain this credit card or bank account information in its files and acknowledges Equinox&rsquo;s right to charge the account identified at any time and from time to time during the term of my membership.&nbsp;</span></p>  <div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13px;\"><font face=\"trebuchet ms,sans-serif\">Specific Acknowledgment If Buyer is not the Member - I,&nbsp;</font><span style=\"font-size: 10pt; font-family: 'Trebuchet MS', sans-serif; background-position: initial initial; background-repeat: initial initial;\">Amazon Kindle</span><font face=\"trebuchet ms,sans-serif\">, specifically understand and agree that if Buyer is not the Member, my credit card or bank account may be charged for items purchased by the Member and by giving my bank account or credit card information below, I consent to the cost of such items being posted and charged by Equinox to my account.</font></div>  <div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13px;\"><font face=\"trebuchet ms,sans-serif\">&nbsp;<br />  &nbsp;<br />  I may withdraw my authorization for use of my credit card or bank account for Additional Goods and Services upon written notice to Equinox.</font></div>  <div style=\"color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13px;\"><font face=\"trebuchet ms,sans-serif\">I understand that this document serves as an amendment to the Electronic Funds Transfer portion of the original agreement 1420-1001169461 and that all terms and conditions of the original membership agreement apply.</font></div>",
+    "billingMode": "DirectOrEFT",
+    "packages": {
+        "30": 0,
+        "60": 0
+    },
+    "expirationDate": "1/2018",
+    "securityCode": null,
+    "nameOnCard": "Amazon Kindle",
+    "address1": "123 Any",
+    "address2": "#123",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "10001",
+    "country": "USA",
+    "isBillingOptOut": true
+}

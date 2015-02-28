@@ -1,0 +1,86 @@
+.page.join, .page.step1 {
+    .tpl-ctacallout {
+        margin: 0;
+        padding: 0;
+        a.button.box {
+            display: none;
+            max-width: 280px;
+            margin: 25px auto;
+        }
+    }
+}
+.terms-detail{
+	position:relative;
+}
+.page.step1 {
+    // Step 1
+    .nearme {
+        min-height: 450px;
+        .club-information {
+            max-width: 260px;
+            background: transparent;
+            margin: 25px auto 0 auto;
+            address {
+                text-transform: uppercase;
+            }
+            address, a.link {
+                color: white;
+            }
+        }
+    }
+    
+    .rich-content header h2 {
+        small {
+            font-size: .4em;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+    }
+
+    input[type='submit'] {
+        padding: 0;
+        font-size: 14px;
+        height: 60px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+}
+
+
+.page.step2 {
+    // Step 2 
+}
+.page.step3 {
+    // Step 3
+    .step3 {
+        display: none;
+
+        input.purchase {
+            display: block;
+            max-width: 280px;
+            margin: 25px auto;
+        }
+    }
+    .billing-info {
+        .checkbox label {
+            letter-spacing: 3px;
+            font-weight: 200;
+        }
+    }
+    .membership-agreement {
+        p, label {
+            font-weight: 200;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 3px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .agreement-checkboxes {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}

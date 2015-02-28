@@ -1,0 +1,1566 @@
+#activity-app-tour {
+	max-width: 100%;
+	background: #000 url(/assets/images/activity/tour_desktop.jpg) no-repeat center 100px;
+	background-size: 684px 315px;
+	height: 545px;
+	h1 {
+		/*font-size: 32px;*/
+       font-size: 45px;
+       letter-spacing: 10px;
+      margin: 40px 0 10px;
+	}
+	p {
+		margin-bottom: 385px;
+		width: 100%;
+	}
+}
+
+.nav-title {
+	font-size: 12px;
+}
+
+#activity-app-nav {
+	max-width: 520px;
+	li {
+		margin-left: 0;
+		a {
+			border-right: 1px solid rgba(255, 255, 255, 0.4);
+			font-size: 12px;
+			line-height: 10px;
+
+			span {
+				letter-spacing: 2px;
+				padding: 0;
+			}
+
+			&.selected {
+				span {
+					padding: 0 0 4px;
+				}
+			}
+		}
+
+		&:last-child {
+			a {
+				border-right: 0;
+			}
+		}
+	}
+}
+
+.dateSelector {
+	max-width: 450px;
+	.timeframe-select-current {
+		font-size: 22px;
+		font-weight: 200;
+		padding: 20px 0;
+		height: 32px;
+		line-height: 32px;
+
+		&:hover {
+			font-weight: 400;
+		}
+
+		.timeframe-select-current-arrow {
+			top: -10px;
+			margin-left: 15px;
+		}
+	}
+	.timeframe-select-options {
+		padding: 20px 10px 10px;
+		max-height: 500px;
+		min-width: 185px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		.timeframe-select-option {
+			margin-bottom: 20px;
+			> a {
+				text-transform: uppercase;
+				font-size: 20px;
+			}
+			
+		}
+	}
+}
+.timeframe-select-overlay {
+	height: 700px;
+}
+
+#activity-app-page {
+	.activity-eq-graphic {
+		position: relative;
+		margin-bottom: 50px;
+		.graphic-information-container {
+			width: 70%;
+			padding-left: 30px;
+		}
+	}
+}
+
+#activity-app-page-visual {
+	clear: both;
+	.activity-session-drilldown {
+		top: -80px;
+		font-size: 36px;
+		padding: 20px 0;
+		height: 40px;
+		.activity-session-drilldown-icon {
+			top: 1px;
+			margin-left: 15px;
+		}
+	}
+	#activity-canvas.selectable {
+		cursor: pointer;
+	}
+	#activity-canvas-labels {
+		p.label {
+			font-size: 16px;
+			&.small {
+				font-size: 12px;
+			}
+		}
+	}
+	.activity-canvas-info-wrapper {
+		top: 155px;
+		.activity-canvas-info {
+			width: 140px;
+			font-size: 14px;
+			padding-top: 70px;
+			background-size: 60px 60px;
+		}
+		&.no-text {
+			top: 170px;
+		}
+	}
+}
+
+#activity-app-page-visual {
+	.no-sessions-activity {
+		background: url(/assets/images/activity/zero_sessions_desktop.jpg) no-repeat top center;
+		background-size: 398px 394px;
+		height: 14px;
+		margin: 20px 0 60px;
+		padding: 190px 0;
+		font-size: 11px;
+	}
+	#activity-svg-container {
+		overflow-x: visible;
+		margin-bottom: 20px;
+		#activity-svg {
+			text {
+				font-size: 11px;
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+#activity-app-page-list {
+	padding: 60px 0;
+	.list-title {
+		font-size: 22px;
+	}
+	.energy-summary {
+		width: 40%;
+	}
+	.list-sub-title {
+		font-size: 15px;
+		font-weight: 700;
+		color: #525252;
+		width: 100%;
+		margin: 0;
+	}
+	.list-top-arrow {
+		top: -15px;
+		border-width: 0 15px 15px 15px;
+	}
+	.list-container {
+		padding: 10px 15px;
+		.list-timeline {
+			left: 49.99%;
+			height: calc(100% - 20px);
+		}
+		.list-items {
+			padding: 22px 0 22px;
+			position: relative;
+			overflow: auto;
+			.list-item {
+				width: 50%;
+				clear: both;
+				margin-top: -40px;
+				.list-item-date {
+					position: absolute;
+					margin-left: 0;
+					float: none;
+					width: 10%;
+					top: 20px;
+				}
+				.list-item-info {
+					margin: 0;
+					display: inline-block;
+					max-width: 335px;
+					.list-item-info-values {
+						font-size: 14px;
+
+						&.with-calories {
+							padding-right: 70px;
+						}					
+
+						span {
+							display: inline;
+							word-wrap: none;
+							&:before {
+								content: "";
+							}
+						}
+					}
+				}
+				&:nth-child(odd), &:nth-of-type(odd) {
+					float:left;
+					text-align: right;
+					.list-item-date {
+						left: 95%;
+					}
+					.list-item-info {
+						right: 10%;
+						text-align: right;
+						margin-left: 5%;
+						&:after {
+							content: " ";
+							border: solid transparent;
+							border-color: rgba(255, 255, 255, 0);
+							border-width: 10px;
+							border-left-color: #ffffff;
+							margin-top: -10px;
+							top: 50%;
+							left: 100%;
+							position: absolute;
+							height: 0;
+							width: 0;
+							display: block;
+						}
+
+						&:before {
+							display: none;
+						}
+						.list-item-info-energy {
+							left: 20px;
+							right: auto;
+							position: absolute;
+						}
+
+						.list-item-info-values {
+							&.with-calories {
+								padding-right: 20px;
+								padding-left: 75px;
+							}
+						}
+					}
+				}
+				&:nth-child(even), &:nth-of-type(even) {
+					float:right;
+					text-align: left;
+					.list-item-date {
+						left: -5%;
+					}
+					.list-item-info {
+						left: 10%;
+						margin-right: 5%;
+						.list-item-info-energy {
+							left: auto;
+							right: 20px;
+							position: absolute;
+						}
+						.list-item-info-values {
+							&.with-calories {
+								padding-left: 20px;
+								padding-right: 75px;
+							}
+						}
+					}
+				}
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&.workout, &.checkin, &.weight {
+					height: auto;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					&:nth-child(odd), &:nth-of-type(odd) {
+						.list-item-date {
+							left: 95.1%;
+						}
+					}
+
+					.list-item-date {
+						top: 50%;
+						margin-top: -4px;
+						margin-left: 0;
+					}
+				}
+
+				&.checkin, &.weight {
+					padding-top: 18px;
+				}
+			}
+		}
+	}
+	.month-container {
+		&.expanded {
+			.month.navigation {
+				text-align: center;
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+#activity-app-page-visual {
+	.activity-bar-chart {
+		width: 85%;
+		height: 275px;
+		.activity-bar-chart-axis {
+			.activity-bar-chart-axis-label {
+				height: 45px;
+				border-bottom: none;
+				.activity-bar-chart-axis-label-value {
+					font-size: 12px;
+					font-weight: 700;
+				}
+				&:first-child {
+					height: 0px;
+				}
+			}
+		}
+		.activity-bar-chart-bars {
+			.activity-bar-chart-bar {
+				.activity-bar-chart-bar-label {
+					color: #747474;
+					font-size: 11px;
+					margin-top: 5px;
+					.activity-bar-chart-bar-label-today {
+						font-size: 8px;
+					}
+				}
+			}
+		}
+		.activity-bar-chart-best {
+			display: block;
+			position: absolute;
+			left: 0;
+			height: 1px;
+			border-bottom: 1px dotted rgba(255,255,255,.3);
+			width: 100%;
+			text-transform: uppercase;
+			font-weight: 700;
+			.activity-bar-chart-best-value {
+				font-size: 12px;
+				position: absolute;
+				bottom: 5px;
+				color: #fff;
+				.activity-bar-chart-best-label {
+					opacity: .8;
+				}
+			}
+		}
+		.activity-bar-chart-tooltip {
+			position: absolute;
+			z-index: 10;
+			display: none;
+			.activity-bar-chart-tooltip-values {
+				padding: 20px;
+				width: 80px;
+				background: #fff;
+				position: absolute;
+				bottom: 60px;
+				left: -54px;
+				box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+				.activity-bar-chart-tooltip-value {
+					margin-bottom: 10px;
+					span {
+						color: #000;
+						text-transform: uppercase;
+						font-size: 12px;
+						text-align: center;
+						display: block;
+						&.activity-bar-chart-tooltip-value-name {
+							font-weight: 700;
+						}
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			.activity-bar-chart-tooltip-arrow {
+				width: 0px;
+				height: 0px;
+				border-style: solid;
+				border-width: 6px 6px 0 6px;
+				border-color: #fff transparent transparent transparent;
+				position: absolute;
+				bottom: 54px;
+			}
+			.activity-bar-chart-tooltip-dot {
+				width: 8px;
+				height: 8px;
+				border-radius: 4px;
+				position: absolute;
+				bottom: 35px;
+				left: 2px;
+				background: #fff;
+			}
+		}
+	}
+	.activity-bar-chart-info {
+		width: 85%;
+		.activity-bar-chart-total {
+			margin-bottom: 75px;
+			.activity-bar-chart-total-label {
+				font-size: 11px;
+				width: 60px;
+			}
+			.activity-bar-chart-total-value {
+				font-size: 45px;
+			}
+			.activity-bar-chart-total-metric {
+				font-size: 18px;
+			}
+		}
+		.activity-bar-chart-key {
+			text-align: right;
+			float: right;
+			margin: -120px 0 0;
+			.activity-bar-chart-key-item {
+				display: block;
+				margin-bottom: 10px;
+				&:first-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+#activity-app-page-visual {
+	#activity-best-progress {
+		margin-bottom: 60px;
+	}
+	.activity-current-best {
+		font-size: 14px;
+		color: #fff;
+		.activity-current-best-label {
+			opacity: .8;
+		}
+	}
+	.activity-current-progress {
+		top: 160px;
+		.activity-current-progress-total {
+			font-size: 22px;
+		}
+		.activity-current-progress-new {
+			font-size: 22px;
+		}
+		.activity-current-progress-value {
+			.activity-current-progress-amount {
+				font-size: 100px;
+				line-height: 80px;
+				letter-spacing: -5px;
+			}
+			.activity-current-progress-unit {
+				font-size: 30px;
+			}
+		}
+	}
+}
+
+
+#activity-app-page-connect {
+	text-align: left;
+	max-width: 860px;
+	padding: 70px 0;
+	> h3 {
+		font-size: 22px;
+		margin-bottom: 55px;
+		text-align: center;
+	}
+	.activity-connect-section {
+		display: block;
+		width: 42%;
+		margin: 0 4%;
+		float: left;
+		> h4 {
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+		.activity-connect-apps {
+			li {
+				width: auto;
+				margin-right: 25px;
+			}
+		}
+		&.connect-apps {
+			&:after {
+				display: none;
+			}
+		}
+		&.connect-equipment {
+			> a {
+				display: inline-block;
+				margin-right: 25px;
+			}
+		}
+	}
+}
+
+/* Activity Cycling Category - Top Message module */
+
+.upper-cycling-module {
+	padding: 18px 60px 46px;
+
+	.upper-select-container {
+		position: relative;
+		text-align: center;
+		width: 100%;
+
+		.back-button {
+			display: inline-block;
+			font-size: 18px;
+			margin-left: 0;
+			position: absolute;
+			left: 5px;
+			top: 35px;
+		}			
+	}
+
+	.color-button-box {
+		background-color: rgba(51, 63, 72, 0.7);
+		padding: 30px;
+
+		.close {
+			right: 16px;
+		}
+
+		.color-title {
+
+			> p {
+				font-size: 19px;
+				margin-bottom: 10px;
+			}
+		}
+
+		p {
+			font-size: 12px;
+		}
+	}
+}
+
+/* Activity Cycling Category - Energy Bar Stats module */
+
+.graphic-bar-module {
+	padding: 0 60px 50px;
+	min-height: 480px;
+
+	.small-menu {
+		li {
+			.month {
+				.timeframe-select-current {
+					font-size: 18px;
+				}
+
+				.timeframe-select-options {
+					min-width: 190px;
+				}
+			}
+
+			.year {
+				.timeframe-select-current {
+					padding-left: 25px !important;
+				}
+
+				.timeframe-select-options {
+					min-width: 155px;
+				}
+			}
+
+			.allTimeTitle {
+				margin-top: 0;
+				h3 {
+					font-size: 18px;					
+				}
+			}
+
+			.dateSelector {
+				.timeframe-select-current {
+					padding: 0;
+					font-weight: 700;
+					.icon-dropdown {
+						border-right: 0;
+						padding-right: 25px;
+					}
+				}
+
+				.timeframe-select-options {
+					.timeframe-select-option {
+						border-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.activity-select {
+		display: block;
+		font-size: 25px;
+		padding-top: 60px;
+	}
+
+	.select-arrow {
+		font-size: 12px;
+		vertical-align: middle;
+	}
+
+	.month {
+		.timeframe-select-options {
+			max-height: 350px;
+			overflow-y: auto;
+		}
+	}
+
+	.graphic-result-container {
+		.graphic-bar {
+			min-height: 324px;
+			display: block;
+			overflow-x: visible;
+			width: 100%;
+
+			.graph-container {
+				min-width: 0;
+				width: 100%;
+			}
+
+			/* &.year {
+				min-height: 252px;
+				padding-bottom: 0;
+				.graph-container {
+					min-height: none;
+					margin: 0 auto;
+					.stats-bar-chart {
+						height: 600px;
+					}
+				}
+			} */
+		}
+
+		.results-container {
+			padding-bottom: 0;
+
+			span {
+				font-size: 13px;
+			}
+
+			.three-row-container {
+				.stat-item {
+					span {					
+						&.measure {
+							.measure-title {
+								font-size: 13px;
+							}
+
+							span {							
+								font-size: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.dateSelector {
+			margin-top: 30px;
+		}
+	}
+}
+
+/* Activity Cycling Category - Stats Comparision module */
+
+.compare-columns {
+	padding: 51px 5% 129px;
+	display: block;
+	margin: 0 auto;
+
+	&.ride-stats {
+		padding: 35px 30px 0;
+		border-bottom: 0;
+
+		.compare-container {
+			border-bottom: 1px solid #4d4d4d;
+			padding-bottom: 55px;
+			max-width: 800px;
+			margin: 0 auto;
+			ul.compare-category {
+				padding-left: 16.666%;
+				margin-left: 0;
+				width: 100%;
+
+				li {
+					//text-align: center;
+					width: 16.666%;
+
+					> div {
+						max-width: 60%;
+						margin: auto;
+					}
+				}
+			}
+			ul.col-1, ul.col-2 {
+				li {
+					width: 14%;
+					&.title {
+						width: 17%;
+					}
+
+					div {
+						@include css-translate(-50%, -73%);
+					}
+				}			
+			}
+		}
+	}
+
+	.compare-container {
+		max-width: 700px;
+		margin: 0 auto;
+		ul {
+			display: block;
+			width: 100%;
+
+			&.compare-category {
+				font-size: 0;
+				padding-left: 20%;
+				@include box-sizing(border-box);
+				li {
+					display: inline-block;
+					font-size: 11px;
+					font-weight: 700;
+					width: 25%;
+				}
+			}
+
+			&.col-1 {
+				margin-bottom: 12px;
+			}
+
+			&.col-2 {
+				li {
+					font-weight: 400;
+				}
+			}
+
+			&.col-1, &.col-2 {
+				display: table;
+				li {
+					display: table-cell;
+					font-size: 27px;
+					margin-bottom: 0;
+					height: 54px;
+					width: 20%;
+					vertical-align: middle;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					> span {
+						font-size: 11px;
+						color: #484848;
+					}
+
+					&.title {
+						font-size: 23px;
+						text-align: left;
+						margin: 0;
+					}
+				}
+			}
+
+			&.divider {
+				display: none;
+			}
+		}
+	}
+
+}
+
+/* Personal Bests */
+
+.personal-bests {
+	padding: 0 30px;
+	position: relative;
+	@include box-sizing(border-box);
+	h3 {
+		font-size: 24px;
+		margin: 0 70px 5px;
+	}
+
+	p {
+		font-size: 12px;
+		text-align: center;
+		margin: 0 30px 34px;
+	}
+
+	.slide-prev, .slide-next {
+		top: 47%;
+	}
+
+	.main-best-ride {
+		.owl-wrapper-outer {
+			width: 99.8%;
+			.owl-wrapper {
+				.owl-item {
+					&.active {
+						.best-ride-container {
+							.ride-info-container {
+								ul.best-ride-content {
+									padding: 0 12px;
+								}
+							}
+						}
+					}
+
+					&:last-child {
+						.best-ride-container {
+							.ride-info-container {
+								ul.best-ride-content {
+									border-right: 0;
+								}
+							}
+						}
+					}
+				}
+			}			
+		}
+
+		.best-ride-container {
+			display: inline-block;
+			margin-top: 10px;
+			width: 100%;
+
+			.ride-info-container {
+				margin-top: 0;
+				border-top: 0;
+				.best-ride-content {
+					margin-top: 0;
+					border-right: 1px solid #bdc1c4;
+					li {
+						font-size: 11px;
+						line-height: 25px;
+
+						&.icon-star-slim {
+							font-size: 25px;
+							color: #333f48;
+						}
+
+						&.title {
+							font-size: 11px;
+							margin: 5px 0 0;
+						}
+
+						&.result {
+							margin-bottom: 24px;
+							span {
+								&.measure {
+									font-size: 34px;
+									font-weight: 400;
+
+									> span {
+										font-size: 26px;
+										font-weight: 400;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.detail-link {
+					margin-top: 36px;
+					font-size: 10px;
+				}				
+			}
+		}
+	}
+}
+
+/* Activity Cycling Category - Milestones and Leaderboard modules */
+
+.common-cta-module {
+	padding: 40px 0 119px;
+	display: block;
+
+	&.milestones {
+		padding: 40px 0;
+	}
+
+	h3 {
+		font-size: 24px;
+		margin: 0 60px 5px;
+	}
+
+	p {
+		margin: 0 30px 34px;
+	}
+
+	nav {
+		margin-top: 44px;
+		padding: 0;
+	}
+
+	> a {
+		margin: 0 28px;
+	}
+}
+
+.half-module {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	width: 49.96%;
+
+	.image-wrapper {
+		height: 474px;
+
+		img {
+			width: auto;
+		}
+	}
+
+	.group-cycling {
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		padding: 35px 27px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include css-translate(-50%, -50%);
+		width: 285px;
+
+		h6 {
+			font-size: 33px;
+			margin-bottom: 10px;
+			small {
+				font-size: 12px;
+			}
+		}
+
+		p {
+			font-size: 12px;
+			padding: 0 50px;
+		}
+
+		nav {
+			padding: 0;
+
+			a {
+				background-color: transparent;
+				border-color: white;
+			}
+		}
+	}
+}	
+
+/* Activity Cycling - Extra elements */
+
+.small-menu {
+	border-bottom: 0;
+
+	&:last-child {
+		clear: both;
+		border-top: 0;
+		border-bottom: 0;
+		padding-top: 52px;
+	}
+
+	&.upper {
+		li {
+			a {
+				span {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	&.lower {
+		li {
+			width: auto;
+		}
+	}
+
+	li {
+		border-left: 2px solid #484848;
+		&:first-child {
+			border-left: 0;
+		}
+
+		a {
+			padding: 0 25px;
+			text-align: center;
+
+			span {
+				border-right: 0;
+				color: #fff;
+				font-size: 12px;
+				padding: 0;
+			}
+
+			&.selected {
+				span {
+					border-bottom: 1px solid #fff;
+					display: inline;
+					font-weight: 700;
+					padding: 0 0 5px;
+
+					&:before, &:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.activity-session-drilldown-icon {
+	margin-bottom: 5px;
+}
+
+.activity-select {
+	display: inline-block;
+	font-size: 31px;
+	padding: 34px 0;
+
+	.select-arrow {
+		font-size: 15px;
+	}
+}
+
+.main-content {
+	text-align: center;
+
+	&.cycling-leaders {
+		display: block;
+		max-width: 396px;
+		margin: 0 auto 38px;
+	}
+
+	.three-circles-container {
+		max-width: 623px;
+		display: block;
+		margin: 0 auto;
+
+		ul {
+			margin: 0;
+			vertical-align: top;
+			width: 31.4%;
+			li {
+				&:first-child {
+					padding: 0;
+				}
+
+				padding: 0 35px;
+			}
+		}
+
+		.rounded-image {
+			width: 115px;
+			height: 115px;
+			margin: 0 auto 18px;
+
+			&.small {
+				margin-top: 9px;
+				width: 98px;
+				height: 98px;
+			}
+
+			&.rounded-button {
+				a {
+					font-size: 27px;
+					padding: 37px 0;
+				}
+			}
+		}
+	}
+
+	ul {
+		margin: 0 8% 22px;
+
+		&:first-child {
+			display: inline-block;
+		}
+
+		&.big-circle {
+			width: 35%;
+		}
+
+		li {
+			font-size: 12px;
+
+			&.small-font {
+				font-size: 11px;
+			}
+		}
+
+		.image {
+			width: 97px;
+			margin: 0 auto 8px;
+		}
+		
+		.rounded-image {
+			@include border-radius(100%);
+			width: 133px;
+			height: 133px;
+			margin: 0 auto 18px;
+
+			&.small {
+				@include border-radius(100%);
+				width: 107px;
+				height: 107px;
+				margin-top: 17px;
+				margin-bottom: 26px;
+			}
+		}
+	}
+}
+
+.empty-milestone-container {
+	height: 148px;
+	padding: 50px 60px 0;
+	span {
+		margin-bottom: 4px;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+/**---- Activity Cycling Details Section ----**/
+.detail-header {
+	.header-wrapper {
+		height: 171px;
+
+		> a {
+			font-size: 18px;
+			top: 22px;
+			left: 22px;
+		}
+
+		.activity-icon {
+			font-size: 55px;
+		}
+	}
+
+	.title-cta-module {
+		h3 {
+			font-size: 38px;
+			small {
+				font-size: 12px;
+			}
+		}
+
+		.instructor {
+			letter-spacing: 1px;
+			margin-bottom: 25px;
+		}
+
+		nav {
+			margin-top: 25px;
+			padding: 0;
+		}
+	}
+}
+
+.class-results-container {
+	.class-results {
+		padding: 40px 10px 0;
+
+		h3 {
+			font-size: 27px;
+			margin-bottom: 30px;
+		}	
+		.results-columns {
+			margin: 0 auto;
+			max-width: 797px;
+			.result-row {
+				display: inline-block;
+				padding: 0 10px;
+				width: 27.5%;
+				ul {
+					border-bottom: 0;
+					padding: 0;
+
+					li {
+						font-size: 11px;
+
+						&:last-child {
+							font-size: 14px;
+						}
+
+						&.position {
+							p {
+								font-size: 65px;
+								margin-bottom: 8px;
+
+								sup {
+									font-size: 23px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.secondary-info {
+				display: inline-block;
+				padding: 0;
+				width: 38%;
+				border-left: 1px solid #b2b2b2;
+				border-right: 1px solid #b2b2b2;
+				.secondary-info-container {
+					border-bottom: 0;
+					padding: 0;
+					ul {
+						width: 49.2%;
+
+						&:first-child {
+							margin-bottom: 27px;
+						}
+
+						li {
+							p {
+								font-size: 26px;
+								span {
+									font-size: 11px;
+									margin-bottom: 5px;
+								}
+
+								sub {
+									font-size: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.class-award {
+				display: inline-block;
+				padding: 0 10px;
+				width: 27.5%;
+				p {
+					margin-bottom: 10px;
+				}
+
+				> img {
+					width: 63px;
+					margin-bottom: 0;
+				}
+			}
+
+			.sharing {
+				padding: 33px 20px;
+				margin-bottom: 0;
+				
+				.sharing-icon {
+					padding: 0 10px;
+				}
+			}
+
+		}
+	}
+}
+
+.class-stats-container {
+	padding-bottom: 58px;
+	.color-reference {
+		top: 100px;
+		right: 60px;
+	}
+	.graphic {
+		margin: 27px 0 0;
+		padding: 0 40px;
+
+		.canvas-container {
+			padding: 22px 0 0 0;
+		}
+	}
+
+	.small-menu.lower {
+		padding-top: 22px;
+	}
+}
+
+.comparision-milestones-module {
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 100%;
+		border-left: 1px solid #b2b2b2;
+	}
+	.cycling-extra-stats-comparision, .cycling-extra-user-milestones {
+		&.half {
+			float: left;
+			width: 50%;
+
+			&:last-child {
+				border: 0;
+			}
+		}
+	}
+}
+
+.cycling-extra-stats-comparision {
+	background-color: #fff;
+	padding: 40px 0;
+}
+
+.cycling-extra-user-milestones {
+	.common-cta-module {
+		border-top: 0;
+		padding: 40px 0 60px;
+
+		.timeline-container {
+			padding: 0 30px;
+			margin: 0 auto 5px;
+			max-width: 390px;
+		}
+
+		nav {
+			a {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.cycling-extra-top-message, .cycling-extra-energy-bar-stats {
+	z-index: 3;
+	position: relative;
+}
+
+.background-image-container {
+	clear: both;
+	position: relative;
+	overflow: hidden;
+
+	.overlay {
+		display: block;
+		background-color: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+	}
+
+	img {
+		position: absolute;
+	}
+
+}
+
+.activity-app-timeframe-select {
+	position: relative;
+	margin: 0 auto;
+	max-width: 980px;
+
+	.addActivityButton, .addWeightButton {
+		right: 33px;
+		margin-top: 26px;
+
+		span {
+			display: inline-block;
+			font-size: 12px;
+		}
+	}
+
+	.dateSelectorBox {
+
+		.dateSelector {
+			.timeframe-select-current {
+				.icon-dropdown {
+					font-size: 13px;
+				}
+			}
+		}
+
+		&.month {
+			min-width: 205px;
+
+			.dateSelector {
+				.timeframe-select-current {
+					padding-right: 17px;
+				}
+			}
+		}
+
+		&.year {
+			.dateSelector {
+				.timeframe-select-current {
+					width: 120px;
+					.disabled-label {
+                        line-height: 32px;
+                    }
+					.timeframe-select-current-name {
+						line-height: 17px;
+						height: 22px;
+						padding: 0 20px;
+					}
+				}
+
+				.timeframe-select-options {
+					min-width: 100px;
+				}
+			}
+		}
+	}
+}
+
+.common-padding {
+	padding: 34px 28px;
+}
+
+/* CHECKINS CALENDAR */
+.checkins-calendar {
+	.graphic-information-container {
+		position: relative;
+		padding: 0 50px;
+		margin: 0 auto;
+		text-align: center;
+		max-width: 700px;
+
+		.calendar {
+			padding: 10px 0;
+			max-width: 650px;
+
+			table {
+				width: 600px;
+				tr {
+					height: 45px;
+					td {
+						span {
+							&.current-day {
+								background: #1aeca9;
+								color: #000;
+								top: 7px;
+							}
+
+							&.activity-day {
+								top: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.activity-graphic-details {
+			width: auto;
+		}
+	}
+}
+
+.activity-graphic-details {
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	@include translate(0, -50%);
+
+	> div {
+		display: block;
+		margin: 40px 0;
+		width: 100%;
+
+		.title {
+			font-size: 11px;
+		}
+
+		.personal-stats-container {
+			display: block;
+			text-align: center;
+			width: 100%;
+			span {
+				display: inline-block;
+				font-size: 25px;
+
+				&:last-child {
+					font-size: 20px;
+					margin-left: 5px;
+				}
+
+				&.title {
+					letter-spacing: 1px;
+					margin-bottom: 5px;
+					display: block;
+				}
+			}			
+		}
+	}
+}
+
+.graphic-information-container {
+	min-height: 310px;
+	max-height: 345px;
+
+	/* OVERLAY MESSAGES */
+	.overlay-wrapper {
+		height: 307px;
+		
+		.overlay-inner {
+			max-width: 400px;
+			padding: 20px;
+
+			h3 {
+				font-size: 20px;
+			}
+
+			p {
+				font-size: 13px;
+			}
+			.button {
+				width: 60%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.calendar {
+		.overlay-wrapper {
+			height: 250px;
+		}
+	}
+}
+
+.addActivityButton, .addWeightButton {
+	right: 33px;
+	margin-top: 26px;
+
+	.add-message {
+		display: inline-block;
+		font-size: 12px;
+	}
+}
+
+.addWeightButton {
+	display: block;
+}

@@ -1,0 +1,53 @@
+.fb-sharing-overlay {
+	.fb-box {
+		top: 50%;
+		left: 50%;
+		margin-left: -225px;
+		margin-top: -194px;
+		padding: 38px 28px;
+		width: 450px;
+		z-index: 120;
+
+		a {
+			font-size: 10px;
+		}
+
+		img {
+			width: 75px;
+			height: 75px;
+		}
+
+		ul {
+			max-width:200px;
+			margin-bottom: 26px;
+
+			li {
+				&:first-child {
+					font-size: 14px;
+					font-weight: bold;
+				}
+
+				font-size: 12px;
+			}
+		}
+
+		p {
+			font-size: 18px;
+		}
+
+		form {
+			max-width: 287px;
+
+			textarea {
+				font-size: 10px;
+				min-height: 73px;
+				margin: 20px 0;
+				padding: 12px;
+			}
+
+			input {
+				margin: 0 auto;
+			}
+		}
+	}
+}

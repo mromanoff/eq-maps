@@ -1,0 +1,49 @@
+.class-summary .results-module {
+	padding: 80px 45px 0;
+}
+.results-module {
+	h3 {
+		font-size: 21px;
+	}
+
+	.results-container {
+		.result-item {
+			display: inline-block;
+			margin-top: 35px;
+			width: 100%;
+			vertical-align: top;
+			@include box-sizing(border-box);
+
+			&:first-child {
+				display: inline-block;
+			}
+			
+			li {
+				h4 {
+					font-size: 23px;
+				}
+
+				&.result-image {
+					margin: 0;
+					img {
+						width: 250px;
+					}
+				}
+
+				&.perform-result-title {
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+
+				&.perform-result {
+					font-size: 23px;
+					margin-bottom: 4px;
+				}
+
+				&.small-personal-results,  &.small-total-results {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,206 @@
+.classdetail {
+	.columnsContainer {
+		.leftColumn {
+			float: left;
+			width: 50%;
+			font-size: 36px;
+
+			.class-module {
+				p {
+					margin-bottom: 70px;
+				}
+
+				h4 {
+					margin-bottom: 0;
+				}
+			}
+
+			h3 {
+				margin: 96px 0 50px;
+				font-size: 36px;
+			}
+		}
+
+		.rightColumn {
+			border-left: 1px solid #b2b2b2;
+			float: right;
+			width: 49.85%;
+			clear: none;
+		}
+	}
+
+	.header-wrapper {
+        min-height: 170px;
+
+		img {
+			width: 100%;
+		}
+
+		.header-title {
+
+			h1 {
+				small {
+					display: block;
+					margin: 0 10px 0 0;
+					padding-bottom: 0;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	.class-module {
+		padding: 48px 10%;
+
+		.rounded {
+			margin-bottom: 14px;
+		}
+
+		&.fpo-module {
+			height: 100%;
+			padding: 20px 0 0;
+		}
+		
+		.class-category-title {
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+		
+		p {
+			font-size: 14px;
+			letter-spacing: 0px;
+			line-height: 24px;
+		}
+
+		.description {
+			margin-bottom: 62px;
+		}
+
+		.class-detail {
+			margin-bottom: 0;
+			.big-font {
+				font-weight: 200;
+				font-size: 45px;
+				margin-bottom: 15px;
+				line-height: 45px;
+			}
+			.medium-font {
+				font-size: 24px;
+				line-height: 36px;
+			}
+			.opt-status {
+				margin: 15px 0 -34px;
+				.checkbox {
+					.checkbox-replacement {
+						border: 1px solid #000;
+						width: 16px;
+						height: 16px;
+						&:before {
+							top: -6px;
+						}
+					}
+					.label {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.social-buttons {
+			padding: 15px 0 30px 0;
+
+			a.black {
+				font-size: 18px;
+			}
+		}
+
+		nav.button-container {
+			margin-top: 14px;
+		}
+	}
+
+	.underlined-small-link {
+		margin-top: 0;
+		padding-bottom: 2px;
+	}
+	.rich-content {
+		.caption {
+			nav.buttons {
+				> a {
+					font-size: 11px;
+					float: none;
+				}
+			}
+		}
+	}
+	
+	.bar-chart {
+		.chart {
+			height: 300px;
+		}
+		.description {
+			padding: 40px 30px 0;
+		}
+	}
+
+	.dtm-traninercallout {
+		.class-module {
+			padding-top: 40px;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+		.title {
+			margin: 30px auto 40px;
+			font-size: 36px;
+		}
+	}
+}
+
+.favorites-button {
+	background: rgba(124, 135, 142, .8);
+	color: #fff;
+	font-size: 11px;
+	line-height: 11px;
+	letter-spacing: 2.2px;
+	padding: 18px 10px;
+	top: 131px;
+	width: 160px;
+
+	&.active {
+		background: rgba(208, 211, 211, .9);
+		color: #333f48;
+	}
+}
+.favorites-list {
+	top: 131px;
+	right: 180px;
+	width: 288px;
+	li {
+		background: rgba(124, 135, 142, .9);
+		border-top: 1px solid #bec1c1;
+		a {
+			padding: 20px 25px;
+			font-size: 11px;
+			letter-spacing: .88px;
+			span {
+				font-size: 20px;
+				margin-top: -5px;
+				&:before {
+					width: 22px;
+				}
+			}
+		}
+	}
+	&:before {
+		content: '';
+		border-right: 0;
+		border-left: 7px solid rgba(124, 135, 142, 0.9);
+		border-top: 7px solid transparent;
+		border-bottom: 7px solid transparent;
+		position: absolute;
+		top: 18px;
+		right: -7px;
+	}
+}

@@ -1,0 +1,170 @@
+.class-summary {
+	
+	padding-top: 0px;
+
+	.header-wrapper {
+        min-height: 170px;
+
+		img {
+			width: 100%;
+		}
+
+		.header-title {
+
+			h1 {
+				small {
+					display: block;
+					margin: 0 10px 0 0;
+					padding-bottom: 0;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	.summary-content {
+		margin: 0 auto;
+		padding: 0 30px;
+		position: relative;
+
+		.editable-info-container {
+			padding: 25px 0;
+			margin-bottom: 25px;
+			width: 425px;
+			max-width: none;
+			position: relative;
+
+			&.five-items {
+				width: 600px;
+				.two-col, .one-col {
+					width: 20%;
+					margin-right: -5px;
+					margin-bottom: 0;
+
+					form {
+						margin-top: 0px;
+						input {
+							height: 36px;
+							max-width: 108px;
+							font-size: 20px;
+							padding: 0;
+						}
+					}
+				}
+			}
+
+			.edit-container {
+				margin-top: 0;
+				position: absolute;
+				right: -41px;
+				top: 50%;
+				@include translate(0, -50%);
+
+				.edit-button {
+					text-decoration: underline;
+					span {
+						font-size: 14px;
+						margin-right: 10px;
+					}
+
+					&.save {
+						border-bottom: 0;
+					}
+				}
+			}
+
+			/*.duration {
+				display: inline-block;
+				text-align: center;
+				width: 32%;
+			}
+
+			.intensity {
+				border-left: 1px solid #999999;
+				min-height: 41px
+				width: 37%;
+			}
+
+			.calories {
+				width: 28%;
+			}*/
+		}
+
+		.notes-container {
+			margin: 25px auto;
+			max-width: 425px;
+			text-align: center;
+			> span {
+				margin-bottom: 5px;
+			}
+
+			p {
+				padding: 0 94px;
+
+			}
+		}
+
+		.button-container {
+			padding: 0px 0 45px;
+			margin: 0px;
+			a {
+				margin-bottom: 30px;
+			}
+		}
+
+		.class-rank-container {
+			margin: 0 auto;
+			width: 425px;
+
+			.rank-result {
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				p {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 28px;
+					span {
+						display: inline-block;
+						font-size: 35px;
+						vertical-align: middle;
+						padding-bottom: 6px;
+
+						&.rank-num {
+							padding-left: 12px;
+						}
+
+						&.rank-total {
+							padding-right: 12px;
+						}
+					}
+				}
+			}
+
+			.first-position {
+				p {
+					font-size: 13px;
+					&.position-results {
+						font-size: 37px;
+						font-weight: 200;
+					}
+				}
+			}
+
+			nav.button-container {
+				a {
+					margin: 0 auto;
+					width: 198px;
+				}
+			}
+
+			.social-icons {
+				a {
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+}

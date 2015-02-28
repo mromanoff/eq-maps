@@ -1,0 +1,62 @@
+.page.step1 {
+    .rich-content header h2 {
+        span {
+            font-size: 45px;
+            letter-spacing: 7.5px;
+        }
+        small {
+            font-size: 14px;
+        }
+    }
+    .tpl-ctacallout {
+        nav {
+            margin-top: 0;
+        }
+        a.button.box {
+            font-size: 14px;
+        }
+    }
+    .title {
+        margin-bottom: 60px;
+        strong {
+            font-size: 22px;
+        }
+    }
+    input[type="text"] {
+        font-size: 22px;
+        letter-spacing: 3px;
+        border-color: rgba(255, 255, 255, .5);
+        &::-webkit-input-placeholder { /* WebKit browsers */
+            color:  rgba(255, 255, 255, .5);
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: rgba(255, 255, 255, .5);
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: rgba(255, 255, 255, .5);
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: rgba(255, 255, 255, .5);
+        }
+    }
+    .nearme-wrapper {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .select-wrapper {
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+    }
+}
+
+.page.step2, .page.step3 {
+    .rich-content header h2 {
+        span {
+            font-size: 45px;
+            letter-spacing: 7.5px;
+        }
+        small {
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+    }
+}

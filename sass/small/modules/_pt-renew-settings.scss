@@ -1,0 +1,52 @@
+.pt-renew-settings{
+
+  border-bottom: #d0d3d3 1px solid;
+
+  .info-block{
+    margin-bottom: 0;
+  }
+
+  .row {
+
+    border-bottom: none !important;
+
+    .col-1-2 {
+
+
+      .fancy-select{
+
+        margin-bottom: 30px;
+
+        .dropdown{
+          width:65%;
+          .option {
+            color: black;
+          }
+        }
+
+      }
+
+      .time-label {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+
+      }
+
+      &:nth-child(2) {
+        a.toggle {
+          float: none;
+          text-align: center;
+          display: block;
+          margin: 0 0 10px;
+          text-decoration: none;
+        }
+      }
+
+    }/*END col-1-2*/
+
+
+  }/*END row*/
+
+
+} /*END pt-renew-settings*/

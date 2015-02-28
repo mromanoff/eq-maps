@@ -1,0 +1,99 @@
+.schedule-visit {
+    background: #000;
+    @include pie-clearfix;
+
+    .schedule-visit-wrapper {
+        max-width: 740px;
+        padding: 2%;
+        margin: 0 auto;
+
+        .sav-thanks {
+            small {
+                font-size: 25px;
+            }
+        }
+    }
+
+    &.inline {
+    }
+
+    .button {
+        display: block;
+        max-width: 280px;
+        margin: 60px auto;
+    }
+
+    .hidden {
+        display: none;
+    }
+    
+    .content-wrapper {
+        padding: 0 2%;
+
+        .select-wrapper {
+            .option {
+                font-size: 20px;
+            }
+        }
+        
+        div, input {
+            font-size: 20px;
+            font-weight: 200;
+            font-family: $font-family;
+            text-transform: uppercase;
+            outline: none;
+            letter-spacing: 3px;
+        }
+
+        input {
+            -webkit-appearance: none;
+            @include border-radius(0px);
+
+            display: block;
+            width: 90%;
+            max-width: 90%;
+            min-width: 90%;
+            border: 1px solid #fff;
+            margin: 10px auto;
+            padding: 12px 30px;            
+            background: transparent;
+            color: #fff;
+            text-align: center;
+
+            &.half {
+                width: 48%;
+                margin: 1% 0;
+            }
+
+            &.error {
+                border-bottom: 1px solid red;
+                border-color: red;
+            }
+        }
+
+        div {
+            margin: 20px 0;
+            text-align: center; 
+            color: #989797;
+
+            small {
+                display: block;
+                margin: 20px 0;
+                font-size: 0.7em;
+                font-weight: normal;
+                color: #fff;
+            }
+        }
+
+        .submit {
+            margin: 0 auto;
+        }
+    }
+} 
+
+// Hide Region dropdown on club-detail.
+.club-detail {
+    .region-dropdown {
+        display: none;
+    }
+}

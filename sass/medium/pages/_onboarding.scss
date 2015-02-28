@@ -1,0 +1,298 @@
+﻿.page.onboarding {
+    $max-width: 480px;
+
+    form {
+        overflow: hidden;
+        max-width: none;
+    }
+    
+    .module {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0px;
+    }
+
+    .rich-content header h2.rich-content-title {
+        width: auto;
+        font-size: 45px;
+        height: 115px;
+        min-height: 115px;
+        margin-top: 0px;
+        letter-spacing: 7.5px;
+        small {
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+    }
+
+    h3, p {
+        margin-left: auto;
+        margin-right: auto;
+        // Not the same as buttons
+        max-width: 625px;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .select-wrapper {
+        font-size: 30px;
+        letter-spacing: 12px;
+        margin: 0 20px;
+        border-color: rgba(255, 255, 255, .5);
+        
+        select {
+            option {
+                letter-spacing: 0;
+            }
+        }
+
+        .option:after {
+            right: 0;
+            text-align: right;
+            width: 19px;
+        }
+
+        & + .select-wrapper {
+            margin-top: 0;
+        }
+
+        & + input {
+            display: inline-block;
+            font-size: 30px;
+            letter-spacing: 7px;
+            margin: 0 1%;
+            padding: 15px 0 19px;
+            width: 55%;
+            border: none;
+            background: #1a1a1a;
+
+            &.error {
+                border: 1px solid;
+            }
+        }
+
+        &.box {
+            border: 1px solid #fff;
+            font-size: 20px;
+            margin: 0 1%;
+            height: 75px;
+            padding: 24px 0 20px;
+            vertical-align: top;
+            width: 48%;
+
+            &.club {
+                margin: 15px 0 50px;
+                width: $max-width;
+            }
+
+            .option:after {
+                font-size: 16px;
+                margin-top: -8px;
+                position: absolute;
+                right: 13px;
+                top: 50%;
+            }
+        }
+    }
+
+    .checkbox {
+        margin: 20px 0 0;
+        span {
+            font-size: 12px;
+        }
+    }
+    
+    .tpl-memberimagetextcallout {
+        margin-top: 0;
+        padding-top: 0;
+        .member-callout {
+            margin-top: 0;
+        }
+    }
+    .tpl-joinschedule {
+        border: 0;
+    }
+    
+    .tpl-imagetextcallout {
+        .paragraph p {
+            font-size: 14px;
+        }
+    }
+    
+    .dtm-q-start-3-columns {
+        h1 {
+            font-size: 14px;
+            margin-bottom: 80px;
+        }
+        .columns-layout .column .content {
+            h2, p {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .tpl-multipleselect {
+        .multiple-select li section label.check-selector h6 {
+            font-size: 14px;
+        }
+    }
+
+    textarea {
+        margin: 0 auto 40px;
+        width: $max-width;
+        text-align: center;
+        font-size: 14px;
+        padding-top: 25px;
+        letter-spacing: 2px;
+    }
+
+    .button.box {
+        @include box-sizing(border-box);
+        letter-spacing: 2.5px;
+        font-size: 14px;
+        margin: 25px auto 30px;
+        width: $max-width;
+        max-width: $max-width;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+
+    .alternative-cta {
+        display: block;
+        margin-bottom: 40px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.join-schedule-form {
+    max-width: none;
+
+    .checkbox.small {
+        label {
+            padding: 0;
+        }
+        .checkbox-replacement {
+            position: static;
+            margin: 2px 6px 0 0;
+            top: auto;
+            left: auto;
+
+            &:before {
+                left: -10px;
+                top: -7px;
+            }
+        }
+    }
+}
+
+.page.onboarding {
+    .questionnaire {
+        h3 {
+            margin-bottom: 45px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            line-height: 1.5em;
+        }
+
+        fieldset {
+            margin-bottom: 40px;
+        }
+
+        .radio {
+            margin-bottom: 40px;
+            
+            .label {
+                font-size: 14px;
+
+                .radio-replacement {
+                    width: 14px;
+                    height: 14px;
+                    top: 3px;
+
+                    &:after {
+                        height: 6px;
+                        left: 4px;
+                        top: 4px;
+                        width: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.multiple-select {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px;
+    text-align: left;
+    width: auto;
+
+    li {
+        display: inline-block;
+        width: 49%;
+        box-sizing: border-box;
+
+        section {
+            padding: 0;
+
+            label.check-selector {
+                cursor: pointer;
+
+                h6 {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: left;
+                    padding: 18px 0  18px 30px;
+                    position: relative;
+
+                    &:before {
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        width: 14px;
+                        height: 14px;
+                        border: 1px solid #FFF;
+                        border-radius: 100%;
+                        top: 50%;
+                        margin-top: -7px;
+                    }
+
+
+                }
+                img, input[type=checkbox] {
+                    display: none;
+                }
+
+                &.checked {
+                    h6:after {
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #FFF;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 5px;
+                        margin-top: -2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .column.half {
+        width: 50%;
+    }
+}

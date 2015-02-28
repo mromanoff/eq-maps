@@ -1,0 +1,244 @@
+.page.add-custom-workout-form {
+
+	position: relative;
+	background-color: white;
+	color: black;
+	min-height: 400px;
+
+
+	.error-area{
+		position: relative;
+		top: 77px;
+	}
+
+	form{
+		fieldset{
+
+			width: 100%;
+			padding: 0;
+
+			textarea{
+				background: white;
+				color: black;
+				border: 1px solid black;
+				outline: none;
+				-webkit-appearance: none;
+  				-webkit-border-radius: 0;
+			}
+
+			.distance-label{
+				text-align: center;
+				margin-top: 34px;
+
+
+			}
+
+			#distance-holder {
+				label {
+					span.is-mobile {
+						display: inline !important;
+					}
+				}
+			}
+
+
+
+
+		}/*fieldset*/
+
+		.hidden-fields{
+			fieldset{
+				height: 0px;
+				overflow: hidden;
+				&.active{
+					height: auto;
+				}
+			}
+
+		}
+
+	}/*form*/
+
+	.button-container{
+		margin-top: 0px;
+		button{
+			width: 275px;
+			cursor: pointer;
+		}
+		button[disabled] {
+			opacity: .5;
+			cursor: default;
+		}
+
+		#cancel-bttn{
+			display: block;
+			font-size: 11px;
+			width: 275px;
+			margin: -1px auto 0 auto;
+		}
+	}
+
+	#workout-date{
+		.dropdown{
+			width: 33%;
+			float: left;
+		}
+	}
+
+	.time-holder {
+
+		.time-section{
+			float:left;
+			width: 28%;
+
+			&.separator-holder{
+				width: 3%;
+				padding-top: 13px;
+				text-align: center;
+			}
+
+			&.am-pm{
+
+				text-align: center;
+				padding-top: 0px;
+				width: 40%;
+				a{
+					font-size: 20px;
+					cursor: pointer;
+				}
+
+				.toggle{
+					text-decoration: none;
+				}
+
+				&.is-mobile{
+
+					a {
+			  
+						i, b {
+							display: inline-block;
+							width: 42%;
+							background: #fff;
+							border: 1px solid #080808;
+							line-height: 54px;
+						}
+
+						b {
+							border-left: 0;
+						}
+
+					}
+					.toggle{
+						text-decoration: none;
+			
+						i,b{
+							transition: background, border-color 0.5s;
+							-moz-transition: background, border-color 0.5s;
+							-webkit-transition: background, border-color 0.5s;
+							-o-transition: background, border-color 0.5s;
+						}
+
+						&.on{
+							b{
+								color: #333;
+								border-left: 1px solid #080808;
+							}
+							i{
+								color: #fff;
+								background: #7B7B7B;
+								border-color: #7B7B7B;
+								border-right: 0;
+								font-weight: 300;
+							}
+						}
+
+						&.off{
+							b{
+								color: #fff;
+								background: #7B7B7B;
+								border-color: #7B7B7B;
+								font-weight: 300;
+							}
+							i{
+								color: #333;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.duration-holder{
+		clear: left;
+
+		&.is-mobile{
+			.workout-duration-other{
+				margin-top: 10px;
+
+				#workout-duration-mobile {
+					display: inline-block;
+					width: 64%;
+				}
+
+				.min{
+					width: 30%;
+					display: inline-block;
+					text-align: center;
+				}
+			}
+			.duration-radio{
+				width: 100%;
+				text-align: center;
+
+				div{
+					margin: 4px 0 0;
+					text-align: left; 
+
+					span{
+						display: inline-block;
+						text-align: center;
+						width: 31.3%;
+						padding: 5px 0;
+						border: 1px solid #080808;
+						cursor: pointer;
+
+						transition: background, border-color, color 0.5s;
+						-moz-transition: background, border-color, color 0.5s;
+						-webkit-transition: background, border-color, color 0.5s;
+						-o-transition: background, border-color, color 0.5s;
+
+						&.active{
+							color: #fff;
+							background: #7B7B7B;
+							border-color: #7B7B7B;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+			&.error{
+				.duration-radio{
+					div{
+						span{
+							border-color: #F00;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.hidden{
+		display: none;
+	}
+
+
+  #countdown{
+
+    float:right;
+
+  }
+
+
+  }/*end page*/

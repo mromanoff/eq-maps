@@ -1,0 +1,73 @@
+.small-calendar {
+    min-width: 400px;
+
+	.calendar-detail {
+		font-size: 14px;
+		font-weight: bold;
+		color: #000;
+		background: #d0d3d3;
+		position: relative;
+		&:after {
+		    font-family: 'icomoon';
+		    content: "\e613";
+		    position: absolute;
+		    top: 15px;
+		    right: 20px;
+		}
+		a {
+		    padding: 15px 0;
+		}
+	}
+
+	.calendar-container {
+		table {
+			.day-detail-container {
+				.classes-detail {
+					ul {
+						li {
+							&.class-title {
+								span {
+									display: inline;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	table {
+		.day-left-container {
+			font-size: 10px;
+
+			&.active-day {
+				span {
+					font-size: 10px;
+				}
+			}
+		}
+		.day-detail-container {
+			.classes-detail {
+				ul {
+					li {
+						font-size: 11px;
+
+						&.class-date-location {
+							font-size: 9px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.no-classes-overlay {
+		.message-main-container {
+			.message-container {
+				padding: 0 23px;
+			}
+		}
+	}
+}

@@ -1,0 +1,112 @@
+.page.rewards,
+.page.guest-pass-form{
+
+  //TODO:  change this to better class name. .NET!
+  .tpl-friendswhorecievedpasses {
+    background-color: black;
+    color: white;
+    margin-bottom: -40px;
+
+    .column {
+      width: 100%;
+    }
+
+    h6 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .refer-header {
+    margin-bottom: 50px;
+    p {
+      position: absolute;
+      color: white;
+      top: 60%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  hr.separator-line {
+    margin: 50px auto;
+  }
+
+  .badge {
+    background-color: #7c878e;
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 200;
+    font-size: 24px;
+    letter-spacing: 2px;
+    span {
+      display: block;
+      padding-top: 20px;
+    }
+
+  }
+
+  .underlined-small-link {
+    margin-top: 1.5em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    &.white {
+      color: white;
+    }
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .no-padding-bottom {
+    padding-bottom: 0;
+  }
+
+  .no-border-top {
+    border-top: none;
+  }
+
+  .paragraph {
+    p {
+      margin-bottom: 50px;
+    }
+  }
+
+  .reward-module {
+    text-align: center;
+    @include clearfix;
+
+    > div {
+      float: left;
+      width: 100%;
+    }
+
+    .reward-detail {
+      text-transform: uppercase;
+      padding-bottom: 30px;
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      h4 {
+        font-weight: bold;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 15px;
+        font-weight: 200;
+        line-height: 26px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

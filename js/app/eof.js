@@ -1,0 +1,1 @@
+window.App.Events.trigger('loaded');

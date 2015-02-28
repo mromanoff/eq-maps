@@ -1,0 +1,171 @@
+.page.feedback{
+	min-height: 520px;
+	font-size: 1.4em;
+}
+
+.txt-center{
+	text-align: center;
+}
+
+hr{
+	margin: 40px 0 20px;
+}
+	
+.feedback-wrapper {
+	h1{
+		margin-bottom: 20px;
+	}
+
+	.feedback-dropdown{
+		padding: 20px;
+		text-align: center;
+
+		.option{
+			font-size: 1.5em;
+		}
+	}
+
+	.sub-title{
+		margin-bottom: 40px;
+	}
+
+	.feedback-form{
+		padding: 60px 40px 40px;
+		max-width: 100%;
+		background-color: #efefef;
+
+		div{
+			text-align: center;
+		}
+
+		.row{
+			border: 0;
+			.col-1-2{
+				border: 0;
+				.select-wrapper{
+					select + .option{
+						width: 100%;
+					}
+				}
+
+				.checkbox{
+					width: 100%;
+				}
+			}
+		}
+
+		.feedback-club, .feedback-website{
+			margin-bottom: 40px;
+		}
+
+		.feedback-website{
+			.label{
+				font-size: 1.2em;
+				width: 100%;
+				line-height: .8;
+			}
+		
+			.checkbox-replacement{
+				background: #fff;
+				padding: 5px;
+			}
+		}
+
+		.select-wrapper{
+			width: 100%;
+			border-bottom: 0;
+
+			select, .option{
+				background: #fff;
+				padding: 10px 0;
+				width: 100%;
+			}
+		}
+	}
+
+	.arrow-down {
+		width: 0; 
+		height: 0; 
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		border-top: 25px solid #fff;
+		position: absolute;
+		left: 48%;
+	}
+
+	.checkbox-row{
+		text-align: left !important;
+		margin-top: 10px;
+		
+		.label{
+			font-size: 1.2em;
+			width: 100%;
+			line-height: .8;
+		}
+		
+		.checkbox-replacement{
+			background: #fff;
+			padding: 5px;
+		}
+	}
+
+	.description{
+		border: 0;
+		text-transform:none;
+
+		&::-webkit-input-placeholder{
+			text-transform: uppercase;
+			text-align: center;
+		}
+		&::-moz-placeholder{
+			text-transform: uppercase;
+			text-align: center;
+		}
+		&:-moz-placeholder {
+			text-transform: uppercase;
+			text-align: center;
+		}
+		&:-ms-input-placeholder {
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+
+	.error {
+		border: 1px solid red;
+	}
+
+	button[type='submit']{
+		padding: 1.35em 3em;
+		width: auto;
+		display: inline-block;
+	}
+
+	.feedback-thanks{
+		margin-top: 100px;
+
+		.thanks-title{
+			font-size: 40px;
+		}
+
+		hr{
+			width: 300px;
+			margin: 60px auto 40px;
+		}
+	}
+}
+
+#browse {
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: underline;
+
+}
+
+#faqSection #browse {
+	padding: 15px 0 25px;
+	display: block;
+}
+#faqSection + .html-callout {
+	display: none;
+}

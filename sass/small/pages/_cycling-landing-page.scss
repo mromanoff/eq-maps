@@ -1,0 +1,95 @@
+﻿.page.cyclinggroups {
+    .rich-content header {
+        min-height: 250px;
+    }
+
+    .rich-content-title {
+        border: none;
+        font-weight: bold;
+        width: 260px;
+
+        span {
+            text-align: left;
+        }
+
+        span span {
+            font-size: 150%;
+            font-size: 15vw;
+        }
+
+        small {
+            font-size: 0.6em;
+            margin-bottom: 3px;
+            margin-left: 10px;
+        }
+    }
+
+    .tpl-quote {
+        padding-top: 0;
+        margin-top: 0;
+
+        p {
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            display: table;
+            left: 50%;
+            top: 40%;
+            @include translate(-50%,-50%);
+            width: 240px;
+            line-height: 160%;
+            font-weight: 200;
+        }
+    }
+
+    .tpl-perksgroup {
+        padding-top: 0px;
+
+        .paragraph img {
+            width: 268px !important;
+            height: 268px !important;
+            @include border-radius(900px);
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 200;
+            margin-bottom: 20px;
+        }
+
+        .columns-layout .column {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .perk {
+            position: relative;
+            width: 268px;
+            margin: 50px auto 0 auto;
+
+            h3 {
+                position: absolute;
+                display: table;
+                left: 50%;
+                top: 50%;
+                @include translate(-50%,-50%);
+                color: #1aeca9;
+                font-size: 1.5em;
+                width: 90%;
+                margin: 0;
+                font-weight: 200;
+            }
+        }
+    }
+
+    .tpl-ctagroup {
+        background: #000;
+        padding: 30px 0;
+        border-bottom: 1px solid #808080;
+
+        .button.white, .button.black {
+            border-color: #fff;
+        }
+    }
+}

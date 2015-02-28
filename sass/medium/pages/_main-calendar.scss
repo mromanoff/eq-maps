@@ -1,0 +1,492 @@
+.checkin-reminder {
+    font-size: 11px;
+    padding: 20px 10px;
+
+}
+
+.main-calendar {
+	header {
+        height: 223px;
+		.main-calendar-header {
+			padding: 0 55px;
+			h2 {
+				font-size: 37px;
+			}
+			h3 {
+				font-size: 14px;
+				font-weight:800;
+				display:inline-block;
+				padding-top:3px;
+				min-width: 130px; /* Safari on load not getting any width bug */
+				white-space: nowrap;
+			}
+			a.navigation {
+                font-size: 25px;
+				top:48px;
+				
+				&.prev {
+					left:75px;
+				}
+				&.next {
+					right:75px;
+				}
+            }
+		}
+	}
+	.main-calendar-week {
+		white-space: nowrap;
+		font-size: 0;
+		overflow-x: auto;
+		overflow-y: hidden;
+		.day-detail-main-container {
+			&:first-child {
+				.extra-event-container {
+					left: 100%;
+					&:after {
+						left: 25%;
+					}  
+				}
+			}
+			&:last-child {
+				.extra-event-container {
+					left: 0;
+					&:after {
+						right: 20%;
+					}
+				}
+			}
+			&.show-add-event-menu {
+				.day-date {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+	.small-calendar {
+		.add-class {
+			font-size: 45px;
+			font-weight: 100;
+		}
+		.calendar-container {
+			table {
+				.day-detail-container {
+					.day-left-container {
+						font-size: 14px;
+						width: 75px;
+					}
+					.classes-detail {
+						padding: 21px 23px 23px 0;
+						.pastEvent {
+							margin-top: 16px;
+						}
+						&.past {
+							padding: 40px 23px 40px 0;
+							ul {
+								margin-top: 16px;
+							}
+						}
+						ul {
+							margin-top: 50px;
+							span.icon-category img {
+								width: 20px;
+								height: 20px;
+							}
+							&:first-child {
+								margin-top: 0;
+							}
+							li {
+								display: inline;
+								&.class-title {
+									span {
+										display: inline-block;
+										width: 85px;
+										text-align: center;
+										font-size: 20px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.day-detail-main-container {
+		width: 20%;
+		min-height: 436px;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		text-align: center;
+		background-color: #fff;	
+		border-left: 1px solid #d0d3d3;
+		border-bottom: 1px solid #d0d3d3;
+		white-space: normal;
+		font-size: initial;
+
+		&.past {
+			.day-detail-container .events-container {
+				p, small, a {
+					color: rgba(124, 135, 142, .8);
+				}
+				.see-more-classes {
+					p {
+						border: 1px solid #7c878e transparent;
+					}
+				}
+				.event-view {
+					[class*="icon-"] {
+						display: none;
+					}
+					small.selected-bike {
+						color: inherit;
+					}
+				}
+				.extra-event-container {
+					background-color: #999fa3;
+					small {
+						color: #fff;
+					}
+				}
+			}
+			.icon-category {
+				display: none;
+			}
+			.event-overlay {
+				a.book-a-bike, a.schedule {
+					display: none;
+				}
+			}
+		}
+		&.current-day {
+			.day-date {
+				background-color: #7c878e;
+				p, small {
+					color: #fff;
+				}
+				p.dayName, small.dayName {
+					display: none
+				}
+				p.today {
+					margin-top: 8px;
+					display: block;
+				}
+			}
+		}
+		@include box-sizing(border-box);
+		&:first-child {
+			border-left: 0;
+		}
+		&.empty-day {
+			min-height: 436px;
+		}
+		.day-date {
+			background-color: #fff;
+			border-bottom: 1px solid #d0d3d3;
+			text-align: center;
+			padding: 15px;
+			position: relative;
+			z-index: 120;
+			min-height: 36px;
+			p, small {
+				text-transform: uppercase;
+				color: #000;
+			}
+			p {
+				font-size: 14px;
+				font-weight: 700;
+				margin-bottom: 3px;
+				&.today {
+					display: none;
+				}
+			}
+			small {
+				display: block;
+				font-size: 12px;
+			}
+		}
+		.add-event {
+			width: 100%;
+			background-color: #f6f6f6;
+			font-size: 32px;
+			color: #d0d3d3;
+			cursor: pointer;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			&.empty-day {
+				position: absolute;
+				top: 67px;
+				font-size: 80px;
+				font-weight: 100;
+				span {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					@include css-translate(-50%, -50%);
+				}
+			}
+		}
+		&.show-add-event-menu {
+			.day-detail-container {
+				.event-overlay {
+					height: 423px;
+				}
+			}
+		}
+		.day-detail-container {
+			width: 100%;
+			min-height: 423px;
+			display: table;
+			.events-container {
+				background-color: #fff;
+				padding: 10px;
+				display: table-cell;
+				vertical-align: middle;
+				&.single-event {
+					.event-view {
+						[class*="icon-"] {
+							width: 75px;
+							height: 75px;
+							font-size: 28px;
+						}
+					}
+				}
+				.event-view {
+					margin-bottom: 20px;
+					&.past {
+						[class*="icon-"] {
+							display: none;
+						}
+						p, small {
+							color: rgba(124, 135, 142, .7);
+						}
+					}
+					[class*="icon-"] {
+						display: block;
+						margin: 0 auto 10px;
+						width: 38px;
+						height: 38px;
+						color: #fff;
+						line-height: 2.7;
+						@include border-radius(100%);
+						img {
+							border-radius: 100%;
+							height: 100%;
+						}
+					}
+					&.check-in {
+						[class*="icon-"] {
+							font-size: 20px;
+							color: #7c878e;
+							line-height: 1;
+							background-color: transparent;
+						}
+						p {
+							display: none;
+						}
+					}
+					p {
+						font-size: 12px;
+						font-weight: 700;
+						text-transform: uppercase;
+						letter-spacing: .96px;
+						margin: 0;
+					}
+					small {
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 1;
+						text-transform: uppercase;
+						&.selected-bike {
+							display: block;
+							font-weight: 700;
+							color: #7c878e;
+						}
+					}
+					.instructors, .club-name {
+						display: none;
+					}
+				}
+				.see-more-classes {
+					font-size: 12px;
+					color: #000;
+					text-transform: uppercase;
+					position: relative;
+					&.active {
+						p {
+							background-color: #7c878e;
+							color: #fff;
+							
+						}
+					}
+					p {
+						width: 25px;
+						height: 25px;
+						margin: 0 auto 10px;
+						font-size: 16px;
+						line-height: 1.8;
+						border: 1px solid #7c878e;
+					}
+				}
+			}
+			.event-overlay {
+				position: absolute;
+				height: 0;
+				z-index: 110;
+				width: 100%;
+				overflow: hidden;
+				text-align: center;
+				background-color: #333f48;
+				@include css-transition(all, 400ms, ease);
+				@include box-sizing(border-box);
+				> div {
+					padding: 20px;
+					position: absolute;
+					top: 50%;
+					width: 100%;
+					@include box-sizing(border-box);
+					@include css-translate(0, -50%);
+					a {
+						display: block;
+						font: 700 12px/1.4 'Graphik Web';
+						color: #d0d3d3;
+						text-transform: uppercase;
+						margin-bottom: 40px;
+						letter-spacing: .7px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+						span {
+							display: block;
+							margin-bottom: 5px;
+							color: #fff;
+							&.icon-training {
+    							font-size: 9px;
+    						}
+						}
+						
+					}
+				}
+				.close-event-overlay {
+					position: absolute;
+					bottom: 10px;
+					left: 50%;
+					font-size: 40px;
+					color: #d0d3d3;
+					@include css-translate(-50%, 0);
+				}
+			}
+		}
+		.extra-event-container {
+			opacity: 0;
+			height: 0;
+			position: absolute;
+			bottom: 120%;
+			left: 50%;
+			z-index: 200;
+			@include css-translate(-50%, 0);
+			@include css-transition(opacity, 400ms, ease);
+			width: 203%;
+			background-color: #333f48;
+			&:after {
+				content: '';
+				position: absolute;
+				margin-left: -7px;
+				border-top: 6px solid #333f48;
+				border-right: 6px solid transparent;
+				border-left: 6px solid transparent;
+			}
+			&.active {
+				opacity: 1;
+				height: auto;
+				.extra-event-wrapper {
+					max-height: 210px;
+				}
+			}
+			.extra-event-wrapper {
+				max-height: 0;
+				overflow-y: auto;
+			}
+			.extra-event-view {
+				border-top: 1px solid #a4abb0;
+				position: relative;
+				&:first-child {
+					border-top: 0;
+				}
+				a {
+					padding: 22px 50px 22px 22px;
+					display: block;
+					text-align: left;
+					letter-spacing: 1px;
+					line-height: 1.4em;
+				}
+				h2, small {
+					font-size: 12px;
+					color: #fff;
+					text-transform: uppercase;
+					text-align: left;
+				}
+				h2 {
+					font-weight: 700;
+					margin-bottom: 5px;
+				}
+				small {
+					display: block;
+					&.selected-bike {
+						display: block;
+						font-weight: 700;
+					}
+				}
+				span {
+					position: absolute;
+					right: 18px;
+					top: 50%;
+					margin-top: -10px;
+					font-size: 18px;
+					color: #fff;
+				}
+				.instructors, .club-name {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.mobile-calendar-small-container {
+	.controls {
+		padding: 22px 0;
+	}
+}
+
+/* Overrides mobile calendar on main calendar page for tablet */
+
+.small-calendar {
+    &.calendar-box {
+        table {
+            .day-detail-container {
+                .classes-detail {
+                    ul {
+                        li {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pop-up-wrapper {
+	.pop-up-message {
+        width: 40%;
+        min-height: 300px;
+
+        h2 {
+        	font-size: 24px;
+        	margin: 40px;
+        }
+    }
+}

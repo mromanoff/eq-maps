@@ -1,0 +1,61 @@
+/*
+	Lead Popup and Page
+*/
+
+#lead-popup-content,
+#lead-page-wrapper {
+
+	.content-wrapper{
+		margin: 0 50px;
+
+		div {
+			.row {
+				.col-multiple{
+					width: 48%;
+				}
+			}
+		}
+	}
+
+	.control-form {
+		.radio {
+			text-align: center;
+		}
+	}
+
+	.error-wrapper,
+	.success-wrapper {
+		padding: 18% 12%;
+
+		h2 {
+			font-size: 40px;
+		}
+
+		p {
+			margin-bottom: 80px;
+			font-size: 30px;
+			line-height: 42px;
+		}
+	}
+
+	.step1 {
+		.spacing{
+			padding: 0 7%;
+		}
+
+		.col {
+			display: inline-block;
+			margin-bottom: 0 !important;
+
+			&.left {
+				width: 35%;
+				margin-right: 1%;
+			}
+
+			&.right {
+				width: 63%;
+			}
+		}
+	}
+
+}

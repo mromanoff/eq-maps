@@ -1,0 +1,1 @@
+<h1><center><%= title %></center></h1>

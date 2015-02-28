@@ -1,0 +1,76 @@
+//Global module
+
+.class-module {
+	padding: 35px 33px;
+	position: relative;
+
+	.prev-class {
+		left: 27px;
+		top: 282px;
+
+		span {
+			&:before {
+				font-size: 30px;
+			}
+		}
+	}
+
+	.next-class {
+		right: 27px;
+		top: 282px;
+
+		span {
+			&:before {
+				font-size: 30px;
+			}
+		}
+	}
+
+	p {
+		font-size: 11px;
+		margin-bottom: 53px;
+	}
+
+	.rounded {
+		@include border-radius(100%);
+		width: 96px;
+		height: 96px;
+		margin-bottom: 18px;
+
+		> span {
+			padding: 40px 0;
+		}
+	}
+
+	.class-detail {
+		
+		li {
+			font-size: 11px;
+			line-height: 20px;
+
+			&.big-font {
+				font-size: 28px;
+				line-height: 35px;
+				letter-spacing: 7px;
+			}
+
+			&.medium-font {
+				font-size: 12px;
+				letter-spacing: 2px;
+			}
+
+			&.small-font {
+				font-size: 11px;
+			}
+		}
+	}
+
+	.underlined-small-link {
+		display: inline-block;
+	}
+
+	.owl-carousel {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

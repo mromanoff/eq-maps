@@ -1,0 +1,45 @@
+.bike-classes {
+	li {
+		a {
+			padding: 25px;
+			height: 115px;
+			@include box-sizing(border-box);
+			.class-info {
+				width: 82%;
+				padding-left: 14%;
+				font-size: 0;
+				position: absolute;
+				top: 50%;
+				@include css-translate(0, -50%);
+
+				&.lock-status{
+					color:#ccc;
+				}
+
+				h2, p {
+					display: inline-block;
+					vertical-align: middle;
+					width: 25%;
+					font-size: 12px;
+				}
+				p {
+					margin-bottom: 0;
+					&:before {
+						float: left;
+						margin-top: 3px;
+					}
+					span {
+						float: left;
+						width: 80%;
+						line-height: 1.5;
+					}
+				}
+				h2 {
+					margin-bottom: 0;
+					padding-right: 30px;
+					@include box-sizing(border-box);
+				}
+			}
+		}
+	}
+}

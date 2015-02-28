@@ -1,0 +1,157 @@
+.page.cycling-class-detail {
+	.header-wrapper {
+		height: 171px;
+
+		> a {
+			font-size: 18px;
+			top: 22px;
+			left: 22px;
+		}
+	}
+
+	.title-cta-module {
+		h3 {
+			font-size: 38px;
+			small {
+				font-size: 12px;
+			}
+		}
+
+		.instructor {
+			letter-spacing: 1px;
+			margin-bottom: 25px;
+		}
+
+		nav {
+			margin-top: 25px;
+			padding: 0;
+		}
+	}
+
+	.class-results {
+		padding: 40px 10px 95px;
+
+		h3 {
+			font-size: 27px;
+			margin-bottom: 30px;
+		}	
+		.results-columns {
+			margin: 0 auto;
+			max-width: 797px;
+			.result-row {
+				display: inline-block;
+				padding: 0 10px;
+				width: 27.5%;
+				ul {
+					border-bottom: 0;
+					padding: 0;
+
+					li {
+						font-size: 11px;
+
+						&:last-child {
+							font-size: 14px;
+						}
+
+						&.position {
+							p {
+								font-size: 65px;
+								margin-bottom: 8px;
+
+								sup {
+									font-size: 23px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.secondary-info {
+				display: inline-block;
+				padding: 0;
+				width: 38%;
+				border-left: 1px solid #b2b2b2;
+				border-right: 1px solid #b2b2b2;
+				.secondary-info-container {
+					border-bottom: 0;
+					padding: 0;
+					ul {
+						width: 49.2%;
+
+						&.upper-info {
+							margin-bottom: 27px;
+						}
+
+						li {
+							p {
+								font-size: 26px;
+								span {
+									font-size: 11px;
+									margin-bottom: 5px;
+								}
+
+								sub {
+									font-size: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.class-award {
+				display: inline-block;
+				padding: 0 10px;
+				width: 27.5%;
+				p {
+					margin-bottom: 10px;
+				}
+
+				> img {
+					width: 63px;
+					margin-bottom: 0;
+				}
+
+				.sharing {
+					font-weight: 700;
+					text-transform: uppercase;
+					margin-bottom: 12px;
+				}
+
+				.sharing-icon {
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+
+	.graphic {
+		background-color: grey;
+		margin: 27px 0 0;
+		height: 275px;
+	}
+
+	.leaderboard-results {
+		h3 {
+			font-size: 27px;
+			font-weight: 400;
+			margin-bottom: 28px;
+
+			small {
+				display: block;
+				font-size: 14px;
+				font-weight: 700;
+				letter-spacing: 1px;
+			}
+		}
+
+		.leaderboard-container {
+			height: 350px;
+		}
+	}
+
+	.common-padding {
+		padding: 34px 28px;
+	}
+}

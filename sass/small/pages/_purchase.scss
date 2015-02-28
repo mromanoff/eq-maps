@@ -1,0 +1,252 @@
+.page.purchase {
+  position: relative;
+  background-color: black;
+  color: white;
+  min-height: 400px;
+
+  + footer {
+    margin-top: 0;
+    /*position: static;*/
+
+    .social-icons{
+      visibility: hidden;
+    }
+  }
+
+  header {
+    padding: 30px 0;
+    h2 {
+      display: table;
+    }
+  }
+
+  .rich-content-title {
+    min-height: 104px;
+  }
+
+  .alert {
+    padding: 40px;
+    color: #ce2e2e;
+    h4 {
+      text-align: center;
+    }
+  }
+
+  a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  a.button {
+    text-decoration: none;
+  }
+
+  h5 {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .button {
+    &.new-card {
+      color: white;
+      border: 1px solid #080808;
+    }
+  }
+
+  a.button {
+    display: inline-block;
+    color: #080808;
+  }
+
+  .button[disabled] {
+    color: #ffffff;
+    background-color: #ccc;
+    opacity: .5;
+  }
+
+  .payment {
+    margin: 20px;
+    div {
+      padding: 10px 20px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  // Forms
+
+  .expiration {
+    overflow: auto;
+
+  }
+
+  .dropdown {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .expiration-date {
+    .select-wrapper {
+      width: 50%;
+      float: left;
+      &.date {
+        display: none;
+      }
+    }
+  }
+
+   .expiration {
+    overflow: auto;
+
+  }
+
+  .dropdown {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .disabled {
+    border-color: #444;
+    .option {
+      color: #444;
+    }
+  }
+
+  .equifit {
+    text-align: center;
+    position: relative;
+    height: 300px;
+    padding: 60px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    h5,
+    p,
+    .button.box {
+      position: relative;
+      margin-bottom: 1em;
+    }
+
+    .button.box {
+      margin-top: 40px;
+      display: inline-block;
+      border: none;
+    }
+
+    .icon-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-decoration: none;
+    }
+  }
+
+  .panel {
+    padding: 40px 30px;
+  }
+
+  .full-width {
+    width: 100%;
+    height: auto;
+  }
+
+  .error {
+    color: red;
+    input[type="text"],
+    input[type="password"] {
+      border: 1px solid red;
+    }
+
+    p[data-error] {
+      font-size: 12px;
+      margin: 10px 0;
+    }
+  }
+
+  // these common form elemets should be externalized and avalible to other forms
+
+  form {
+
+    .half.error + .half {
+
+      padding-bottom: 22px;
+
+    }
+
+    fieldset {
+
+      padding: 0;
+
+      div[data-error] {
+        font-size: 14px;
+        margin: 4px 0;
+      }
+
+      > div {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 5px;
+        margin-bottom: 15px;
+        float: left;
+        &.quarter {
+          width: 50%; // crazy, but it deal with this.
+        }
+
+        label {
+          margin-bottom: 4px;
+          font-size: 12px;
+          text-transform: uppercase;
+          font-weight: normal;
+          letter-spacing: 0.16em;
+        }
+
+      }
+    }
+
+  }
+
+  .confirmation {
+    .edit {
+      display: none;
+    }
+  }
+
+  // create spinner background
+//  .block-view {
+//    background-color: white;
+//    width: 100%;
+//    height: 100%;
+//    position: absolute;
+//    z-index: 99999;
+//    top: 0;
+//    left: 0;
+//    opacity: .3;
+//  }
+
+
+  .review-repurchase-info {
+    .toggle-sessions-dropdown {
+      cursor: pointer;
+    }
+    .sessions-dropdown {
+      display: none;
+    }
+
+    h3 {
+      strong {
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+    }
+
+    h6 {
+      font-size: 16px;
+    }
+  }
+}
+
+

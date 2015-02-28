@@ -1,0 +1,394 @@
+.page.cycling {
+
+	.module {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.rich-content {	
+		header {
+			min-height: 0;
+		}
+
+		.rich-content-title {
+			top: 59%;
+			font-size: 30px;
+			width: 90%;
+			border: none;
+			padding: 0; 
+
+			span {
+				display: block;
+				border: solid 1px #fff;
+				width: 192px;
+				text-align: center;
+				margin: 0 auto;
+				padding: 20px 0;
+				letter-spacing: 1px;
+			}
+
+			small {
+				display: block;
+				font-size: 11px;
+				letter-spacing: 1px;
+				margin: 10px auto;
+				max-width: 90%;
+				line-height: 1.6;
+				text-transform: none;
+				font-weight: normal;
+			}
+		}
+	}
+
+	.cycling-info {
+		.rich-content-title {
+			top: 55%;
+			border: none;
+			font-size: 25px;
+			padding: 0;
+			line-height: 1.2;
+			max-width: 450px;
+
+			span {
+				width: auto;
+				letter-spacing: 1px;
+				border: none;
+				padding: 0;
+
+				span {
+					font-weight: lighter;
+				}
+			}
+
+			small {
+				max-width: 100%;
+				margin: 5px auto 0 auto;
+			}
+
+			nav {
+				padding: 0;
+				margin-top: 0;
+			}
+
+			.button.box {
+				border: none;
+			}
+		}
+	}
+
+	.dtm-method {
+		padding-bottom: 30px;
+
+		.carousel {
+			min-height: 0;
+		}
+
+		.paragraph.rich-content {
+             h3 {
+                margin: 40px auto;
+            }
+        }
+	}
+
+	.columns-layout {
+		h1 {
+			max-width: 100%;
+		}
+
+		ul {
+
+			li.column {
+				img {
+					width: 100px;
+					height: 100px;
+				}
+
+				.item-info {
+					padding-bottom: 50px;
+				}
+
+				text-align: center;
+				margin-bottom: 10px;
+
+				h3 {
+					font-size: 0.6em;
+					font-weight: bold;
+					color: #7c7c7c;
+				}
+
+				a {
+					font-size: 12px;
+					font-weight: bold;
+					text-decoration: underline;
+					letter-spacing: 1px;
+				}
+
+				.more-info {
+					font-size: 11px;
+					padding-bottom: 20px;
+					.close-more-info {
+			    		font-size: 18px;
+			    		font-weight: 300;
+			    		color: #7c878e;
+			    		text-transform: uppercase;
+			    		text-decoration: none;
+			    		margin-bottom: 30px;
+			    		display: block;
+			    		span {
+			    			font-size: 14px;
+			    			margin-left: 5px;
+			    		}
+			    	}
+				}
+
+				.qa {
+					strong, span {
+						display: block;
+						font-size: 11px;
+					}
+					span {
+						margin-bottom: 20px;
+					}
+				}
+
+				.content {
+					p {
+						font-size: 11px;
+					}
+				} 
+
+				.button.box.small {
+					display: block;
+					margin: 0 auto;
+					width: 100%;
+					max-width: 250px;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.team {
+		padding-bottom: 20px;
+	}
+
+	.team, .feat {
+		border-bottom: solid 1px #000;
+	}
+
+	.feat {
+		padding-bottom: 20px;
+		.columns-layout {
+			.column {
+				.button-container {
+					padding-bottom: 0px;
+				}
+
+				ul {
+					li.column {
+						.item-info {
+							padding-bottom: 30px;
+						}
+					}
+				}
+
+				&.new {
+					position: relative;
+
+					span {
+						width: 100px;
+						height: 100px;
+						display: block;
+						border-top-left-radius: 500px;
+						border-top-right-radius: 500px;
+						border-bottom-left-radius: 500px;
+						border-bottom-right-radius: 500px;
+						border-radius: 500px;
+						margin: 20px auto;
+						position: relative;
+						&:before {
+							content: url('../images/patch/new.png');
+							display: block;
+							position: absolute;
+							width: 60px;
+							height: 45px;
+							left: -27px;
+							top: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.cycling-hero {
+		background: #000;
+		color: #fff;
+
+		header {
+			position: relative;
+			padding: 40px 0 20px;
+			text-align: center;
+
+			h1 {
+				font-size: 3em;
+				line-height: 0.9;
+				text-align: center;
+				letter-spacing: 0.3em
+
+				small {
+					display: block;
+					font-size: 0.3em;
+					letter-spacing: 3px;
+					margin: 0 auto;
+				}
+			}
+
+			small {
+				display: block;
+				max-width: 550px;
+				width: 80%;
+				font-size: 11px;
+				letter-spacing: 1px;
+				margin: 20px auto;
+				line-height: 1.6;
+			}
+
+			span {
+				display: block;
+				color: #1AEBA9;
+				text-transform: uppercase;
+				font-style: italic;
+
+
+				&:before, &:after {
+					content: "";
+					display: inline-block;
+					width: 20%;
+					background: #fff;
+					height: 1px;
+					vertical-align: middle;
+					margin: 0 10px;
+				}
+			}
+		}
+
+		.columns-layout {
+			ul {
+				li.column {
+					.item-info {
+						width: 100%;
+
+						h3 {
+							font-size: 0.8em;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.faq {
+
+		padding: 0 0 20px 0;
+
+		.title {
+			margin: 25px auto;
+		}
+
+		.faq-container {
+
+			h3 {
+				font-size: 1.15em;
+				margin: 0 auto 15px auto;
+				line-height: 1.25;
+				position: relative;
+				width: 80%;
+				cursor: pointer;
+
+				span {
+					position: absolute;
+					font-size: 20px;
+					color: #b2b2b2;
+					@include css-rotate(45deg);
+					right: -25px;
+					top: 1px;
+				}
+			}
+
+			.faq-content {
+				@include transition(opacity 0.5s);
+				max-height: 500px;
+				opacity: 1;
+				overflow: initial;
+				p {
+					font-size: 11px;
+					margin: 0 auto 20px auto;
+				}
+			}
+
+			&.collapsed {
+				span {
+					@include css-rotate(0deg);
+					margin-top: 0;
+				}
+				.faq-content {
+					max-height: 0;
+					opacity: 0;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	.cycling-q-blog {
+
+		.post-info-container {
+			height: 300px;
+
+			p {
+				font-size: 12px;
+			}
+		}
+
+		.article-list {
+			.articles {
+				min-height: 0;
+
+				article {
+					.cover {
+						max-height: 250px;
+					}
+					.info {
+						width: 47%;
+						padding: 3% 0 0 3%;
+
+						span {
+							font-size: 10px;
+							padding: 0;
+						}
+						h6 {
+							font-size: 11px;
+							margin: 4% 0;
+						}
+					}
+					span {
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+
+		.button.box {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			max-width: 250px;
+			text-decoration: none;
+		}
+	}
+	.bio-overlay-template {
+        display: none;
+    }
+}

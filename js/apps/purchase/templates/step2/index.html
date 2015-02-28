@@ -1,0 +1,43 @@
+<header>
+    <h2 class="rich-content-title">
+    <span>
+        <small>Step 2 of 3</small>
+        <span>Billing</span>
+   </span>
+    </h2>
+</header>
+
+<section class="payment-method paragraph">
+    <h6>Select your payment method</h6>
+    <% if(isCardExpired) { %>
+
+        <div class="cc-expired expired"><%= cardType %> ending with - <%= cardLastFourDigits %> <span class="text-error">expired</span></div>
+
+    <% }  else if(hasCardOnFile) { %>
+
+        <fieldset class="button-container centered">
+            <button type="button" class="js-card-on-file button box white small navigate" data-url="#step3"><%= cardType %> ending with - <%= cardLastFourDigits %></button>
+        </fieldset>
+
+    <% } else { %>
+         <!--  default place holder -->
+    <% } %>
+
+    <fieldset class="button-container centered">
+        <button type="button" class="js-new-card new-card button box small">or Enter A New Card + </button>
+    </fieldset>
+
+
+</section>
+
+<section style="display:none" id="warning"></section>
+
+<section class="payment-new-card paragraph" style="display:none">
+    <h6>All fields are required unless stated.</h6>
+    <div id="payment-form"></div>
+    <fieldset class="button-container centered">
+        <button type="button" class="button box white small navigate next" disabled="disabled" data-url="#step3">Continue</button>
+    </fieldset>
+</section>
+
+

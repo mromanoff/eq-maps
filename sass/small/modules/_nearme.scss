@@ -1,0 +1,129 @@
+.nearme {
+    border-top: 1px solid #b4b4b4;
+    border-bottom: 1px solid #b4b4b4;
+    padding: 25px 20px 20px;
+    text-align: center;
+    min-height: 390px;
+
+    &.nearme-classes {
+        border-top: 0;
+    }
+
+    &.nearme-spa {
+        .button {
+            margin-top: 25px;
+        }
+    }
+
+    .overlay {
+        width: 100%;
+        background: #fff;
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        opacity: 0.3;
+
+        &.disabled {
+            pointer-events: none;
+        }
+    }
+
+    .icon-marker-o {
+        min-height: 50px;
+        font-size: 64px;
+        margin: 0 0 20px;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0 0 20px;
+    }
+
+    .tab-headline {
+      margin-bottom: 32px;
+    }
+
+    .club-finder-widget {
+      &.extra-vertical-margin {
+        margin-top : 60px;
+      }
+      //margin-top : 60px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 200;
+        margin: 0 0 0.6em;
+    }
+
+    .club-information {
+        background: #fff;
+        margin: 25px 0 0;
+        padding: 0;
+
+        .wrapper {
+            margin: 0 auto;
+            width: auto;
+
+            address {
+                width: 200px;
+                margin: 0 auto;
+
+				span {
+					display: inline;
+					text-transform: none;
+					font-size: 12px;
+					margin-bottom: 0;
+				}
+            }
+
+            .buttons {
+                display: inline-block;
+
+                a {
+                    width: 287px;
+                }
+            }
+
+            span {
+                color: #333;
+                font-size: 14px;
+                display: block;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+        }
+
+        // a.button {
+        //     display: block;
+        // }
+
+        address, a.link {
+            color: #333;
+        }
+
+        a.link {
+            font-size: 12px;
+            text-decoration: underline;
+
+            &.club {
+                color: #000;
+            }
+        }
+    }
+}
+
+.club-selector {
+    h4 {
+        min-height: 40px;
+    }
+
+    .map-container {
+        min-height: 450px;
+        .icon-marker-o {
+            margin-top: -40px;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.checkins-calendar {
+	.graphic-information-container {
+		position: relative;
+		padding: 0 50px;
+		margin: 0 auto;
+		text-align: center;
+		.calendar {
+			display: inline-block;
+			padding: 10px 0;
+			vertical-align: middle;
+			@include box-sizing(border-box);
+			width: 70%;
+			max-width: 650px;
+
+			table {
+				tr {
+					height: 45px;
+					td {
+						span {
+							&.current-day {
+								background: #1aeca9;
+								color: #000;
+							}
+
+							&.activity-day {
+								color: #000;
+								top: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.activity-graphic-details {
+			display: inline-block;
+			vertical-align: middle;
+			position: absolute;
+			top: 50%;
+			right: 5%;
+			@include translate(0, -50%);
+
+			> div {
+				display: block;
+				margin: 40px 0;
+				width: 100%;
+
+				span {
+					&.title {
+						letter-spacing: 1px;
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}

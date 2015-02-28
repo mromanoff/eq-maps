@@ -1,0 +1,11 @@
+<label for="select-<%= name %>"><%= name %></label>
+<span class="dropdown block white <% disabled && print('disabled') %>">
+    <span class="option"><%= selected %></span>
+    <select id="select-<%= name %>" class="select-<%= name %>" name="<%= name %>" <% disabled && print('disabled="disabled"') %>>
+        <option>Select</option>
+        <% _.each(options, function(option){
+                var isSelected = _.isEqual(selected, option.val) ? ' selected="selected" ' : ' ';
+                print('<option' + isSelected + 'value="' + option.val + '">' + option.label + '</option>');
+        }); %>
+    </select>
+</span>

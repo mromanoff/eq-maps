@@ -1,0 +1,71 @@
+.group-detail {
+	top: 130px;
+
+	.hero {
+		float: right;
+		width: 70%;
+
+		.controls {
+			display: block;
+		}
+
+		.icon-close-2 {
+			border-width: 2px;
+			top: 35px;
+			right: 35px;
+
+			&:before {
+				margin-top: -20px;
+				font-size: 40px;
+			}
+		}
+	}
+	.side-content {
+		float: left;
+		width: 30%;
+
+		h3 {
+			font-size: 24px;
+			margin: 20px 15px;
+		}
+
+		p {
+			width: 70%;
+			margin: 0 auto;
+			font-size: 12px;
+		}
+
+		hr {
+			width: 40px;
+		}
+
+		.details {
+			padding-top: 35px;
+
+			.icon-training {
+				margin: 0 auto;
+			}
+		}
+		.upcoming {
+			padding: 0;
+
+			hr {
+				display: none;
+			}
+
+			h3 {
+				margin-top: 40px;
+			}
+
+			.controls {
+				display: block;
+			}
+
+			.button-container {
+				a {
+					width: 200px;
+				}
+			}
+		}
+	}
+}

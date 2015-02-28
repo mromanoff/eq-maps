@@ -1,0 +1,151 @@
+//Global module
+
+.class-module {
+	display: block;
+	border-top: 1px solid #b2b2b2;
+	padding: 48px 30px;
+	position: relative;
+	text-align: center;
+
+	&.black-bg {
+		background: #000;
+		border-top: 0;
+		color: #fff;
+	}
+
+	.prev-class {
+		color: #fff;
+		position: absolute;
+		left: 27px;
+		top: 282px;
+        z-index: 200;
+
+		span {
+			&:before {
+				font-size: 30px;
+			}
+		}
+	}
+
+	.next-class {
+		color: #fff;
+		position: absolute;
+		right: 27px;
+		top: 282px;
+        z-index: 200;
+
+		span {
+			&:before {
+				font-size: 30px;
+			}
+		}
+	}
+
+	p {
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 37px;
+
+		.fb-friend-class {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+
+	.rounded {
+		@include border-radius(100%);
+		width: 76px;
+		height: 76px;
+		margin: 0 auto 21px;
+
+		&.grey-bg {
+			background: #7c878e;
+			color: #fff;
+		}
+
+		> span {
+			display: inline-block;
+			padding: 31px 0;
+		}
+	}
+
+	.class-detail {
+		text-transform: uppercase;
+		
+		li {
+			font-size: 15px;
+			font-weight: 200;
+			line-height: 26px;
+
+			&.bold {
+				font-weight: 400;
+			}
+
+			&.big-font {
+				font-size: 20px;
+				letter-spacing: 2px;
+			}
+
+			&.medium-font {
+				letter-spacing: 1px;
+			}
+
+			&.small-font {
+				font-size: 12px;
+				letter-spacing: 1px;
+			}
+		}
+	}
+
+	.share-text, .underlined-small-link {
+		letter-spacing: 1px;
+	}
+
+	.share-text {
+		display: block;
+		font-size: 12px;
+		font-weight: 700;
+		margin-top: 25px;
+		text-transform: uppercase;
+	}
+
+	.social-buttons {
+		padding: 10px 0;
+
+		a {
+			padding: 0 15px;
+			color: #fff;
+
+			&.black {
+				color: #000;
+			}
+		}
+	}
+
+	.underlined-small-link {
+		display: block;
+		color: #fff;
+		font-size: 11px;
+		line-height: 18px;
+		text-decoration: underline;
+		text-transform: uppercase;
+
+		&.black {
+			color: #000;
+		}
+	}
+
+	h4 {
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 15px;
+		letter-spacing: 1px;
+	}
+
+	/* Class overlay confirmation */
+
+	.owl-item > div {
+		position: relative;
+	}
+}
+

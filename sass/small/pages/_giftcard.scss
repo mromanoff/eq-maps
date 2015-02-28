@@ -1,0 +1,152 @@
+.page.giftcard{
+	.giftcard-form {
+		.error-msg {
+
+			.required, .format, .match {
+				display: none;
+				color: red;
+			}
+		}
+
+		.label-required {
+			color: red;
+		}
+
+		.half {
+			width: 50%;
+		}
+
+		.quarter {
+			width: 25%;
+		}
+
+		.label {
+			display: block;
+			margin-left: 26px;
+			font-size: 14px;
+			letter-spacing: 2px;
+		}
+
+		.error {
+			.dropdown {
+				border-color: red;
+				.option {
+					color: red;
+				}
+			}
+		}
+
+	}
+
+	.giftcard-button {
+
+		.button-container {
+			text-align: center;
+			margin-top: -10px;
+
+			.button {
+				background: #fff;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				color: #000;
+				display: inline-block;
+				font-size: 11px;
+				font-weight: 700;
+				letter-spacing: 0.2em;
+				line-height: 15px;
+				min-width: 280px;
+				padding: 15px 25px;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				max-width: 305px;
+			}
+
+			.secondary {
+				background: transparent;
+				border: solid 1px #fff;
+				color: #fff;
+				padding: 14px 25px;
+			}
+
+			button.button:last-child {
+				margin: 0 0 0 -6px;
+			}
+		}
+	}
+
+	.catalog-form {
+		margin-left: 40.2%;
+		margin-top: 5%;
+	}
+
+	.recipientHeader {
+		padding-left: 38.5%;
+		padding-bottom: 4%;
+		padding-top: 6%;
+	}
+
+	.eftPolicy {
+		span {
+			color: #FFF !important;
+		}
+		div {
+			color: #FFF !important;
+		}
+		font {
+			color: #FFF !important;
+		}
+	}
+
+	.flip-icon {
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		display: inline-block;
+	}
+
+	.col {
+		min-height: 558px !important;
+	}
+	
+	.expiration {
+		overflow: hidden;
+	}
+
+	.padding-top-1-x {
+		padding-top: 5%;
+	}
+
+	.padding-top-2-x {
+		padding-top: 10%;
+	}
+
+}
+
+.page.wizard {
+	min-height: 600px !important;
+	
+	.proper-case {
+		text-transform: none;
+	}
+
+	.upper-case {
+		text-transform: uppercase;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.padding-3-x {
+		padding-bottom: 30px;
+	}
+
+	.error {
+		color: red;
+	}
+
+	#textarea_feedback {
+		font-size: 0.689em;
+	}
+}

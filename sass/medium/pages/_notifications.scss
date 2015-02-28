@@ -1,0 +1,51 @@
+.notifications-page {
+	.notifications-header {
+		padding: 50px;
+
+		h1 {
+			font-size: 36px;
+		}
+	}
+	.notifications-container {
+		padding:40px 40px 110px;
+
+		h2 {
+			font-size: 15px;
+		}
+
+		.notifications {
+			padding: 90px 10% 70px;
+
+			.notification-group {
+
+				.notification-list {
+					.notification {
+						padding: 22px 16% 22px 0;
+
+						.time {
+							bottom: auto;
+						}
+
+						&.red,
+						&.yellow {
+							&:before {
+								@include border-radius(100%);
+								display: block;
+								width: 8px;
+								height: 8px;
+								content: ' ';
+								position: absolute;
+								left: -16px;
+							}
+						}
+
+					}
+				}
+			}
+
+			.button-container .box.button {
+
+			}
+		}
+	}
+}

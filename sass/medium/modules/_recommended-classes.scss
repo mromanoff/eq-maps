@@ -1,0 +1,29 @@
+.recommended-classes {
+	/* don't commit this */
+	max-height: 631px;
+	min-height: 591px;
+	padding-top: 40px;
+
+	h3 {
+		font-size: 25px;
+		margin:0 0 0.5em;
+		letter-spacing: 1px;
+	}
+	.recommended {
+		display: inline-block;
+	}
+
+	.carousel-container {
+		min-height: 360px;
+		margin: 40px 20px 0;
+	}
+}
+.home {
+	.recommended-classes {
+		&.class-module {
+			.underlinde-small-link {
+				margin-top: 86px;
+			}
+		}
+	}
+}

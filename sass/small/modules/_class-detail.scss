@@ -1,0 +1,301 @@
+.classdetail {
+	.fpo-module {
+		display: block;
+		padding: 40px 0;
+	}
+
+	.columnsContainer {
+		border-bottom: 1px solid #b2b2b2;
+		float: left;
+		width: 100%;
+	}
+
+	.header-wrapper {
+		min-height: 120px;
+		position: relative;
+		overflow: hidden;
+
+		> img {
+			display: block;
+			width: auto;
+		}
+
+		.overlay {
+			background-color: rgba(0, 0, 0, 0.2);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+		}
+
+		.header-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include translate(-50%, -50%);
+			z-index: 3;
+
+			h1 {
+				font-size: 30px;
+				font-weight: 400;
+				color: #fff;
+				letter-spacing: 2px;
+				text-align: center;
+
+				small {
+					display: block;
+					font-weight: bold;
+					font-size: 13px;
+					letter-spacing: 0;
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+
+	.class-module {
+
+		> .rounded {
+			display: none;
+		}
+
+		&:last-child {
+			clear: both;
+		}
+		
+		h3 {
+		    letter-spacing: 1px;
+		}
+
+		&.no-padding-bottom {
+			padding-bottom: 0;
+		}
+        
+        .class-category-title {
+            text-transform: uppercase;
+            font-size: 12px;
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+		.class-detail {
+			margin-bottom: 25px;
+			.big-font {
+			    margin-bottom: 5px;
+			    font-size: 22px;
+			    font-weight: 400;
+                letter-spacing: 2px;
+			    &:last-child {
+			        margin-bottom: 10px;
+			    }
+			}
+			.medium-font {
+			    letter-spacing: 1px;
+                color: #000;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+			}
+			.opt-status {
+				display: none;
+				position: relative;
+				z-index: 100;
+				margin: 20px 0 -6px;
+				.checkbox {
+					.checkbox-replacement {
+						border: 2px solid #999;
+						width: 12px;
+						height: 12px;
+						&:before {
+							font-size: 28px;
+							top: -8px;
+							left: -8px;
+						}
+					}
+					.label {
+						cursor: pointer;
+						font-size: 12px;
+						font-weight: 700;
+						line-height: 1.1;
+					}
+				}
+			}
+		}
+		
+        .share-text {
+            margin-top: 5px;
+        }
+        
+		.social-buttons {
+			padding: 10px 0 25px;
+		}
+
+		.export-to-calendar {
+			display: none;
+			&.active {
+				display: inline-block;
+			}
+		}
+
+		nav {
+			.add-class, .remove-class {
+				margin: 0 auto;
+				max-width: 426px;
+				padding: 14px 0;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.no-border-top {
+		border-top: 0;
+	}
+
+	.underlined-small-link {
+		display: inline-block;
+		margin: 0 15px;
+	}
+	
+	.bar-chart .chart {
+	    height: 175px;
+	}
+	
+	.dtm-traninercallout {
+	    .class-module {
+	        padding-top: 20px;
+	    }
+	}
+}
+
+.rich-content.overlay-content {
+	.caption {
+		overflow: initial;
+		nav.buttons {
+			text-transform: uppercase;
+			@include css-translate(-50%, 0);
+			position: relative;
+			left: 50%;
+			a {
+				left: auto;
+				&.active ~ a {
+					border-top: 0;
+				}
+			}
+			p {
+				a {
+					float: none;
+					width: auto;
+					padding: 0;
+					display: inline;
+					font-size: inherit;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+nav.buttons {
+	a {
+		&.see-bike, &.book-bike, &.add-class, &.remove-class, &.cancel-class {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+		&.add-class {
+			&.active {
+				&.added {
+					background-color: #7c878e;
+					border: 1px solid #7c878e;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.favorites-button {
+	background: #7c878e;
+	background: rgba(124, 135, 142, .8);
+	font-size: 9px;
+	line-height: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: #fff;
+	display: block;
+	padding: 12px 25px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 140px;
+	z-index: 3;
+	@include box-sizing(border-box);
+	&.active {
+		+ .favorites-list {
+			height: auto;
+			opacity: 1;
+			overflow: initial;
+		}
+	}
+}
+.favorites-list {
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 104px;
+	right: 0;
+	z-index: 10;
+	width: 260px;
+	height: 0;
+	@include css-transition(opacity, 400ms, ease);
+	li {
+		background-color: #7c878e;
+		border-top: 1px solid #969fa5;
+		&:first-child {
+			border-top: 0;
+		}
+		a {
+			display: block;
+			padding: 12px 15px;
+			font-size: 10px;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			span {
+				font-size: 14px;
+				float: left;
+				margin-top: -2px;
+				-webkit-text-stroke: 0.3px; // Fix for jagged icons on Windows for webkit
+				&:before {
+					display: inline-block;
+					width: 16px;
+					margin-right: 10px;
+				}
+			}
+			strong {
+				font-weight: 700;
+			}
+		}
+	}
+	&:before {
+		content: '';
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #7c878e;
+		position: absolute;
+		top: -7px;
+		right: 45px;
+	}
+}
+.gender-feedback{
+	a {
+		color: red;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

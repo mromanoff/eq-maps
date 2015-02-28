@@ -1,0 +1,52 @@
+.page.cycling {
+
+	.columns-layout {
+
+        h1 {
+            max-width: 70%;
+        }
+
+        ul {
+            text-align: center;
+
+            li.column {
+                width: 100%;
+                float: none;
+                display: inline-table;
+                vertical-align: top;
+
+                h3 {
+                    font-size: 0.6em;
+                    font-weight: bold;
+                }
+
+                .content {
+                    .title {
+                        height: 30px;
+                    }
+                    p {
+                        height: 70px;
+                    }
+                } 
+
+                .item-info {
+                    width: 95%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .cycling-hero {
+        header {
+            h1 {
+                font-size: 4.5em;
+            }
+        }
+    }
+    .bio-overlay {
+        .bio-overlay-container {
+            top: 60px;
+        }
+    }
+}

@@ -1,0 +1,952 @@
+/* Activity Cycling Category - Top Message module */
+.upper-cycling-module {
+	padding: 0 35px 50px;
+
+	.upper-select-container {
+		.back-button {
+			font-size: 22px;
+			top: 43px;
+		}
+	}
+	
+	.color-button-box {
+		padding: 36px;
+
+		.close {
+			font-size: 16px;
+			right: 20px;
+			top: 18px;
+		}
+
+		.color-title {
+
+			> p {
+				font-size: 22px;
+				margin-bottom: 12px;
+			}
+		}
+
+		p {
+			font-size: 14px;				
+			margin-bottom: 24px;
+			padding: 0;
+		}
+	}
+
+	.activity-select {
+		font-size: 34px;
+		padding: 41px 0 33px;
+
+		.select-arrow {
+			font-size: 20px;
+		}
+	}
+}
+
+/* Activity Cycling Category - Energy Bar Stats module */
+.graphic-bar-module {
+	padding: 0 75px 63px;
+
+	.small-menu {
+		&.lower {
+			padding-top: 22px;
+		}
+
+		li {
+			.month {
+				.timeframe-select-current {
+					font-size: 22px;
+				}
+			}
+
+			.allTimeTitle {
+				h3 {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+
+	.overlay-wrapper {
+		height: 303px;
+	}
+
+	.activity-select {
+		font-size: 30px;
+		padding-top: 80px;
+	}
+
+	.select-arrow {
+		font-size: 18px;
+	}
+
+	.graphic-result-container {
+		position: relative;
+		.graphic-bar {
+			display: inline-block;
+			margin: 0;
+			min-height: 358px;
+			width: 79%;
+			vertical-align: middle;
+
+			/*&.year {
+				width: 100%;
+			}*/
+		}
+
+		.results-container {
+			display: inline-block;
+			padding: 0;
+			width: 20%;
+			vertical-align: middle;
+
+			/* &.year {
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				@include translate(0%, -50%);
+			} */
+
+			.two-row-container {
+				.stat-item {
+					float: none;
+
+					&:last-child {
+						margin-bottom: 0;
+						margin-top: 54px;
+						float: none;
+					}
+
+					span {
+						&.measure {
+							margin-bottom: 13px;
+							line-height: 5px;
+						}
+					}
+				}
+			}
+
+			.three-row-container {
+				.stat-item {
+					display: block;
+					margin-top: 25px;
+					width: auto;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					span {
+						&.measure {
+							margin-right: 0;
+							margin-bottom: 0;
+							text-align: center;
+							width: auto;
+
+							.measure-title {
+								display: block !important;
+								margin-right: 0;
+								text-align: center;
+								width: 100%;
+								max-width: none;
+							}
+
+							span {
+								color: #d0d3d3;
+								font-size: 25px;
+								font-weight: 200;
+								display: inline-block;
+							}
+						}
+					}
+				}
+			}
+
+			.two-row-container, .three-row-container {
+				.stat-item {
+					span {
+						color: #d0d3d3;
+						font-size: 30px;
+						font-weight: 200;
+						display: inline-block;
+
+						&.measure {
+							float: none;
+							display: block;
+							.measure-title {
+								color: #7c878e;
+								font-weight: 700;
+								font-size: 13px;
+								display: inline-block;
+								margin-right: 5px;
+
+								&:after {
+									content: " ";
+								}
+							}
+
+							.measure-type {
+								color: #7c878e;
+								font-weight: 700;
+								font-size: 12px;
+							}
+						}
+
+						&.val, &.unit {
+							float: none;
+						}
+					}
+				}
+			}
+		}		
+	}
+}
+
+/* Activity Cycling Category - Stats Comparision module */
+.compare-columns {
+	padding: 59px 5% 137px;
+
+	&.ride-stats {
+		.compare-container {
+			max-width: 1040px;
+		}
+	}
+	
+	h3 {
+		font-size: 36px;
+	}
+
+	.compare-table {
+		max-width: 900px;
+
+		ul {
+			&.compare-category {
+				margin-left: 12.5%;
+				li {
+					font-size: 13px;
+					width: 24.5%;
+				}
+			}
+
+			&.col-1 {
+				margin-bottom: 18px;
+			}
+
+			&.col-1, &.col-2 {
+				li {
+					font-size: 32px;
+
+					> span {
+						font-size: 12px;
+					}
+
+					&.title {
+						font-size: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Personal Bests */
+
+.personal-bests {
+	h3 {
+		font-size: 28px;
+		letter-spacing: 1.12px;
+		line-height: 100%;
+		margin: 0 18px 5px;
+	}
+
+	p {
+		font-size: 14px;
+		letter-spacing: 1.12px;
+		margin: 0 30px 24px;
+	}
+
+	.slide-prev, .slide-next {
+		font-size: 32px;
+		top: 40%;
+	}
+
+	.main-best-ride {
+		.best-ride-container {
+			.ride-info-container {
+				.best-ride-content {
+					li {
+						font-size: 12px;
+						line-height: 32px;
+
+						&.icon-star-slim {
+							font-size: 35px;
+						}
+
+						&.title {
+							font-size: 12px;
+							margin: 8px 0 0;
+						}
+
+						&.result {
+							margin: 6px 0 38px;
+							span {
+								&.measure {
+									font-size: 48px;
+
+									> span {
+										font-size: 22px;
+									}
+								}
+							}
+						}
+
+						&.small {
+							font-size: 15px;
+							line-height: 20px;
+						}
+					}
+				}
+
+				.detail-link {
+					font-size: 12px;
+					margin-top: 43px;
+				}				
+			}
+		}
+	}
+}
+
+/* Activity Cycling Category - Milestones and Cycling Leaders modules */
+.common-cta-module {
+	padding: 50px 0 152px;
+
+	h3 {
+		font-size: 28px;
+		letter-spacing: 1.12px;
+		line-height: 100%;
+		margin: 0 18px 5px;
+	}
+
+	p {
+		font-size: 14px;
+		letter-spacing: 1.12px;
+		margin: 0 30px 24px;
+	}
+
+	nav {
+		padding-top: 38px;
+	}
+
+
+}
+
+.main-content {
+	&.col-3 {
+		margin-bottom: 0;
+	}
+
+	&.cycling-leaders {
+		max-width: 500px;
+		margin: 0 auto 48px;
+
+		ul {
+			height: 261px;
+		}
+	}
+
+	.three-circles-container {
+		width: 623px;
+
+		.rounded-image {
+			width: 135px;
+			height: 135px;
+			margin: 0 auto 25px;
+
+			&.small {
+				margin-top: 11px;
+				width: 113px;
+				height: 113px;
+			}
+
+			&.rounded-button {
+				a {
+					font-size: 30px;
+					padding: 43px 0;
+				}
+			}
+		}
+	}
+
+	ul {
+		margin-bottom: 0;
+
+		li {
+			font-size: 15px;
+
+			&.medium-font {
+				font-size: 15px;
+			}
+
+			&.small-font {
+				font-size: 14px;
+			}
+		}
+
+		.image {
+			width: 128px;
+			margin: 0 auto 6px;
+		}
+		
+		.rounded-image {
+			width: 155px;
+			height: 155px;
+			margin: 0 auto 25px;
+
+			&.small {
+				width: 123px;
+				height: 123px;
+				margin-top: 24px;
+				margin-bottom: 33px;
+			}
+		}
+	}
+}
+
+.empty-milestone-container {
+	height: 182px;
+	padding: 50px 60px 0;
+	span {
+		font-size: 16px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+}
+
+.timeline-container {
+	.timeline-wrapper {
+		.timeline-items {
+			li {
+				span {
+					width: 8px;
+					height: 8px;
+				}
+
+				&.big-item {
+					span {
+						width: 12px;
+						height: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.half-module {
+	.image-wrapper {
+		height: 600px;
+	}
+}
+
+/* Activity Cycling - Extra elements */
+.graphic-cycling-circle {
+	height: 515px;
+}
+
+.small-menu {
+	&:last-child {
+		padding-top: 74px;
+	}
+
+	&.upper {
+		li {
+			a {
+				span {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+
+	li {
+		a {
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}
+.activity-session-drilldown {
+	.activity-session-drilldown-icon {
+		margin-bottom: 7px;
+	}
+	.back-button {
+		left: 10%;
+	}
+}
+
+
+/**---- Activity Cycling Details Section ----**/
+.detail-header {
+	.header-wrapper {
+		height: 200px;
+
+		> a {
+			font-size: 20px;
+			top: 37px;
+			left: 37px;
+		}
+
+		.activity-icon {
+			font-size: 65px;
+		}
+	}
+
+	.title-cta-module {
+		padding: 50px 28px;
+		h3 {
+			font-size: 45px;
+			small {
+				font-size: 14px;
+			}
+		}
+
+		.class-info {
+			font-size: 19px;
+		}
+
+		/*.instructor {
+			font-size: 16px;
+			letter-spacing: 1px;
+			margin-bottom: 30px;
+		}
+
+		p {
+			font-size: 14px;
+		}*/
+
+		nav {
+			margin-top: 35px;
+		}
+	}
+}
+
+.class-results-container {
+	.class-results {
+		padding: 50px 10px 0;
+
+		h3 {
+			font-size: 32px;
+			margin-bottom: 45px;
+		}	
+		.results-columns {
+			max-width: 1000px;
+			.result-row {
+				padding: 0 14px;
+				width: 27.5%;
+				ul {
+					li {
+						font-size: 13px;
+
+						&:last-child {
+							font-size: 20px;
+						}
+
+						&.position {
+							p {
+								font-size: 86px;
+								margin-bottom: 20px;
+
+								sup {
+									font-size: 30px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.secondary-info {
+				width: 38%;
+				.secondary-info-container {
+					ul {
+						width: 49.2%;
+
+						&:first-child {
+							margin-bottom: 46px;
+						}
+
+						li {
+							p {
+								font-size: 32px;
+								span {
+									font-size: 13px;
+									margin-bottom: 15px;
+								}
+
+								sub {
+									font-size: 23px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.class-award {
+				padding: 0 14px;
+				width: 27.5%;
+				p {
+					font-size: 14px;
+					margin-bottom: 15px;
+				}
+
+				> img {
+					width: 100px;
+				}
+			}
+
+			.sharing {
+				p {
+					font-size: 13px;
+				}
+
+				.sharing-icon {
+					font-size: 18px;
+					margin: 0 15px;
+				}
+			}
+		}
+	}
+}
+
+.class-stats-container {
+	padding-bottom: 90px;
+	overflow: hidden;
+	.graphic {
+		margin: 27px 0 0;
+		padding: 0 0 0 80px;
+		width: 70%;
+		float: left;
+	}
+	.graphic-stats {
+		margin: 140px auto 0;
+		float: right;
+		width: 20%;
+		> div {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+
+.nav-title {
+	font-size: 32px;
+	font-weight: 400;
+	color: #fff;
+	padding: 30px 0 6px;
+}
+
+#activity-app-nav {
+	max-width: 600px;
+	margin-bottom: 10px;
+
+	li {
+		a.selected {
+			span {
+				padding-bottom: 12px;
+			}
+		}
+	}
+}
+
+.activity-app-timeframe-select {
+	max-width: 1136px;
+
+	.addActivityButton, .addWeightButton {
+		margin-top: 62px;
+		right: 4%;
+		span {
+			font-size: 14px;
+		}
+	}
+
+	.monthAndYearBox {
+		padding-top: 36px;
+	}
+
+	.dateSelectorBox {
+		&.month {
+			min-width: 204px;
+
+			.dateSelector {
+				.timeframe-select-current {
+					font-size: 22px;
+					padding-right: 17px;
+					padding-bottom: 15px;
+				}
+			}
+		}
+
+		&.year {		
+			.dateSelector {
+				.timeframe-select-current {
+					font-size: 22px;
+					.disabled-label {
+						line-height: 28px;
+					}
+					
+					.timeframe-select-current-name {
+						line-height: 17px;
+						height: 22px;
+						padding: 0 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#activity-app-page {
+	.graphic-information-container {
+		margin-top: -22px;
+	}
+}
+
+#activity-app-page-list {
+	padding: 63px 0;
+	
+	&.with-month-navigation {
+		padding-bottom: 0;
+		.list-title {
+			margin-bottom: 8px;
+		}
+	}
+
+	.energy-summary {
+		margin-bottom: 13px;
+	}
+
+	.month-container {
+		&.expanded {
+			.month.navigation {
+				border-top: none;
+			}			
+		}
+	}
+
+	.list-title {
+		font-size: 28px;
+		margin-bottom: 34px;
+	}
+
+	.list-container {
+		.list-item {
+			margin-bottom: 6px;
+
+			.list-item-info {
+				.list-item-info-values {
+					.list-item-info-name {
+						font-size: 16px;
+					}
+				}
+
+				.list-item-info-energy {
+					font-size: 13px;
+
+					strong {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cycling-extra-stats-comparision, .cycling-extra-user-milestones {
+	&.half {
+		width: 50%;
+	}
+}
+
+.cycling-extra-stats-comparision {
+	padding: 53px 0;
+}
+
+.cycling-extra-energy-bar-stats {
+	.small-menu {
+		li {
+			a {
+				span {
+					color: #939393;					
+				}
+			}
+		}
+	}
+
+	.overlay-wrapper {
+		.overlay-inner {
+			h3 {
+				font-size: 32px;
+				font-weight: 200;
+				margin-bottom: 5px;
+				max-width: 455px;
+			}
+
+			a {
+				.button.box.small {
+					font-size: 13px;
+					margin: 0 auto;
+					padding: 15px;
+					width: 280px;
+					@include box-sizing(border-box);
+				}
+			}
+		}
+	}
+}
+
+.cycling-extra-user-milestones {
+	.common-cta-module {
+		padding: 53px 0 60px;
+		height: auto;
+
+		.milestone-item {
+            .distance {
+            	margin-top: 26px;
+            }
+
+			.milestone-title {
+				letter-spacing: 1.28px;
+				font-size: 16px;
+			}
+		}
+
+		.timeline-container {
+			margin: 30px auto 0;
+
+			p {
+				margin: 16px 0 0;
+			}
+		}
+
+		nav.button-container {
+			padding-top: 30px;
+
+			a {
+				width: 281px;
+				padding: 17px 0;
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+/* CHECKINS CALENDAR */
+.checkins-calendar {
+	padding: 5px 0 53px;
+	.graphic-information-container {
+		max-width: 1000px;
+
+		.calendar {
+			max-width: 840px;
+
+			table {
+				width: 780px;
+				tr {
+					height: 63px;
+
+					&.days {
+						td {
+							font-size: 12px;
+						}
+					}
+
+					td {
+						font-size: 16px;
+						span {
+							&.current-day {
+								width: 42px;
+								height: 42px;
+								top: 12px;
+
+								span {
+									padding: 10px 0;
+								}
+							}
+
+							&.activity-day {
+								width: 42px;
+								height: 42px;
+								top: 12px;
+
+								span {
+									padding: 10px 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.activity-graphic-details {
+	> div {
+		margin: 40px 0 63px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		span {
+			font-size: 30px;
+			&.title {
+				font-size: 13px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.activity-eq-graphic {
+	max-width: 1200px;
+	margin: 0 auto 41px;
+}
+
+.graphic-information-container {
+	padding: 0 45px;
+	max-height: 417px;
+
+	canvas {
+		max-height: 423px;
+	}
+
+	/* OVERLAY MESSAGES */
+	.overlay-wrapper {
+		.overlay {
+			max-width: 1100px;
+		}
+		
+		.overlay-inner {
+			max-width: 500px;
+			padding: 40px 10px;
+
+			h3 {
+				font-size: 27px;
+			}
+		}
+	}
+
+	.calendar {
+		.overlay-wrapper {
+			height: 370px;
+		}
+	}
+}

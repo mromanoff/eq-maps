@@ -1,0 +1,154 @@
+.article-list {    
+    @include pie-clearfix;
+
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+
+    .post-info-container {
+        width: 50%;
+    
+        .posts-info {
+            border-right: 1px solid #b2b2b2;
+
+            p {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    & > div {
+        @include box-sizing(border-box);
+        float: left;
+        width: 50%;
+        min-height: 380px;
+        border: none;
+    }
+
+    .articles {
+        @include pie-clearfix;
+        border: none;
+
+        article {
+            float: left;
+            width: 50%;
+
+            .cover, .info {
+                float: none;
+                width: 100%;
+            }
+
+            .info {
+                width: 90%;
+            }
+
+            .cover, .cover:first-child {
+                position: relative;
+                &:before {
+                    z-index: 100;
+                    border-left: 18px solid transparent;
+                    border-right: 18px solid transparent;
+                    border-bottom: 18px solid #fff;
+                    content: "";
+                    display: block;
+                    height: 0;
+                    width: 0;
+                    left: 10%;
+                    margin: -9px 0 0 -9px;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+            span, h6, p {
+                font-size: 12px;
+                max-width: 90%;
+            }
+
+            span {
+                @include inline-block;
+                color: #666;
+                margin-bottom: 5px;
+            }
+
+            p {
+                display: block;
+                margin: 10px 0;
+                letter-spacing: 1px;
+            }
+
+        }
+
+    }
+
+}
+
+
+.module.dtm-pt-inventory-training-qblog-3-column {
+  margin-top: -45px;
+}
+
+
+
+
+.carousel-hero {
+  color: #fff;
+  position: relative;
+  background: none;
+  margin-top: 0;
+  overflow: auto;
+  height: auto;
+
+  .cards-carousel {
+    margin-bottom: 70px;
+  }
+
+  .contents {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+    > div {
+      padding: 40px 20px;
+      position: relative;
+
+      h1 {
+        font-size: 45px;
+        font-weight: 100;
+        letter-spacing: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 100;
+        margin-bottom: 65px;
+      }
+
+      .hero-cta {
+        margin-bottom: 0;
+      }
+
+      // top right link
+      .lnk-tr {
+        position: absolute;
+        top: 40px;
+        right: 46px;
+        text-decoration: underline;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .paragraph {
+
+    .button-container {
+      border-top: none;
+      padding: 0;
+    }
+  }
+}

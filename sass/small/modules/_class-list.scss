@@ -1,0 +1,275 @@
+.bike-classes-container {
+    min-height: 100px;
+    position: relative;
+}
+
+.classes-list, .bike-classes-container {
+    div.empty {
+        padding: 40px;
+        background: white;
+        margin: 10px;
+        text-align: center;
+        
+        h2 {
+            font-weight: 200;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .no-results-button {
+            font-size: 12px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        &.small {
+            padding: 10px;
+            h2 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .loader-holder {
+        position: relative;
+        min-height: 160px;
+    }
+
+    .error-state {
+        position: relative;
+    }
+}
+
+.classes-list {
+	.toggle-day, .day-dates {
+		display: none;
+	}
+	.day-dates {
+		.class-count{
+			float: right;
+			color: rgba(0, 0, 0, 0.5);
+		}
+
+		.current-day {
+			.class-count {
+				color: #C0C0C0;
+			}
+		}
+	}
+
+	.classes-day {
+		display: none;
+		&.current {
+			display: block;
+		}
+
+    }
+    li {
+		background-color: #fff;
+		border-top: 4px solid #efefef;
+		list-style-type: none;
+		.wrapper {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+			@include clearfix;
+			.availability {
+				position: absolute;
+				top: 50%;
+				@include css-translate(0, -50%);
+				p, span {
+					display: block;
+					width: 48px;
+					font-size: 10px;
+					font-weight: 700;
+					text-align: center;
+					text-transform: uppercase;
+					margin: 0;
+				}
+				p {
+					height: 48px;
+					line-height: 48px;
+					color: #fff;
+					&.full {
+						background-color: #333f48;
+						color: #fff;
+						&:before {
+							font-size: 10px;
+							content: 'Full';
+						}
+						+ span {
+							display: none;
+						}
+					}
+				}
+				span {
+					margin-top: 10px;
+				}
+			}
+            .class-info-hit-state {
+                display: inline-block;
+                padding: 20px;
+                width: 80%;
+                margin-top: 2%;
+                
+    			.class-info {
+    				width: 75%; 
+    				float: left;
+    				padding-left: 80px;
+    				position: relative;
+    				h2 {
+    					font-size: 14px;
+    					font-weight: 700;
+    					text-align: left;
+    					margin-bottom: 0px;
+    				}
+    				p {
+    					font-size: 11px;
+    					text-transform: uppercase;
+                        margin: 8px 0;
+    					span {
+    						font-family: 'Graphik Web';
+                            strong {
+                                color: #cc3333;
+                            }
+    					}
+    					&:before {
+    						margin-right: 10px;
+    						color: #cdcdce;
+    					}
+    				}
+                }
+			}
+            .add-to-calendar {
+                position: absolute;
+                cursor: pointer;
+                text-align: center;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 20%;
+                .loader {
+                    width: 60px;
+                    left: -10px;
+                }
+                .class-added {
+                    font-size: 25px;
+                    position: absolute;
+                    top: 40%;
+                    left: 34%;
+                }
+
+                .grey-popup {
+                	background: #333f48;
+                	position: absolute;
+                	width: 200px;
+                	right: 47px;
+                	top: 50%;
+                	-webkit-transform: translateY(-50%);
+
+                	&.closed {
+                		display: none;
+                	}
+
+                	&:before {
+                		content: '';
+						width: 0px;
+						height: 0px;
+						border-style: solid;
+						border-width: 7px 0 7px 7px;
+						border-color: transparent transparent transparent #333f48;
+						position: absolute;
+						top: 35px;
+						right: -7px;
+                	}
+
+                	p {
+                		color: #fff;
+                		font-size: 13px;
+                		font-weight: 200;
+                		margin: 0;
+                		padding: 27px 35px;
+                		text-align: center;
+                		text-transform: uppercase;
+                	}
+                    a {
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+                }
+
+                .add {
+                    position: absolute;
+                    top: 50%;
+                    @include translateY(-50%);
+                    font-size: 26px;
+                    color: #d0d3d3;
+                    &:hover {
+                        color: #333f48;
+                    }
+                }
+                .message {
+                    position: absolute;
+                    display: table;
+                    right: 0;
+                    top: 0;
+                    padding: 10px;
+                    width: 120px;
+                    height: 100%;
+                    background: #333f48;
+                    font-size: 10px;
+
+                    @include transition(transform 0.5s);
+
+                    &.closed {
+                        @include translateX(140px);
+                    }
+
+                    .copy {
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: center;
+                        line-height: 1.4;
+                        .icon-check {
+                            font-size: 28px;
+                            color: #fff;
+                        }
+                    }
+
+                    hr {
+                        max-width: 30px;
+                        margin: 10px auto;
+                        border-top: 1px solid white;
+                        border-bottom: none;
+                    }
+
+                    a {
+                        display: inline;
+                        text-decoration: underline;
+                        color: white;
+                        font-size: 10px;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        color: white;
+                    }
+
+                }
+            }
+		}
+	}
+	.print-button {
+		display: none;
+	}
+}

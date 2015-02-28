@@ -1,0 +1,55 @@
+.checkins-calendar {
+	padding: 5px 0 53px;
+	.graphic-information-container {
+		max-width: 1200px;
+		.calendar {
+			max-width: 840px;
+			table {
+				tr {
+					height: 63px;
+
+					&.days {
+						td {
+							font-size: 12px;
+						}
+					}
+
+					td {
+						font-size: 16px;
+						span {
+							&.current-day {
+								width: 42px;
+								height: 42px;
+
+								span {
+									padding: 10px 0;
+								}
+							}
+
+							&.activity-day {
+								width: 42px;
+								height: 42px;
+								top: 12px;
+
+								span {
+									padding: 10px 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.activity-graphic-details {
+			> div {
+				span {
+					font-size: 30px;
+					&.title {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}

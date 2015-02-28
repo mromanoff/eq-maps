@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Aetna",
+        "serviceName": "carepass",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "BodyMedia",
+        "serviceName": "bmfit",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "Facebook Connect",
+        "serviceName": "fb",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "FitBit",
+        "serviceName": "fitbit",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "Jawbone",
+        "serviceName": "up",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "MapMyFitness",
+        "serviceName": "mmf",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "Moves",
+        "serviceName": "moves",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "MyFitnessPal",
+        "serviceName": "mfp",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "RunKeeper",
+        "serviceName": "hg",
+        "status": "UNLINKED"
+    },
+    {
+        "name": "Withings",
+        "serviceName": "withings",
+        "status": "UNLINKED"
+    }
+]

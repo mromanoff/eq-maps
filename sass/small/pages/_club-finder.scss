@@ -1,0 +1,269 @@
+.club-finder-map {
+  margin-bottom: 80px;
+
+  .buttons {
+    text-align: center;
+  }
+}
+
+.map-wrapper {
+  height: 400px;
+  width: 100%;
+}
+
+//Global Map Container
+.map-container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    .cluster {
+        img { 
+            display: none;
+        }
+
+        .icon-marker {
+            font-size: 48px;
+            color: #eee;
+        }
+
+        small {
+            display: block;
+            left: 0;
+            font-family: $font-family;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 40px;
+            position: absolute;
+            top: 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .map-interaction-lock {
+        a {
+            display: block;
+            height: 52px;
+            margin: 10px 10px 0 0;
+            overflow: hidden;
+            width: 52px;
+
+            span {
+                background: #fff;
+                color: #000;
+                font-size: 100px;
+                left: -24px;
+                line-height: 0.5;
+                position: relative;
+
+                &.icon-unlocked {
+                    background: transparent;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .custom-marker {
+        @include translateZ(0);
+        cursor: pointer;
+        text-align: center;
+        width: 50px;
+
+        .active-info {
+            display: none;
+        }
+
+        &.active {
+            position: relative;
+            width: 125px;
+            z-index: 1;
+
+            .icon-marker-dot {
+                display: none;
+            }
+
+            .active-info {
+                display: block;
+            }
+        }
+
+        .icon-marker-dot {
+            color: #c2c2c2;
+            display: block;
+            font-size: 36px;
+            padding-bottom: 24px;
+            @include transition(color .4s ease);
+
+            &.darker {
+                color: #444;
+            }
+        }
+
+        .icon-marker-o {
+            color: #fff;
+            font-size: 64px;
+        }
+
+        h5 {
+            color: #fff;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 20px 0 0;
+            text-transform: uppercase;
+        }
+
+        &.caption {
+            text-align: center;
+            width: 140px;
+
+            span, small {
+                color: #fff;
+                display: block;
+                font-family: $font-family;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+            small {
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.club-finder {
+    &.module {
+        margin-top: 50px;
+        padding-top: 0;
+    }
+    .map-wrapper {
+        position: relative;
+    }
+
+    .map-container {
+        display: none;
+    }
+
+    .tabs-simple {
+        .map-container {
+          display: block;
+        }
+    }
+}
+
+.clubs-region .club-finder, .club-finder.visible {
+    .map-container {
+        display: block;
+    }
+}
+
+.clubs-region {
+    .club-finder .map-container {
+        display: block;
+    }
+
+    // No matter whether club-finder is visible or not,
+    // for regions this information should not show up
+    .region-information {
+        display: none;
+    }
+}
+
+.dtm-videocallout {
+  margin-bottom: 20px;
+}
+
+.dtm-region-information {
+  > section {
+    @extend .region-information;
+
+    display: block !important; //override .region-information
+  }
+}
+
+.region-information {
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+    display: none;  // hide it by default until we have the info populated
+
+    @include small-padding;
+
+    .title {
+        margin: 30px auto;
+    }
+}
+
+.club-information {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+    h3 {
+        font-size: 21px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin: 0 0 1em;
+        text-transform: uppercase;
+    }
+
+    address, .tel {
+        color: #fff;
+        display: block;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin: 0 0 1em;
+    }
+
+    a.tel {
+        display: block;
+        text-decoration: underline;
+    }
+
+    a.button {
+        margin-top: 1em;
+    }
+}
+
+.region-list-container {
+    @include small-padding;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    h4 {
+        border-left: 50px solid #666;
+        border-right: 50px solid #666;
+        font-size: 14px;
+        font-weight: normal;
+        height: 1px;
+        letter-spacing: 2px;
+        line-height: 0;
+        margin: 20px 0;
+        overflow: visible;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.region-list {
+    color: #000;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    padding: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    h5 {
+        color: #959595;
+        font-size: 20px;
+        font-weight: 200;
+    }
+}

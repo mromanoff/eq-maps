@@ -1,0 +1,11 @@
+{
+  "name": "Activity",
+  "version": "0.3.0",
+  "description": "Activity",
+  "author": "Christian Ramirez",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "^0.10.0"
+  }
+}

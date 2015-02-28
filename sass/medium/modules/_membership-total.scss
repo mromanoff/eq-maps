@@ -1,0 +1,72 @@
+.membership-total {
+    overflow: hidden;
+    .border-wrapper {
+        @include clearfix;
+        border: 1px solid white;
+        border-left: none;
+        border-right: none;
+    }
+    .col {
+        @include box-sizing(border-box);
+        float: left;
+        width: 50%;
+        min-height: 436px;
+        border: none;
+    }
+    .col + .col {
+        border-left: 1px solid white;
+    }
+    small, h3 {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    small {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 32px;
+        margin-bottom: 0.8em;
+    }
+
+    .club-info {
+        display: block;
+        margin-top: 20px;
+        font-size: 13px;
+        letter-spacing: 2px;
+
+        span {
+            display: block;
+            text-align: center;
+        }
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+
+    .due-total {
+        .cta {
+            margin-bottom: 0;
+        }
+    }
+
+    .total {
+        max-width: 240px;
+        margin: 40px auto;
+        margin-top: 20px;    
+    }
+
+    a.button {
+        display: block;
+        max-width: 180px;
+        padding: 1.5em;
+        margin: 40px auto;
+    }
+
+    a.purchase {
+        clear: both;
+        max-width: 280px;
+    }
+}

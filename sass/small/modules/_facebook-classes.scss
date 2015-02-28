@@ -1,0 +1,172 @@
+.facebook-friends-classes {
+	border-top: 1px solid #d9d9d9;
+	clear: both;
+
+	.fb-class-container {
+		min-height: 130px;
+	}
+
+	.fb-friends-container {
+		position: relative;
+		.icon-facebook {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+		}
+		.post-info-container {
+			position: relative;
+			padding: 50px 25px;
+			
+			> span {
+				position: absolute;
+				top: -23px;
+				left: -6px;
+				font-size: 22px;
+			}
+
+			.fb-error {
+				margin-top: 10px;
+			}
+
+			.posts-info {
+				> span {
+					font-size: 30px;
+					display: block;
+					text-align: center;
+					margin-bottom: 31px;
+				}
+
+				p {
+					font-size: 12px;
+					text-align: center;
+				}
+			}
+		}
+		.owl-wrapper {
+			.owl-item {
+				padding: 40px 30px;
+				position: relative;
+				@include box-sizing(border-box);
+			}
+		}
+	}
+
+	.two-part-module {
+		padding: 48px 26px;
+		.left-main-container {
+			position: relative;
+
+			> span {
+				position: absolute;
+				top: -23px;
+				left: -6px;
+				font-size: 22px;
+			}
+
+			.left-container {
+				> span {
+					font-size: 30px;
+					display: block;
+					text-align: center;
+					margin-bottom: 31px;
+				}
+
+				p {
+					font-size: 12px;
+					text-align: center;
+				}
+			}
+		}
+
+		.right-main-container {
+			.right-container {
+				text-align: center;
+
+				a {
+					display: block;
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	// One Friend Class and Friends without classes module
+	.one-friend-class, .friends-whithout-classes {
+		.right-main-container {
+			padding-top: 38px;
+		}
+	}
+	.friends-whithout-classes {
+		.left-main-container {
+			padding-bottom: 38px;
+		}
+	}
+
+	// Friends Without Classes
+	.friends-whithout-classes {
+		.friends-carousel {
+			ul {
+				li {
+					font-size: 12px;
+					text-transform: uppercase;
+					text-align: center;
+
+					&.profile-picture {
+						img {
+							@include border-radius(50px);
+							width: 74px;
+							height: 74px;
+						}
+					}
+
+					&.friend-name {
+						font-weight: bold;
+						margin-top: 10px;
+					}
+				}
+			}
+		}		
+	}
+
+	//Global styles for Class Information
+	.class-information {
+		font-size: 12px;
+		text-transform: uppercase;
+		text-align: center;
+
+		p {
+			margin: 0;
+
+			.fb-friend-class {
+				font-weight: bold;
+			}
+		}
+
+		.class-fb-pics-container {
+			text-align: center;
+			margin: 20px 0; 
+
+			img {
+				@include border-radius(50px);
+				width: 74px;
+				height: 74px;
+				margin: 0 auto;
+			}
+		}
+
+		ul {
+			line-height: 20px;
+
+			li {
+				&:first-child {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.button {
+			margin-top: 20px;
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+.genderModal {
+    .gender-modal-wrapper {
+        width: 764px;
+        padding: 80px 100px 30px;
+        height: auto;
+
+        h2 {
+            span {
+                font-size: 45px;
+            }
+            small {
+                font-size: 14px;
+            }
+        }
+
+        .button-container {
+            .button {
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,168 @@
+.refer-header {
+    h1 {
+        // margin-top: -50px;
+        margin-top: -75px;
+      font-size:45px;
+      letter-spacing: 10px;
+    }
+}
+
+.refer-friend {
+
+    .description {
+        line-height: 1.5em;
+        font-size: 16px;
+    }
+
+    .share {
+        margin-bottom: 40px;
+
+        .icons {
+            padding-bottom: 33px;
+
+            span {
+
+                &.icon-email.active,
+                &.icon-chain.active {
+                    &:after {
+                        bottom: -38px;
+                    }
+                }
+            }
+        }
+
+        .email-a-friend {
+            width: 456px;
+            margin: 0 auto;
+            padding: 40px 40px 4px;
+
+            span {
+                display: inline-block;
+                width: 100%;
+
+                input {
+                    display: inline-block;
+                    width: 49%;
+                    float: left;
+
+                    & + input {
+                        float: right;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+
+            form {
+                padding: 0 15px;
+            }
+
+            input,
+            textarea {
+                font-size: 16px;
+                margin: 3px 0;
+                height: 45px;
+                padding: 0 20px;
+            }
+
+            input[type='submit'] {
+                height: 45px;
+                width: 177px;
+                margin: 20px auto;
+                display: block;
+            }
+        }
+
+        .share-link {
+
+            a.link {
+                width: 46%;
+                margin: 0 auto;
+                font-size: 18px;
+                padding: 20px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+.referral-friends {
+    padding: 70px 25px 100px;
+    h1 {
+        font-size: 45px;
+        font-weight: 200;
+      letter-spacing: 10px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .invited-friends {
+        margin: 57px auto 130px;
+
+        &:before {
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            top: 32px;
+        }
+        li {
+            float: left;
+            margin-top: 0;
+            margin-left: 80px;
+            &:first-child {
+                margin-left: -20px;
+            }
+            .invited-friend {
+                float: none;
+                border: 1px solid #fff;
+                margin-left: 0;
+                margin-top: 10px;
+                &.active {
+                    margin: 0 auto;
+                }
+            }
+            .invited-friend-info {
+                float: none;
+                padding: 0;
+                margin-top: 15px;
+                text-align: center;
+                strong, span {
+                    font-size: 14px;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .referred-friends {
+        text-align: center;
+        li {
+            margin-top: 50px;
+            display: inline-block;
+            margin-left: 10%;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: .5px;
+
+            &:first-child {
+                margin-top: 50px;
+                margin-left: 0;
+            }
+            &.no-referred-msg {
+                font-size: 14px;
+            }
+            strong {
+                font-weight: 600;
+                display: block;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}

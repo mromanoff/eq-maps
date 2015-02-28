@@ -1,0 +1,71 @@
+.page.purchase {
+
+  // these common form elemets should be externalized and avalible to other forms
+
+  form {
+    &.large {
+      fieldset {
+        width: 100%;
+        padding: 0;
+
+        > div {
+          box-sizing: border-box;
+          padding: 0 5px;
+          margin-bottom: 15px;
+          float: left;
+          &.full {
+            width: 100%;
+          }
+          &.three-quarter {
+            width: 75%;
+          }
+          &.half {
+            width: 50%;
+          }
+          &.third {
+            width: 33%;
+          }
+          &.quarter {
+            width: 25%;
+          }
+          &.half-quarter {
+            width: 15%;
+          }
+        }
+      }
+    }
+
+    label {
+      margin-bottom: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: normal;
+      letter-spacing: 0.16em;
+    }
+  }
+
+  .equifit {
+    height: 200px;
+    padding: 60px;
+  }
+
+  #contact {
+    form {
+      &.large {
+        fieldset {
+
+          > div {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  //TODO: this should be moved out membership-total class.
+  // Overwrite strong specificity rules
+  .membership-total .col {
+    min-height: 330px;
+  }
+
+}

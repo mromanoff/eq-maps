@@ -1,0 +1,44 @@
+.nearest-club {
+    position: relative;
+
+    #map {
+        height: 362px;
+        max-height: 500px;
+        background: #000;
+    }
+
+    .nearest-map {
+        header {
+            h3 {
+                margin: 0;
+                margin-top: -120px;
+            }
+            h2 {
+                margin-top: -15px;
+            }
+        }
+        .pin {
+            position: absolute;
+            bottom: 100px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 52px;
+        }
+
+        nav.buttons-container {
+            @include pie-clearfix;
+            a {
+                border:none;
+                display: block;
+                width: 48%;
+                padding-left: 1%;
+                padding-right: 1%;
+                float: left;
+            }
+        }
+
+    }
+
+
+}

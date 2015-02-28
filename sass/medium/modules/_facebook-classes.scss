@@ -1,0 +1,368 @@
+.facebook-friends-classes {
+	width: 100%;
+
+	// Connect to Facebook module
+	.fb-friends-container {
+		padding: 0 60px;
+		.icon-facebook {
+			left: 0;
+			top: 0;
+		}
+		.post-info-container {
+			span {
+				top: 10px;
+				left: 10px;
+				font-size: 30px;
+			}
+
+			a.button span {
+				font-size: 11px;
+			}
+
+			.posts-info {
+				border-right: 0;
+
+				h3 {
+					font-size: 23px;
+					margin-bottom: 18px;
+				}
+
+				p {
+					margin-bottom: 0;
+				}
+
+				nav {
+					margin-top: 39px;
+					padding: 0px;
+				}
+			}
+		}
+	}
+
+	// TWO PARTS MODULE
+	.two-part-module {
+		padding: 0;
+
+		h3 {
+			font-size: 17px;
+			text-align: left;
+			margin: 0;
+		}
+
+		p {
+			font-size: 12px;
+			margin: 29px 0 0;
+		}
+
+		.left-main-container {
+			border-right: 1px solid #e0e0e0;
+			float: left;
+			padding: 0;
+			width: 50%;
+			height: 182px;
+
+			.left-container {
+				position: relative;
+				vertical-align: middle;
+				padding: 18px 21px 22px 70px;
+
+				> span {
+					position: absolute;
+					top: 10px;
+					left: 10px;
+				}
+
+				p {
+					text-align: left;
+					margin-top: 10px;
+				}
+
+				.fb-friends-list {
+					float: left;
+					text-align: center;
+					width: 90%;
+					height: 135px;
+					overflow: hidden;
+
+					ul {
+						display: inline-block;
+						margin: 0 15px;
+
+						li {
+							font-size: 11px;
+							text-align: center;
+
+							&.profile-picture {
+								img {
+									width: 94px;
+									height: 94px;
+								}
+							}
+
+							&.friend-name {
+								font-weight: bold;
+								margin-top: 12px;
+							}
+						}
+					}
+
+				}
+
+				.button-container {
+					float: right;
+					margin: 0;
+					padding: 43px 0;
+
+					button {
+						border: none;
+						color: #cccccc;
+						cursor: pointer;
+						font-size: 45px;
+						padding: 0;
+					}
+				}
+
+				// One Friend module
+				.fb-class-container {
+
+					.class-image {
+						float: left;
+						width: 30%;
+
+						img {
+							&.rounded {
+								@include border-radius(50px);
+								width: 96px;
+								height: 96px;
+							}
+						}
+					}
+
+					.class-information {
+						float: left;
+						width: 63%;
+						padding: 0 0 0 19px;
+					}
+				}
+			}
+		}
+
+		.right-main-container {
+			display: table;
+			width: 49.9%;
+			height: 182px;
+			padding-top: 0;
+
+			.right-container {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				padding: 0 20px;
+
+				h3 {
+					margin-bottom: 37px;
+					text-align: center;
+				}
+
+				a {
+					margin: 0;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	// Many Friends with classes
+	.many-friends-classes {
+		position: relative;
+		font-size: 12px;
+		width: 100%;
+		min-height: 210px;
+		overflow: hidden;
+		@include box-sizing(border-box);
+
+		span {
+			&:before {
+				font-size: 30px;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+			}
+		}
+
+		.button-prev-container, .button-next-container {
+			position: absolute;
+			top: 50%;
+			margin: 0;
+			padding: 0;
+			z-index: 500;
+			@include translate(0, -50%);
+
+			button {
+				border: none;
+				cursor: pointer;
+				color: #cccccc;
+				font-size: 45px;
+				padding: 0;
+			}
+		}
+		
+		.button-prev-container {
+			left: 30px;
+		}
+		.button-next-container {
+			right: 30px;
+		}
+
+		.fb-modules-container {
+			width: 100%;
+		}
+
+		.fb-class-container {
+			float: left;
+			width: 280px;
+			margin-right: 20px;
+
+			.class-image {
+				float: left;
+				width: 35%;
+
+				img {
+					&.rounded {
+						@include border-radius(50px);
+						width: 96px;
+						height: 96px;
+					}
+				}
+
+				.small-pics-container {
+					text-align: center;
+
+					img {
+						&.rounded {
+							@include border-radius(50px);
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+			}
+
+			.class-information {
+				float: left;
+				width: 57%;
+				padding: 0 0 0 19px;
+				position: relative;
+
+				p {
+					text-align: left;
+				}
+
+				// changes for social class join error - Gaurav Mehra
+				.message {
+					position: absolute;
+					display: table;
+					right: 0;
+					top: 0;
+					width: 100%;
+					height: 100px;
+					background: #7c878e;
+					font-size: 10px;
+					-moz-transition: -moz-transform 0.1s;
+					-o-transition: -o-transform 0.5s;
+					-webkit-transition: -webkit-transform 0.5s;
+					transition: transform 0.5s;
+
+					&.closed {
+						-moz-transform: translateY(-140px);
+						-ms-transform: translateY(-140px);
+						-webkit-transform: translateY(-140px);
+						transform: translateY(-140px);
+						background: transparent;
+					}
+
+					.copy {
+						display: table-cell;
+						vertical-align: middle;
+						text-align: center;
+					}
+
+					p {
+						margin-bottom: 0;
+						text-transform: uppercase;
+						color: white;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	//FB class with profile picture
+	.class-fb-pics-container {
+		margin: 0;
+		padding: 0 11px;
+	}
+
+	.class-information {
+
+		p {
+			margin: 0;		
+		}
+
+		ul {
+			font-size: 12px;
+			margin: 12px 0;
+			text-align: left;
+
+			li {
+				text-transform: uppercase;
+
+				&:first-child {
+					font-weight: bold;
+				}
+			}
+		}
+
+		a {
+			font-size: 11px;
+			text-decoration: underline;
+			text-transform: uppercase;
+			float: left;
+		}
+	}
+
+	// One friend Classes specific style
+	.one-friend-class {
+
+		.left-main-container {
+			.left-container {
+				.fb-class-container {
+					.class-image {
+						margin-left: 7%;
+					}
+
+					.class-information {
+						width: 56%;
+					}
+				}
+			}
+		}
+
+		.right-main-container {
+			.right-container {
+				h3 {
+					margin-bottom: 17px;
+				}
+
+				p {
+					margin: 0;
+				}
+
+				a {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}

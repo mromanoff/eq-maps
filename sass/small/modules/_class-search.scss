@@ -1,0 +1,57 @@
+.search-menu {
+	display: block;
+	background: #333F48;
+	padding: 15px 0;
+
+	h3 {
+		color: #FFF;
+	}
+	ul {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			width: 32.4%;
+
+			&:last-child {
+				a {
+					border-right: 0;
+				}
+			}
+
+			a {
+				display: block;
+				border-right: 1px solid #313131;
+				line-height: 13px;
+				padding: 0 5px;
+				text-align: center;
+				text-transform: uppercase;
+
+				span {
+					color: #FFF;
+					font-size: 9px;
+					font-weight: 700;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+
+					&:before {
+						font-size: 11px;
+					}
+
+					&:first-child {
+						display: none;
+					}
+					
+					&.icon-training {
+					    &:before {
+    						font-size: 9px;
+    					}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+.genderModal {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    text-align: center;
+        
+    .gender-modal-wrapper {
+        background: #fff;
+        display: block;
+        padding: 45px 40px 30px;
+        height: 100%;
+        margin: 0 auto;
+        top: 10%;
+        position: relative;
+
+        h2 {
+            span {
+                font-size: 31px;
+                font-weight: 200;
+                line-height: 1.1em;
+            }
+            small {
+                font-size: 12px;
+                font-weight: 400;
+                width: 75%;
+                margin: 0 auto;
+                letter-spacing: 1px;
+                display: block;
+                padding: 15px 0;
+            }
+        }
+        
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .genderBox {
+            border-top: 2px solid #CCC;
+            border-bottom: 2px solid #CCC;
+            text-transform: uppercase;
+            padding: 20px 0;
+            margin-top: 20px;
+
+            .genderBoxTitle {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .genderError {
+                display: block;
+                color: red;
+                margin-top: 15px;
+            }
+
+            .genderOptions {
+                font-size: 26px;
+                color: #BBB;
+
+                a {
+                    color: #BBB;
+                }
+
+                .separator {
+                    margin: 0 10px;
+                }
+
+                .selected {
+                    color: #000;
+                }
+            }
+        }
+
+        .button-container {
+            .button {
+                display: block;
+            }
+            .cancelContainer {
+                margin-top: 20px;
+                .cancel {
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .genderNote {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.range-selection {
+    margin: 30px auto;
+    width: 520px;
+
+    .track-wrapper {
+        margin-bottom: 100px;
+        padding: 20px 0;
+    }
+
+    .track {
+        height: 4px;
+    }
+
+    .thumb {
+        border-radius: 30px;
+        height: 30px;
+        top: -8px;
+        width: 30px;
+    }
+
+    .track-shadow {
+        min-width: 30px;
+        top: -150%;
+    }
+
+    .reference {
+        border-radius: 30px;
+        height: 13px;
+        top: -4px;
+        width: 13px;
+    }
+
+    .caption {
+        display: block;
+    }
+}

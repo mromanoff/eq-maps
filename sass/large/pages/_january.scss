@@ -1,0 +1,130 @@
+$green: #C2CE00;
+
+.page {
+
+	&.january-page {
+
+		.hero {
+
+			header {
+
+				h2 {
+					border: solid 3px #fff;
+					width: 640px;
+					padding: 50px;			
+					span {
+						font-size: 72px;
+					}
+				}
+			}
+		}
+
+		.promo-steps {
+
+			ul {
+				li {
+					&:nth-child(1) {
+						&:before {
+							font-size: 90px;
+						}
+					}
+					&:nth-child(2) {
+						&:before {
+							font-size: 90px;
+						}
+					}
+					&:nth-child(3) {
+						&:before {
+							font-size: 90px;
+						}
+					}
+					.item-info {
+						img {
+							width: 200px;
+							height: 200px;
+						}
+					}
+				}
+			}
+		}
+
+		.scoring {
+			ul {
+				li {
+					.circle {
+						width: 150px;
+						padding-bottom: 150px;
+
+						h4 {
+							font-size: 16px;
+						}
+						h3 {
+							font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.prizes {
+			max-width: 1120px;
+			.center {
+				width: 33%;
+				.circle {
+					width: 230px;
+					height: 230px;
+					h2{ 
+						line-height: 225px;
+						font-size: 35px;
+					}
+				}
+			}
+
+			.side {
+				width: 33%;
+				top: 50px;
+
+				&.left {
+					float: left;
+					text-align: left;
+					.inner {
+						float: right;
+						text-align: left;
+						h3 {
+							text-align: left;
+						}
+						img {
+							left: -12%;
+							top: 50%;
+						}
+					}
+				}
+
+				&.right {
+					float: right;
+					text-align: right;
+					.inner {
+						float: left;
+						text-align: right;
+						h3 {
+							text-align: right;
+						}
+						img {
+							right: -100%;
+							top: 50%;
+						}
+					}
+				}
+			}
+		}
+
+		.join {
+			a {
+				&.terms {
+					font-size: 14px;
+					margin: 80px auto 0;
+				}
+			}
+		}
+	}
+}

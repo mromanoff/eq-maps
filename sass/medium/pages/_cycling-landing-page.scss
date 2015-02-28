@@ -1,0 +1,30 @@
+﻿.page.cyclinggroups {
+
+    .tpl-quote {
+        p {
+            width: 60%;
+            font-size: 1.5em;
+        }
+    }
+
+    .tpl-perksgroup {
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+
+        .columns-layout .column {
+            float: none;
+            width: 500px;
+        }
+    }
+
+    .tpl-ctagroup {
+        .rich-content .caption {
+            margin-top: 0px;
+        }
+        .rich-content .caption nav.buttons a {
+            width: 275px !important;
+        }
+    }
+}

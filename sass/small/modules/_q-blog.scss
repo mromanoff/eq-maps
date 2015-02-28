@@ -1,0 +1,73 @@
+.q-blog {
+	.header-title {
+		padding: 34px 20px;
+		text-align: center;
+
+		h3 {
+			display: inline-block;
+			margin: 0;
+		}
+
+		span {
+			margin-left: 6px;
+			font-size: 20px;
+		}
+	}
+
+	.blog-article-container {
+
+		.article-text-container {
+			padding: 35px 27px;
+			position: relative;
+
+			.selected-article {
+				width: 0px;
+				height: 0px;
+				border-style: solid;
+				border-width: 0 12px 13px 12px;
+				border-color: transparent transparent #ffffff transparent;
+				position: absolute;
+				top: -13px;
+				left: 30px;
+			}
+
+			.recommended {
+				font-size: 11px;
+				font-weight: 700;
+				color: #7c878e;
+				position: absolute;
+				letter-spacing: 1px;
+				top: 0;
+				text-transform: uppercase;
+
+				span.icon-bookmark {
+					font-size: 25px;
+					margin-right: 8px;
+					vertical-align: middle;
+				}
+			}
+			
+			.category-font {
+				font-size: 11px;
+				color: #7d888e;
+				text-transform: uppercase;
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+
+			h4 {
+				font-size: 14px;
+				font-weight: 700;
+				margin-top: 3px;
+				color: #000;
+				letter-spacing: 1px;
+			}
+
+			p {
+				font-size: 12px;
+				letter-spacing: 1.5px;
+				margin: 15px 0 0 0;
+			}
+		}
+	}
+}

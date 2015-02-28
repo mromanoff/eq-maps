@@ -1,0 +1,25 @@
+.logged-homepage {
+	// composed modules
+	.top-module {
+		width: 100%;
+		overflow: hidden;
+	}
+
+
+	// Columns styles
+	.big-column {
+		width: 70%;
+	}
+
+	.small-column {
+		width: 30%;
+	}
+
+	.right {
+		float: right;
+	}
+
+	.left {
+		float: left;
+	}
+}

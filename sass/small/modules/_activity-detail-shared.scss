@@ -1,0 +1,149 @@
+.activity-detail-shared {
+	.header-wrapper {
+		display: block;
+		height: 225px;
+		overflow: hidden;
+		position: relative;
+
+		h3 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include css-translate(-50%, -50%);
+			font-weight: 200;
+			font-size: 32px;
+			color: #fff;
+			line-height: 32px;
+			text-align: center;
+			z-index: 10;
+
+			small {
+				display: block;
+				font-size: 14px;
+				font-weight: 700;
+				letter-spacing: 1px;
+			}
+		}
+
+		.overlay {
+			content: " ";
+			display: block;
+			background-color: rgba(0, 0, 0, 0.2);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 9;
+		}
+	}
+
+	.background-container {
+		.main-container {
+			padding: 0 30px;
+
+			.common-container {
+				border-bottom: 1px solid #b2b2b2;
+				padding: 35px 0;
+
+				h3 {
+					font-size: 26px;
+					font-weight: 400;
+					margin-bottom: 0;
+
+					small {
+						display: block;
+						font-size: 14px;
+						letter-spacing: 1px;
+					}
+				}
+
+				&.stats {
+					ul {
+						display: inline-block;
+						width: 49.2%;
+
+						&:first-child {
+							margin-bottom: 36px;
+						}
+
+						li {
+							text-align: center;
+							p {
+								font-size: 30px;
+								font-weight: 200;
+								text-transform: uppercase;
+								margin-bottom: 0;
+								span {
+									display: block;
+									font-size: 14px;
+									font-weight: 700;
+									margin-bottom: 5px;
+								}
+
+								sub {
+									font-size: 20px;
+								}
+							}
+						}
+					}
+				}
+
+				.rank {
+					text-align: center;
+
+					li {
+						font-size: 14px;
+						letter-spacing: 1px;
+						text-transform: uppercase;
+
+						&:first-child {
+							font-weight: 700;
+						}
+
+						&.position {
+							p {
+								font-size: 56px;
+								font-weight: 200;
+								margin-bottom: 8px;
+
+								sup {
+									font-size: 23px;
+									font-weight: 400;
+									vertical-align: super;
+								}
+							}
+						}
+					}
+				}
+
+				&.milestone-mobile {
+					p {
+						font-size: 12px;
+						text-align: center;
+						margin-bottom: 20px;
+						padding: 0 25px;
+					}
+
+					img {
+						display: block;
+						margin: 0 auto;
+						width: 102px;
+					}
+
+					.caption {
+						margin-top: 38px;
+					}
+				}
+
+				&.milestone-tablet {
+					display: none;
+				}
+			}
+
+			> nav {
+				display: none;
+			}
+		}
+	}
+}

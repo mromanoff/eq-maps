@@ -1,0 +1,36 @@
+.nearest-club {
+    margin-top: 0;
+    .nearest-map {
+        #map {
+            min-height: 500px;
+        }
+        header {
+            h3 {
+                margin-top: -180px;
+            }
+            h2 {
+                margin-top: -20px;
+            }
+        }
+        .pin {
+            bottom: 78px;
+        }
+        nav.buttons-container {
+            position: absolute;
+            z-index: 2;
+            bottom: 1px;
+            left: 50%;
+            margin-right: -50%;
+            a {
+                @include inline-block;
+                width: auto;
+                float: none;
+                border:none;
+                margin: 0 -2px;
+                padding: 1.2em 1.5em;
+                position: relative;
+                left: -50%;
+            }
+        }
+    }
+}

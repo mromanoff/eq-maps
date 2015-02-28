@@ -1,0 +1,423 @@
+.page.cycling {
+
+    .rich-content {
+
+        header {
+            min-height: 356px;
+            max-height: 356px;
+        }
+
+        .rich-content-title {
+            top: 45%;
+            font-size: 50px;
+            width: 480px;
+            border: solid 1px #fff;
+            padding: 50px 15px;
+            height: auto;
+            min-height: 0;
+
+            span {
+                border: none;
+                width: auto;
+                padding: 0;
+                letter-spacing: 10px;
+            }
+            small {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .search-menu {
+        ul {
+            width: auto;
+        }
+    }
+
+    .cycling-info {
+        .rich-content {
+            .rich-content-title {
+                top: 55%;
+                border: none;
+                font-size: 33px;
+                min-height: auto;
+                height: auto;
+                max-width: 1000px;
+                width: auto;
+                padding: 0;
+
+                span {
+                    line-height: 1.5;
+                    letter-spacing: 4px;
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+
+                small {
+                    max-width: 65%;
+                    margin: 35px auto 0 auto;
+                }
+
+                nav {
+                    padding: 1em 0;
+                }
+            }
+        }
+    }
+
+    .dtm-method {
+        .paragraph.rich-content {
+             h3 {
+                margin: 40px auto 15px 0;
+            }
+        }
+
+        .carousel {
+            min-height: 0;
+
+            nav {
+                a {
+                    margin: 25px 10px;
+                }
+            }
+
+            .content-slider-item {
+                .caption-wrapper {
+                    top: 50%;
+
+                    .caption {
+
+                        h2 {
+                            color: #000;
+                            letter-spacing: 3px;
+                        }
+
+                        p {
+                            color: #000;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    .columns-layout {
+
+        h1 {
+            max-width: 70%;
+        }
+
+        ul {
+            text-align: center;
+
+            .owl-item {
+
+                &:nth-of-type(2) {
+
+                    li.column {
+
+                        &:before, &:after {
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: 150px;
+                            background: #b2b2b2;
+                            vertical-align: middle;
+                        }
+
+                        .item-info {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    li.column{
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    li.column {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            li.column {
+                width: 100%;
+                float: none;
+                display: inline-table;
+                vertical-align: top;
+
+                h3 {
+                    font-size: 0.6em;
+                    font-weight: bold;
+                }
+
+                
+
+                .content {
+                    .title {
+                        height: 35px;
+                    }
+                    p {
+                        height: 90px;
+                    }
+                } 
+
+                .item-info {
+                    width: 95%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .team {
+        padding: 0;
+    }
+
+    .feat {
+        padding: 40px 0 20px 0;
+    }
+
+    .cycling-hero {
+        background: #000;
+        color: #fff;
+
+        .columns-layout {
+            ul {
+                .owl-item {
+                    &:nth-of-type(2) {
+                        li.column {
+                            width: 100%;
+                            float: none;
+                            display: inline-table;
+                            vertical-align: top;
+
+                            h3 {
+                                font-size: 0.6em;
+                                font-weight: bold;
+                            }                    
+
+                            .content {
+                                .title {
+                                    height: 35px;
+                                }
+                                p {
+                                    height: 90px;
+                                }
+                            } 
+
+                            .item-info {
+                                width: 95%;
+                                margin: 0 auto;
+                            }
+
+                            &:before, &:after {
+                                content: "";
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        header {
+            position: relative;
+
+            h1 {
+                small {
+                    font-size: 0.16em;
+                }
+            }
+            span {
+                &:before, &:after {
+                    max-width: 140px;
+                    width: 23%;
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+
+    .faq {
+
+        padding: 50px 0;
+        .title {
+            margin: 30px auto;
+        }
+
+        .faq-container {
+
+            h3 {
+                font-size: 1.5em;
+                line-height: 1;
+                position: relative;
+                width: 100%;
+                margin: 0 auto 30px auto;
+
+                span {
+                    position: absolute;
+                    font-size: 20px;
+                    margin-left: 30px;
+                    color: #b2b2b2;
+                    @include css-rotate(45deg);
+                    margin-top: 6px;
+                    right: auto;
+                }
+            }
+
+            .faq-content {
+                p {
+                    font-size: 14px;
+                    margin: 0 auto 30px auto;
+                }
+            }
+
+            &.collapsed {
+                span {
+                    @include css-rotate(0deg);
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .cycling-q-blog {
+        .post-info-container {
+            height: 450px;
+        }
+
+        .article-list {
+
+            .articles {
+                article {
+                    height: 450px;
+
+                    .info {
+                        width: 90%;
+                        padding: 10% 0 0 10%;
+
+                        span {
+                            margin-bottom: 5px;
+                            font-size: 12px;
+                        }
+                        h6 {
+                            font-size: 13px;
+                            margin-bottom: 1em;
+                        }
+                    }
+
+                    &:first-child {
+                        border-right: 1px solid #b2b2b2;
+                        margin-left: -1px;
+                    }
+                }
+            }
+        }
+    }
+    .bio-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .7);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        .bio-overlay-container {
+            background-color: #fff;
+            position: absolute;
+            top: 130px;
+            padding: 20px 40px 40px;
+            width: 100%;
+            @include box-sizing(border-box);
+            h1 {
+                font-size: 21px;
+                font-weight: 500;
+                text-align: center;
+                margin: 30px 0;
+            }
+            .profile-pic-info {
+                width: 400px;
+                margin: auto;
+                position: relative;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    vertical-align: bottom;
+                    @include border-radius(100%);
+                }
+                .content {
+                    width: 280px;
+                    position: absolute;
+                    top: 50%;
+                    left: 120px;
+                    @include translate(0, -50%);
+                    h2, h3 {
+                        font-weight: 600;
+                        margin: 0;
+                        text-align: left;
+                    }
+                    h2 {
+                        font-size: 18px;
+                    }
+                    h3 {
+                        font-size: 13px;
+                        color: #7c7c7c;
+                    }
+                    a {
+                        font-size: 12px;
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+                    p {
+                        display: none;
+                    }
+                }
+            }
+            .profile-info {
+                clear: both;
+                margin-top: 30px;
+                .close-more-info {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    font-size: 0;
+                    .icon-close-slim {
+                        font-size: 20px;
+                        color: #b0b7bb;
+                    }
+                }
+                .qa {
+                    float: left;
+                    width: 33.33%;
+                    padding-left: 40px;
+                    @include box-sizing(border-box);
+                    span, strong {
+                        font-size: 14px;
+                        display: block;
+                    }
+                    strong {
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    span {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

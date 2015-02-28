@@ -1,0 +1,223 @@
+.page.schedule {
+
+  .header {
+    background-color: black;
+    padding: 40px 20px 20px;
+
+    h1 {
+      font-size: 25px;
+      font-weight: 200;
+      color: #fff;
+      line-height: 1.7;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    h3{
+      font-size: 16px;
+      margin: 20px 0 0;
+      color: white;
+    }
+
+    .sub-header {
+      a {
+        font-size: 12px;
+        text-align: center;
+        display: block;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: underline;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .content {
+    min-height: 300px;
+    position: relative;
+
+    .export {
+      margin-bottom: 35px;
+      a {
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        .icon-export {
+          margin-right: 10px;
+          font-size: 16px;
+          bottom: -2px;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  form {
+    fieldset {
+      > div {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .trainer-filter {
+    background-color: black;
+  }
+
+  .class-module {
+    border: none;
+    &.no-padding-bottom {
+      padding-bottom: 0;
+    }
+
+    .underlined-small-link {
+      margin-top: 0;
+    }
+  }
+
+  textarea {
+    width: 90%;
+    height: 10em;
+    margin-top: 1em;
+    resize: none;
+    font-size: 14px;
+  }
+
+  .char-counter {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+
+  .classes-calendar ul li.disabled{
+    a{
+      cursor: default;
+      p{
+        color: #efefef;
+        &.is-mobile{
+          color: black;
+        }
+      }
+      small{
+        color: #efefef;
+      }
+    }
+  }
+
+  .nav-arrows {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background: #000;
+    color: white;
+
+    .icon-left-arrow {
+      left: 30px;
+      color: inherit;
+    }
+
+    .icon-right-arrow {
+      right: 30px;
+      color: inherit;
+    }
+
+    .current-week {
+      text-align: center;
+      padding-top: 7px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  .appointments-list {
+    margin-bottom: 40px;
+
+    li {
+      display:none;
+
+      &:nth-child(7n+1) {
+        display: block;
+      }
+
+      &.empty {
+        display: none;
+      }
+
+      background-color: white;
+      border-top: 4px solid #efefef;
+      border-left: 4px solid #efefef;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 12px;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .wrapper {
+        padding: 1.6em 20px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        &.reserved {
+          padding: 2.85em 20px;
+          color: #999;
+        }
+        &.scheduled {
+          padding: 1em 20px;
+          background-color: #7c878e;
+          color: white;
+        }
+        &.available {
+          cursor: pointer;
+        }
+
+        .add-appointment {
+          position: absolute;
+          text-align: center;
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: 60px;
+          .add {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            @include translateY(-50%);
+            font-size: 26px;
+
+          }
+        }
+      }
+    }
+  }
+
+  .original{
+      font-size: 16px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      color: #7c878e;
+  }
+
+  h3.tier {
+    font-size: 22px;
+    background-color: #7c878e;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    line-height: 104px;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  .buttons {
+    margin-bottom: 50px;
+  }
+}

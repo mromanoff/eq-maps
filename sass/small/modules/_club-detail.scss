@@ -1,0 +1,183 @@
+$club-padding: 5%;
+
+.page.club-detail {
+  .rich-content {
+    header {
+      h2 {
+        small.firts-line {
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+
+  .columns-layout {
+    ul {
+      .big-circle-column {
+        margin-bottom: 36px;
+      }
+    }
+  }
+}
+
+.subregion-list {
+  @include pie-clearfix;
+  .subrerion-title{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  padding: 20px 0;
+}
+
+.club-list {
+  @include pie-clearfix;
+  background-color: #ccc;
+  padding-bottom: 20px;
+
+  ul {
+    padding: 20px;
+    li {
+      box-sizing: border-box;
+      padding: 0 20px;
+      background-color: white;
+      text-align: center;
+      margin: 10px;
+      &.collapsed {
+        .club-body, .icon-close {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.club-location {
+  position: relative;
+  @include pie-clearfix;
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+
+  &.club-map-marker-detail {
+    display: none;
+    position: absolute;
+    width: 284px;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 10px;
+    z-index: 9999;
+    .club-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+
+    .club-body {
+      margin-bottom: 0;
+    }
+  }
+
+  &.club-location-region {
+    border: none;
+  }
+
+  .icon-close {
+    float: right;
+  }
+
+  .club-title {
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .club-body {
+    margin-bottom: 20px;
+  }
+
+  .club-detail {
+    .club {
+      padding: $club-padding;
+      text-align: center;
+      p, h1 {
+        margin: 4px 0;
+      }
+
+      p {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        font-size: 30px;
+        font-weight: normal;
+      }
+
+      hr {
+        max-width: 40px;
+        border-bottom: 0;
+        border-color: #000;
+        margin: 20px auto;
+      }
+
+      a {
+        text-decoration: underline;
+        &.icon-close {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .club-hours {
+      padding: 0 $club-padding;
+      margin: 30px 0;
+
+      hr {
+        max-width: 40px;
+        border-bottom: 0;
+        border-color: #000;
+        margin: 30px auto;
+      }
+
+      .period {
+        margin: 16px 0;
+        @include pie-clearfix;
+
+        span {
+          font-size: 14px;
+          display: block;
+          text-align: center;
+          &.day-name {
+            text-transform: uppercase;
+          }
+        }
+
+      }
+      .box.button {
+        max-width: 55%;
+        margin: 30px auto;
+      }
+    }
+  }
+
+  .map-container {
+    background: #000;
+
+    .custom-marker {
+      width: 300px;
+
+      &.active {
+        margin: -100px 0 0;
+      }
+
+      h5 {
+        font-size: 20px;
+      }
+    }
+  }
+}

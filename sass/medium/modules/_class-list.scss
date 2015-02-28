@@ -1,0 +1,148 @@
+.classes-list {
+	background-color: #efefef;
+	overflow: hidden;
+	* {
+		@include box-sizing(border-box);
+	}
+
+	.toggle-day, .day-dates {
+		display: block;
+	}
+	.toggle-day {
+		border-top: 2px solid #efefef;
+		background-color: #fff;
+		padding: 15px 20px;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1.12px;
+		span {
+			margin-left: 5px;
+			font-size: 16px;
+			vertical-align: middle;
+		}
+	}
+	.day-dates {
+        border: 1px solid #d9d9d9;
+		text-transform: uppercase;
+        @include clearfix;
+        p {
+            font-size: 14px;
+            font-weight: 700;
+			margin: 0;
+		}
+		span {
+			font-size: 12px;
+		}
+		
+		&.fixedNav2{
+			position: fixed;
+			width: 100%;
+			top: 130px;
+			z-index: 1;
+			transition: position 0.3s;
+		}
+
+		li {
+            display: none;
+			background-color: #efefef;
+			border-top: 0;
+			float: left;
+			width: 33.33%;
+			padding: 12px 0;
+			&.current-day {
+				background-color: #7c878e;
+				color: #fff;
+				div {
+					border: 0;
+				}
+			}
+			div {
+				border-left: 1px solid #dedede;
+				padding: 0 27px;
+			}
+            &:nth-child(-n+3) {
+                display: block;
+            }
+        }
+	}
+	.classes-day-container {
+		height: 50px;
+		overflow: hidden;
+
+        &.active {
+            height: auto;
+        } 
+        .classes-day:nth-of-type(4), .classes-day:nth-of-type(5), .classes-day:nth-of-type(6), .classes-day:nth-of-type(7) {
+            display: none;
+        }
+		.classes-day:first-child {
+			border-left: 6px solid #fff;
+		}
+		&:last-of-type {
+			border-bottom: 2px solid #efefef;
+		}
+	}
+	.classes-day {
+		float: left;
+		width: 33.33%;
+        min-height: 1px;
+		border-left: 6px solid #efefef;
+		display: block;
+		li {
+			border-top: 2px solid #efefef;
+			.wrapper {
+				.availability {
+					p {
+						width: 38px;
+						height: 38px;
+						line-height: 38px;
+					}
+				}
+				.class-info {
+					width: 100%;
+					padding-left: 60px;
+					h2 {
+						font-size: 11px;
+						letter-spacing: .88px;
+					}
+					p {
+						margin: 3px 0;
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.print-button {
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1.8px;
+		display: table;
+		margin: 20px auto;
+		&:before {
+			font-size: 18px;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+	}
+
+	li {
+		.wrapper {
+			.add-to-calendar {
+		    	.grey-popup {
+		    		p {
+		    			font-size: 11px;
+		    		}
+		    	}
+		    }
+		    .class-info-hit-state {
+		    	width: 90%;
+		    	margin-top: 5%;
+		    }
+		}
+	}
+}

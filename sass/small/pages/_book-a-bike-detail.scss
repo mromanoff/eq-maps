@@ -1,0 +1,634 @@
+// TODO: Change and remove this. Talk with visual team.
+
+.page.image.bookabike {
+	min-height: 0;
+	background-color: #000;
+}
+
+.page.image.bookabike .background {
+	bottom: auto;
+	z-index: 0;
+	img {
+		width: auto;
+	}
+}
+
+.page .book-a-bike-detail {
+	min-height: 100px;
+	background: #000;
+	position: relative;
+	h2, h3 {
+		text-align: center;
+
+		small {
+			font-size: 12px;
+			font-weight: 400;
+			letter-spacing: 2px;
+			line-height: 1.5em;
+			&.name {
+				display: block;
+			}
+		}
+		span {
+			font-size: 31px;
+			font-weight: 200;
+			display: block;
+			letter-spacing: 4px;
+			line-height: 1.1em;
+		}
+	}
+
+	.message {
+		text-transform: none;
+		font-size: 12px;
+		letter-spacing: 2px;
+		padding: 0 15px;
+	}
+
+	.upper-button {
+		font-size: 12px;
+		text-transform: uppercase;
+		text-decoration: underline;
+		letter-spacing: 1px;
+	}
+
+	.background {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	.head {
+		border-top: 1px solid #292929;
+		text-transform: uppercase;
+		background-color: #000;
+		text-align: center;
+		overflow: hidden;
+		color: #fff;
+		padding: 20px 0 0;
+
+		a {
+			color: #fff;
+		}
+
+		.book-fav-bike {
+			display: none;
+		}
+
+		.message {
+			color: rgba(255,255,255,.8);
+		}
+
+		.confirmation {
+			padding: 20px 0;
+		}
+
+		.details {
+			.expand {
+				.expand-button {
+					h2.title {
+						margin-top: 0;
+						margin-bottom: 0;
+
+						a {
+							font-size: 12px;
+							display: block;
+							padding-top: 16px;
+							padding-bottom: 6px;
+							letter-spacing: 1px;
+
+							.icon-dropdown {
+								margin-left: 6px;
+								font-size: 12px;
+								display: inline-block;
+							}
+						}
+					}
+					.short-data {
+						text-align: center;
+						font-size: 10px;
+						letter-spacing: 1px;
+						margin: 0;
+					}
+				}
+				.expandable {
+					display: none;
+				}
+				.more-details {
+					border-bottom: 2px solid #292929;
+					font-size: 12px;
+					text-align: center;
+					padding-top: 10px;
+
+					p {
+						margin-bottom: 10px;
+					}
+
+					.date {
+						span {
+							display: none;
+						}
+					}
+
+					.links {
+						padding-top: 12px;
+						padding-bottom: 24px;
+
+						a {
+							letter-spacing: 0;
+							padding: 0 15px;
+						}
+					}
+				}
+
+				&.active {
+					.expandable {
+						display: block;
+					}
+					.hidden-on-expanded {
+						display: none;
+					}
+					.expand-button {
+						h2.title {
+							a {
+								span {
+									@include css-rotate(180deg);
+									display: inline-block;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.bikes-graphic {
+				width: 90%;
+				height: 146px;
+				margin: 36px auto;
+				position: relative;
+
+				.bike {
+					font-family: helvetica, sans-serif;
+					position: absolute;
+					background-color: #fff;
+					color: #000;
+					width: 16px;
+					height: 16px;
+					font-size: 9px;
+					text-align: center;
+					line-height: 19px;
+					font-weight: 700;
+                    cursor: pointer;
+                    &.favorite-bike {
+                    	background-color: #848589;
+                    	&.unavailable {
+                    		&:hover {
+                    			border: 0;
+                    		}
+                    	}
+                    	&:before {
+                    		font-size: 5px;
+                    		margin-right: -1px;
+                    		vertical-align: middle;
+                    	}
+                    }
+				}
+
+				.unavailable {
+					color: #a3a3a3;
+					background-color: transparent;
+					font-weight: 400;
+				}
+
+				.selected {
+					background-color: #858688;
+					color: #fff;
+				}
+
+				.faved {
+					background-color: #858688;
+					color: #fff;
+
+					&:before {
+						font-family: 'icomoon';
+						content: "\e61d";
+						font-size: 5px;
+						position: relative;
+						top: -2px;
+					}
+				}
+
+				.door {
+					position: absolute;
+					height: 12px;
+					width: 10px;
+					color: rgba(255, 255, 255, 0.5);
+
+					&:before {
+						font-size: 12px;
+						line-height: 1.25em;
+						display: block;
+						content: "\e61f";
+					}
+				}
+
+				.instructor-bike {
+					position: absolute;
+					font-size: 0px;
+					letter-spacing: 0px;
+					width: 16px;
+
+					.icon-bike-2 {
+						display: block;
+						font-size: 14px;
+						padding-bottom: 2px;
+					}
+				}
+			}
+		}
+
+		.reserved {
+			margin-bottom: 30px;
+		}
+
+		.selected-bike {
+			background-color: #7c878e;
+			text-align: left;
+			font-size: 14px;
+			padding: 20px 0 20px 18px;
+		}
+
+	}
+
+	.content {
+		text-transform: uppercase;
+		text-align: center;
+
+		.message {
+			color: #fff;
+		}
+
+		.confirmation {
+			background-color: #fff;
+			padding: 35px 0;
+
+			.share {
+				font-weight: 700;
+				font-size: 13px;
+				letter-spacing: 2px;
+				margin-bottom: 5px;
+
+				.social-icons {
+					display: block;
+
+					a {
+						display: inline-block;
+						font-size: 16px;
+						margin: 5px 0 10px;
+						padding: 15px 12px;
+					}
+				}
+			}
+
+			.export {
+				margin-bottom: 35px;
+
+				a {
+					font-weight: 700;
+					font-size: 12px;
+					letter-spacing: 2px;
+
+					.icon-export {
+						margin-right: 10px;
+						font-size: 16px;
+						bottom: -2px;
+						position: relative;
+					}
+				}
+			}
+
+			.reminder {
+				margin: 0 auto 30px;
+				width: 85%;
+			}
+
+			.options {
+				a {
+					font-size: 13px;
+					padding: 0 8px;
+				}
+				.bike-settings-container {
+					display: none;
+					margin: 20px 0;
+					position: relative;
+				}
+			}
+			.opt-status {
+				display: none;
+				position: relative;
+				z-index: 100;
+				margin: 30px auto;
+				padding: 25px;
+				border-top: 1px solid #b2b2b2;
+				border-bottom: 1px solid #b2b2b2;
+				width: 90%;
+				@include box-sizing(border-box);
+				> p {
+					font-size: 12px;
+				}
+				.checkbox {
+					.checkbox-replacement {
+						border: 2px solid #999;
+						width: 12px;
+						height: 12px;
+						&:before {
+							font-size: 28px;
+							top: -8px;
+							left: -8px;
+						}
+					}
+					.label {
+						cursor: pointer;
+						font-size: 12px;
+						font-weight: 700;
+						line-height: 1.1;
+					}
+				}
+			}
+		}
+
+		.countdown {
+			color: #fff;
+			padding: 30px 0;
+
+			h3 {
+				margin: 0 0 15px;
+
+				small {
+					font-size: 10px;
+					letter-spacing: 1px;
+				}
+
+				span.countdown-time {
+					font-size: 50px;
+					line-height: 1.5em;
+				}
+
+				span.countdown-digit {
+					font-size: 99px;
+					line-height: 2em;
+				}
+			}
+
+			.message {
+				p {
+					letter-spacing: 1px;
+					width: 70%;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		.bike-list {
+
+			.book-fav-bike {
+				a {
+                    position: relative;
+					display: block;
+					color: #131313;
+					font-size: 14px;
+					font-weight: 700;
+					padding: 18px;
+					border-bottom: 1px solid #D8D8D8;
+					text-align: left;
+					letter-spacing: 1px;
+                    background: white;
+
+					.icon-star {
+						font-size: 11px;
+						position: relative;
+						margin-right: 5px;
+						top: -1px;
+					}
+
+					.number {
+						font-weight: 400;
+					}
+				}
+				&.disabled {
+					a {
+						background-color: #848589;
+						color: #555;
+						cursor: default;
+					}
+				}
+			}
+
+			ul {
+				li {
+					position: relative;
+					background-color: #fff;
+                    a {
+        				display: block;
+        				color: #131313;
+        				font-size: 14px;
+        				font-weight: 700;
+        				padding: 18px;
+        				border-bottom: 1px solid #d8d8d8;
+        				text-align: left;
+        				letter-spacing: 1px;
+                    }
+                    &.selected {
+                        background: #eaeaea;
+                        a {
+                            cursor: default;
+                        }
+                    }
+                    &.unavailable {
+                        a {
+                            cursor: default;
+                            color: #efefef;
+                        }
+                    }
+                    &.selected-bike {
+                    	background-color: #7c878e;
+                    	a {
+                    		color: #fff;
+                    		span {
+                				font-weight: 500;
+                			}
+                    	}
+                    }
+                }
+			}
+		}
+
+		.class-full {
+			padding: 35px 0;
+
+            color: white;
+
+			h3 {
+				margin-bottom: 15px;
+			}
+
+			.button-container {
+				margin: 25px 5px;
+
+				.button.box {
+					font-size: 11px;
+					padding: 1.5em 3em;
+				}
+			}
+		}
+		
+	}
+
+	.modals {
+		background-color: #000;
+		position: fixed;
+		z-index: 999;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		text-align: center;
+
+		.close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+
+		> div {
+			position: relative;
+			height: 100%;
+		}
+
+		h2 {
+			span, small {
+				padding: 15px 0;
+			}
+
+			small {
+				letter-spacing: 1px;
+				display: block;
+			}
+		}
+
+		.modal-wrapper {
+			background: #fff;
+			padding: 80px 20px 90px;
+
+			.button-container {
+				padding: 1.3em 0 3.5em;
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+				.button.box {
+					font-size: 11px;
+					padding: 18px 35px;
+					width: 177px;
+					height: 45px;
+				}
+			}
+
+			.strikes-count {
+				padding: 15px 0;
+				@include clearfix;
+				width: 100px;
+				margin: 0 auto;
+
+				span {
+					border: 3px solid #7c878e;
+					margin: 7px;
+					width: 12px;
+					height: 12px;
+					display: block;
+					border-radius: 100%;
+					float: left;
+				}
+
+				.missed {
+					color: #7c878e;
+					width: 18px;
+					height: 18px;
+					border: none;
+					font-size: 17px;
+					margin-top: 6px;
+
+					&:before {
+						font-family: 'icomoon';
+						content: '\e60e';
+					}
+				}
+			}
+		}
+	}
+
+
+	/* Page views */
+
+	.modals,
+	.modals > div {
+		display: none;
+	}
+
+	&.book .book {
+		display: block;
+	}
+
+	&.confirmed .confirmed {
+		display: block;
+	}
+
+	&.countdown {
+		.countdown {
+			display: block;
+
+			.content {
+				.countdown {
+					display: block;
+
+					.countdown-digit {
+						display: none;
+					}
+				}
+			}
+
+			&.seconds {
+				.content {
+					.countdown {
+						.countdown-digit {
+							display: block;
+						}
+						.countdown-time {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.pick-favorite .pick-favorite {
+		display: block;
+
+		.head {
+			.details,
+			.pick-a-favorite {
+				display: block;
+			}
+		}
+	}
+
+	.modal {
+		.modals {
+			display: block;
+		}
+	}
+}
+
+

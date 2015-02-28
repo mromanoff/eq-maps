@@ -1,0 +1,242 @@
+$milestoneWidth: 51px;
+$milestoneWidthSmall: 40px;
+
+.cycling {
+    .search-menu {
+        ul {
+            li {
+                width: 32.4%;
+                float: none;
+            }
+        }
+    }
+}
+
+.cycling-milestones-hero {
+    header {
+        > a {
+            font-size: 30px;
+            top: 40px;
+            left: 35px;
+        }
+        .cycling-title {
+            span {
+                font-size: 18px;
+                letter-spacing: 2.7px;
+            }
+            p {
+                font-size: 14px;
+                margin: 20px 0;
+            }
+            h2 {
+                font-size: 50px;
+                letter-spacing: 10px;
+            }
+        }
+    }
+}
+.cycling-milestones-container {
+    .cycling-buttons {
+        a {
+            font-size: 14px;
+        }
+    }
+    .milestones-list {
+        padding: 53px 20px 17px;
+    }
+    .milestones-header {
+        @include clearfix;
+        li {
+            display: inline-block;
+            margin-left: 100px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:before {
+                content: none;
+                display: none;
+            }
+        }
+        span {
+            font-size: 13px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+    }
+    .milestones-list {
+        @include clearfix;
+        > h2 {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: 8px;
+        }
+        > p {
+            font-size: 13px;
+            line-height: 20px;
+            margin: 5px auto 0;
+            max-width: 30%;
+        }
+        .milestones-items-container {
+            margin: 65px auto;
+            .milestone-item:first-child {
+                padding-left: 0;
+                width: 60px;
+            }
+        }
+        .milestone-item-container {
+            height: auto;
+        }
+        .milestone-item {
+            padding: 0 0 0 14px;
+            display: inline-block;
+            vertical-align: top;
+            width: 75px;
+            @include box-sizing(border-box);
+            &.small {
+                padding: 10px 0 0 5px;
+                width: 67px;
+                &:hover {
+                    .milestone-icon {
+                        @include css-scale(1.5);
+                    }
+                }
+                .milestone-icon {
+                    width: $milestoneWidthSmall;
+                    height: 40px;
+                    margin: 0 auto;
+                    @include transition(all, 250ms, ease);
+                    &:after {
+                        width: $milestoneWidthSmall;
+                    }
+                }.milestone-item-container {
+                    height: auto;
+                }
+                .milestone-info {
+                    h2 {
+                        color: #000;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+            &:before {
+                content: "\e645";
+                width: auto;
+                font-size: 5px;
+                position: absolute;
+                top: 27px;
+                left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            .miles-track-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 10px;
+                height: auto;
+                margin-top: 0;
+            }
+            .miles-track {
+                position: absolute;
+                top: 22px;
+                left: 0; /* value to change miles track position */
+                border-left: 0;
+                border-top: 1px solid #000;
+                width: 0px;
+                height: auto;
+                .miles-traveled {
+                    left: 100%;
+                    border-top: 0;
+                    border-left: 1px dotted #000;
+                    width: auto;
+                    height: 50px;
+                    margin-left: 0;
+                    &:before {
+                        width: 4px;
+                        height: 12px;
+                        top: auto;
+                        bottom: -6px;
+                        left: -2px;
+                    }
+                    &:after {
+                        font-size: 14px;
+                        width: 100px;
+                        top: -20px;
+                        left: 50%;
+                        right: auto;
+                        padding: 0;
+                        text-align: center;
+                        @include css-translate(-50%, 0);
+                    }
+                }
+            }
+            .milestone-icon {
+                width: 60px;
+                height: 60px;
+                float: none;
+                margin: -5px auto;
+                &:after {
+                    width: $milestoneWidth;
+                }
+            }
+            .milestone-info {
+                position: static;
+                top: auto;
+                left: auto;
+                margin: 30px auto 0;
+                width: 65px;
+                text-align: center;
+                @include css-translate(0, 0);
+                h2 {
+                  font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+.milestones-overlay {
+    .milestone-information-container {
+        width: 737px;
+        h2, h3, p {
+            width: 70%;
+        }
+    }
+}
+.milestone-information-container {
+    padding: 60px 22px;
+    img {
+        margin-bottom: 20px;
+    }
+    h2, h3 {
+        font-size: 30px;
+        margin: 0 auto;
+        width: 50%;
+    }
+    p {
+        margin: 30px auto 50px;
+        width: 50%;
+    }
+    .bottom-info {
+        font-size: 13px;
+        padding-top: 55px;
+        > .button {
+            margin-left: -4px;
+            display: inline-block;
+            padding: 14px 0;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        .social-share {
+            margin-top: 50px;
+        }
+    }
+}
+.close-modal {
+    font-size: 13px;
+    color: #000;
+}

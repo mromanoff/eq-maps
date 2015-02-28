@@ -1,0 +1,99 @@
+.notifications-page {
+	.notifications-header {
+		background-color: #000;
+		padding: 30px 15px;
+
+		h1 {
+			font-size: 24px;
+			font-weight: 200;
+			text-align: center;
+			color: #fff;
+		}
+	}
+	.notifications-container {
+		background-color: #efefef;
+		padding: 35px 20px 50px;
+
+		h2 {
+			font-size: 14px;
+			font-weight: 400;
+			text-align: center;
+			color: rgba(0, 0, 0, 0.8);
+			letter-spacing: 2px;
+		}
+
+		.notifications {
+			margin-top: 35px;
+			padding: 60px 10%;
+			background-color: #fff;
+
+			.notification-group {
+				margin-top: 48px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				.date {
+					font-size: 15px;
+					font-weight: 700;
+					margin: 0;
+					text-align: left;
+					margin-bottom: 10px;
+				}
+				.notification-list {
+					.notification {
+						padding: 22px 0 38px;
+						font-size: 13px;
+						border-top: 1px solid #ccc;
+						text-transform: uppercase;
+						position: relative;
+
+						.time {
+							position: absolute;
+							right: 0;
+							font-size: 14px;
+							bottom: 8px;
+						}
+
+						&:first-child {
+							border-top: none;
+						}
+
+						&.red,
+						&.yellow {
+							&:before {
+								@include border-radius(100%);
+								display: block;
+								width: 8px;
+								height: 8px;
+								content: ' ';
+								position: absolute;
+								left: -16px;
+								top: 26px;
+								margin-top: 0;
+							}
+						}
+
+						&.red:before {
+							background-color: #ea1414;
+						}
+						&.yellow:before {
+							background-color: #f6e202;
+						}
+					}
+				}
+			}
+
+			.button-container .box.button {
+				font-size: 11px;
+				letter-spacing: 3px;
+				padding: 16px 60px;
+			}
+		}
+	}
+
+	& + footer {
+		margin-top: 0;
+	}
+}

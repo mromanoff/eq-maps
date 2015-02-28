@@ -1,0 +1,17 @@
+﻿.page.cyclinggroups {
+    .tpl-perksgroup {
+        .columns-layout .column {
+            float: left;
+            width: 33%;
+        }
+
+        .columns-layout {
+            max-width: 1200px;
+
+            ul {
+                width: 100%;
+                max-width: 1200px;
+            }
+        }
+    }
+}

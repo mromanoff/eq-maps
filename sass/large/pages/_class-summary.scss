@@ -1,0 +1,216 @@
+.class-summary {
+	
+	padding-top: 0px;
+
+	.header-wrapper {
+		> a {
+			font-size: 30px;
+			top: 40px;
+			left: 35px;
+		}
+
+		.header-title {
+			h1 {
+				font-size: 43px;
+				small {
+					display: block;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	.summary-content {
+		max-width: 1425px;
+
+		.upper-module {
+			padding: 42px 0 0;
+
+			h3 {
+				font-size: 45px;
+				line-height: 33px;
+				margin: 0 0 18px;
+				small {
+					font-size: 16px;
+					margin-bottom: 0;
+				}
+			}
+
+			ul {
+				li {
+					font-size: 22px;
+					line-height: 28px;
+
+					&.instructor-font {
+						font-size: 32px;
+						margin-bottom: 12px;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		.error-area {
+			height: 31px;
+		}
+
+		.editable-info-container {
+			padding: 27px 0 36px;
+			margin-bottom: 35px;
+			width: 598px;
+
+			&.five-items {
+				width: 760px;
+
+				.two-col, .one-col {
+					form {
+						input {
+							max-width: 135px;
+							font-size: 22px;
+						}
+					}
+				}
+			}
+
+			form {
+				input[type="text"] {
+					max-width: 145px;
+				}
+
+				input[type="radio"] {
+					padding: 0;
+				}
+			}
+
+			.intensity {
+				//min-height: 45px;
+
+				.intensity-level-container {
+					height: 63px;
+					form {
+						.intensity-checkbox {
+							margin: 3px 19px;
+							width: 24px;
+							height: 24px;
+							input[type="radio"] {
+								width: 24px;
+								height: 24px;
+								margin: 0;
+							}
+						}
+					}
+
+					.intensity-line {
+						top: 24px;
+						width: 150px;
+					}
+
+					.intensity-level {
+						font-size: 14px;
+						top: 45px;
+					}
+				}
+			}
+
+			.measure-title {
+				font-size: 13px;
+
+				.measure {
+					font-size: 32px;
+					line-height: 21px;
+					margin-top: 6px;
+				}
+			}
+
+			.edit-container {
+				right: -48px;
+				.edit-button {
+					font-size: 11px;
+					font-weight: 600;
+					span {
+						font-size: 17px;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+
+		.notes-container {
+			margin: 35px auto;
+			max-width: 598px;
+			text-align: center;
+			> span {
+				font-size: 13px;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font-size: 15px;
+				width: 300px;
+				margin-bottom: 45px;
+			}
+
+			a {
+				width: 280px;
+				margin: 0 auto;
+			}
+		}
+
+		.button-container {
+			padding: 0px 0 45px;
+			margin: 0px;
+			a {
+				font-size: 12px;
+			}
+		}
+
+		.class-rank-container {
+			width: 425px;
+
+			.rank-result {
+				span {
+					font-size: 13px;
+				}
+
+				p {
+					span{
+						font-size: 33px;
+						sup {
+							font-size: 16px;
+						}
+					}
+
+				}
+			}
+
+			.first-position {
+				h4 {
+					font-size: 17px;
+				}
+
+				p {
+					font-size: 14px;
+					&.position-results {
+						margin-bottom: 5px;
+					}
+				}
+			}
+
+			nav.button-container {
+				a {
+					padding: 14px 0;
+					width: 250px;
+				}
+			}
+
+			.social-icons {
+				a {
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+}

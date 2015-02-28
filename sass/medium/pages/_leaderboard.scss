@@ -1,0 +1,68 @@
+﻿.page.leaderboard {
+    .rich-content header {
+        .content {
+            h1 {
+                font-weight: 300;
+                font-size: 3em;
+            }
+
+            ul {
+                li {
+                    padding: 0 2em;
+
+                    a {
+
+                        &.active {
+                            font-weight: 600;
+                            border-bottom: 1px solid #fff;
+                            padding-bottom: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #leaderboard-container {
+        th, td {
+            padding: 23px 0;
+        }
+
+        th {
+            font-size: 1em;
+        }
+
+        td {
+            font-size: 1.5em;
+        }
+
+        th.rank {
+            padding-left: 80px;
+            padding-right: 40px;
+        }
+
+        th.name {
+            text-indent: 80px;
+        }
+
+        th.energy {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        td.rank {
+            text-indent: 30px;
+        }
+
+        td.name {
+            img {
+                width: 65px;
+                height: 65px;
+                @include border-radius(65px);
+                margin-right: 15px;
+            }
+        }
+
+
+    }
+}

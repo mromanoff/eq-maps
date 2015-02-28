@@ -1,0 +1,64 @@
+.nearme {
+    @include pie-clearfix;
+    padding: 0;
+    position: relative;
+
+    .left {
+        float: left;
+        padding-top: $section-margin+20;
+        padding-bottom: $section-margin+20;
+        width: 50%;
+
+        h4 {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    }
+
+    .club-information {
+        .wrapper {
+            .buttons {
+                a {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+
+    .club-finder-widget {
+        h4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .map-container {
+        background: #333;
+        bottom: 0;
+        display: block;
+        height: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+    }
+
+    &.nearme-classes {
+        .left {
+            float: right;
+            padding-top: $section-margin;
+            padding-bottom: $section-margin;
+        }
+        .map-container {
+            right: auto;
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.workout-box {
+	.mini-sessions {
+	    background: #fff;
+	    clear: both;
+        overflow: hidden;
+        padding-top: 20px;
+        min-height: 490px;
+	    > h6 {
+	        text-align: center;
+	        color: #000;
+	        font-size: 20px;
+            font-weight: lighter;
+	    }
+	    .spinner {
+	        width: 32px;
+    		height: 32px;
+    		margin: 84px auto;
+    		display: block;
+    		background: url(/assets/images/activity/loader.gif) no-repeat center center;
+	    }
+	    .session-list {
+	        max-width: 400px;
+	        .session-list-item {
+	            width: 25%;
+	            margin-bottom: 20px;
+	            color: #000;
+	            float: left;
+	            height: 110px;
+	            span {
+	                display: block;
+	                text-align: center;
+	                text-transform: uppercase;
+	                &.session-list-count {
+	                    font-weight: lighter;
+	                    font-size: 16px;
+	                }
+	                &.session-list-name {
+	                    font-size: 10px;
+	                    font-weight: bold;
+	                }
+	                &.session-list-icon {
+	                    width: 100%;
+	                    height: 50px;
+	                    margin-bottom: 10px;
+	                    background: center 0px no-repeat;
+        	            background-size: 50px 50px;
+	                }
+	            }
+	            &.empty {
+	                span {
+	                    &.session-list-count {
+	                        color: #9c9c9c;
+	                    }
+	                    &.session-list-icon {
+	                        opacity: .3;
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    nav {
+	        clear: both;
+	    }
+	}
+}

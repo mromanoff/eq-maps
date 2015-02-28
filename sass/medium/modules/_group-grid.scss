@@ -1,0 +1,82 @@
+.group-grid {
+    .col-1-2 {
+        width: 50%;
+    }
+	.is-tablet.is-desktop {
+		> .col-3-5 {
+			> .col-1:last-child {
+				margin-top: -2px;
+			}
+		}
+	}
+    .new-from-eq {
+        > a {
+            label {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.grid-active {
+    .close {
+        top: 15px;
+    }
+}
+
+.quilt-overlay {
+    background-color: transparent;
+    height: 50%;
+    top: 0;
+    left: 0;
+    &.active {
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+    }
+    .quilt-overlay-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .icon {
+            display: none;
+        }
+        img {
+            position: absolute;
+            width: auto;
+            height: auto;
+            min-height: 100%;
+            min-width: 100%;
+        }
+    }
+    .quilt-overlay-info {
+        padding: 54px 20px 65px;
+        background: rgba(0, 0, 0, .35);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 80%;
+        min-width: 60%;
+        @include translate(-50%, -50%);
+        img {
+            margin-bottom: 14px;
+        }
+        span {
+            font-size: 90px;
+            letter-spacing: 16.2px;
+            line-height: 74px;
+            color: #fff;
+            margin-bottom: 18px;
+        }
+        p {
+            color: #fff;
+            font-size: 14px;
+            max-width: 510px;
+            margin: 0 auto 36px;
+        }
+        .button {
+            color: #fff;
+        }
+    }
+}

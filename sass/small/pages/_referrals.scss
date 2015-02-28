@@ -1,0 +1,321 @@
+.refer-header {
+    position: relative;
+    max-height: 253px;
+    overflow: hidden;
+
+    h1 {
+        font-size: 32px;
+        font-weight: 200;
+        text-align: center;
+        line-height: 1.1em;
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        margin-top: -100px;
+
+        span {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            padding-bottom: 5px;
+
+            &.currency {
+                font-size: 30px;
+                font-weight: 200;
+                display: inline;
+            }
+        }
+
+        small {
+            font-size: 30px;
+        }
+    }
+}
+
+.refer-friend {
+
+    .description {
+        padding: 37px 30px 20px;
+        text-align: center;
+        margin: 0;
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+
+    .share {
+
+        .title {
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            width: 100%;
+            display: inline-block;
+            margin: 24px auto;
+        }
+
+        .icons {
+            text-align: center;
+            padding-bottom: 33px;
+
+            span {
+                font-size: 24px;
+                margin-left: 15px;
+                margin-right: 15px;
+                cursor: pointer;
+                position: relative;
+
+                &.icon-facebook {
+                    font-size: 20px;
+                    top: -2px;
+                }
+
+                &.active {
+                    color: #7c878e;
+                }
+
+                &.icon-email.active,
+                &.icon-chain.active {
+                    &:after {
+                        content: ' ';
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        left: -4px;
+                        position: absolute;
+                        bottom: -38px;
+                        border-left: 16px solid transparent;
+                        border-right: 16px solid transparent;
+                        border-bottom: 18px solid #7c878e;
+                    }
+                }
+            }
+        }
+
+        .email-a-friend {
+            display: none;
+            background-color: #7c878e;
+            position: relative;
+            padding: 45px 15px 35px;
+
+            .icon-close {
+                color: rgba(255, 255, 255, 0.7);
+                position: absolute;
+                top: 28px;
+                right: 28px;
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            h2 {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: center;
+                margin-bottom: 20px;
+                letter-spacing: 2px;
+            }
+
+            form {
+                padding: 0;
+            }
+
+            input,
+            textarea {
+                background-color: transparent;
+                border: 1px solid #fff !important;
+                margin: 10px 0;
+                font-weight: 200;
+                font-size: 14px;
+                text-align: left;
+                padding: 0 20px;
+                color: #fff;
+                letter-spacing: 1px;
+
+                &::-webkit-input-placeholder {
+                    opacity: .5;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    font-size: 14px;
+                }
+
+                &:-moz-placeholder {
+                    opacity: .5;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    font-size: 14px;
+                }
+
+                &::-moz-placeholder {
+                    opacity: .5;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    font-size: 14px;
+                }
+
+                &:-ms-input-placeholder {
+                    opacity: .5;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    font-size: 14px;
+                }
+
+                &.error {
+                    border: 1px solid #f00 !important;
+                }
+            }
+
+            input {
+                height: 45px;
+            }
+
+            input[type='submit'] {
+                background-color: #fff;
+                width: 100%;
+                height: 45px;
+                padding: 12px;
+                color: #000;
+                text-transform: uppercase;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 2px;
+                text-align: center;
+                margin-top: 5px;
+            }
+        }
+
+        .share-link {
+            display: none;
+
+            a.link {
+                background-color: #7c878e;
+                padding: 35px 70px;
+                display: block;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 22px;
+                word-break: break-all;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                font-size: 15px;
+                padding: 30px 0;
+                margin: 0;
+            }
+        }
+    }
+}
+.referral-friends {
+    background-color: #000;
+    padding: 52px 25px;
+    h1 {
+        font-size: 30px;
+        font-weight: 100;
+        color: #fff;
+        letter-spacing: 2.4px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+    }
+    a {
+        display: block;
+        font-size: 11px;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-align: center;
+    }
+    .loader-container {
+        position: relative;
+        top: 30px;
+    }
+    .invited-friends {
+        position: relative;
+        display: table;
+        margin: 65px auto;
+
+        &:before {
+            content: '';
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            left: 35px;
+            background-color: #d0d3d3;
+        }
+        li {
+            position: relative;
+            margin-top: 25px;
+            &:first-child {
+                margin-top: 0;
+            }
+            @include clearfix;
+            .invited-friend {
+                width: 43px;
+                height: 43px;
+                font-size: 14px;
+                position: relative;
+                float: left;
+                text-align: center;
+                background-color: #000;
+                border: 1px solid #fff;
+                color: rgba(255, 255, 255, .5);
+                line-height: 43px;
+                margin-left: 10px;
+                @include border-radius(100%);
+                &.active {
+                    width: 70px;
+                    height: 70px;
+                    border: 0;
+                    margin: 0;
+                }
+                img {
+                    @include border-radius(100%);
+                }
+            }
+            .invited-friend-info {
+                float: left;
+                padding: 15px 0 0 25px;
+                strong, span {
+                    font-size: 14px;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+    .referred-friends {
+        li {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+
+            &:first-child {
+                margin-top: 45px;
+            }
+
+            &.no-referred-msg {
+                font-size: 12px;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+.page.referrals + footer {
+    margin-top: 0;
+}

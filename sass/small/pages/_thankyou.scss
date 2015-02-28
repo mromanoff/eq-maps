@@ -1,0 +1,32 @@
+.page.thankyou {
+    .wrapper {
+        .module {
+            max-width: 540px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 $section-padding;
+            padding-top: $section-padding;
+
+        }
+        &.module:first-child {
+            max-width: none;
+        }
+
+        .paragraph {
+            padding: 0;
+        }
+
+        p {
+            font-size: 13px;
+            letter-spacing: 3px;
+            strong {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .tpl-ctacallout {
+        position: relative;
+        min-height: 100px;
+    }
+}

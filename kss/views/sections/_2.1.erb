@@ -1,0 +1,41 @@
+<% styleguide_block '2.1' do %>
+<form class="login simple-form">
+    <fieldset>
+        <input type="text" name="input field" placeholder="input field" class="$modifier_class" />
+    </fieldset>
+</form>
+<% end %>
+
+<% styleguide_block '2.1.1' do %>
+<form>
+	<fieldset>
+		<label for="city">Dropdown</label>
+		<span class="dropdown $modifier_class" data-component="inline-select">
+		    <select name="state">
+		        <option>Option 1</option>
+		    </select>
+		    <span class="option">Option 1</span>
+		</span>
+	</fieldset>
+</form>
+<% end %>
+
+<% styleguide_block '2.1.2' do %>
+<form>
+    <fieldset>
+        <span class="select-wrapper $modifier_class" data-component="inline-select">
+            <select>
+                <option>Option 1</option>
+            </select>
+            <span class="option">Option 1</span>
+        </span>
+    </fieldset>
+</form>
+<% end %>
+
+
+<% styleguide_block '2.1.3' do %>
+<form>
+    <textarea name="something" placeholder="Enter something..." cols="30" rows="10"></textarea>
+</form>
+<% end %>

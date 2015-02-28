@@ -1,0 +1,90 @@
+.activity-detail-shared {
+	.header-wrapper {
+		height: 128px;
+	}
+
+	.background-container {
+		background: #f2f2f2;
+		padding: 20px 25px;
+		.main-container {
+			background-color: #fff;
+			padding: 35px 62px;
+
+			.common-container {
+				padding: 0 0 30px;
+				border-bottom: 0;
+
+				&:first-child {
+					border-bottom: 0;
+				}
+
+				&.milestone-tablet {
+					display: inline-block;
+					vertical-align: top;
+
+					.logo-container {
+						display: inline-block;
+						width: 49%;
+						text-align: center;
+						vertical-align: middle;
+						img {
+							width: 80px;
+						}
+					}
+
+					.description-container {
+						display: inline-block;
+						width: 49%;
+						p {
+							font-size: 10px;
+							text-align: left;
+						}
+					}
+				}
+
+				&.half {
+					display: inline-block;
+					border-bottom: 0;
+					width: 49%;
+				}
+
+				&.stats {
+					border-top: 1px solid #b2b2b2;
+					padding: 38px 0 56px;
+
+					ul {
+						border-right: 1px solid #b2b2b2;
+						width: 24%;
+
+						&:first-child {
+							margin-bottom: 0;
+						}
+
+						&:last-child {
+							border-right: 0;
+						}
+
+						li {
+							p {
+								span {
+									font-size: 12px;
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+
+				.rank {
+					border-right: 1px solid #b2b2b2;
+				}
+			}
+
+			> nav {
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}

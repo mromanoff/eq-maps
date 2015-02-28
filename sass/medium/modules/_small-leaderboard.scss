@@ -1,0 +1,71 @@
+.rank-container {
+    .leaderboard-results {
+        padding: 43px 40px 0;
+        position: relative;
+        h3 {
+            font-size: 27px;
+            font-weight: 400;
+
+            small {
+                display: block;
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+        }
+
+        .leaderboard-container {
+            clear: both;
+            margin: 12px auto 23px;
+            padding-top: 0px;
+
+            .list-titles{
+                padding: 9px 37px 9px 0;
+
+                span {
+                    &.position {
+                        width: 12%;
+                    }
+
+                    &.profile {
+                        margin-left: 14px;
+                    }
+                }
+            }
+            
+            .leaderboard-list {
+                padding: 11px 37px 11px 0;
+
+                li {
+                    font-size: 12px;
+                }
+
+                .position {
+                    font-size: 12px;
+                    width: 12%;
+                }
+
+                .profile-picture {
+                    @include border-radius(100%);
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .profile-name {
+                    margin-left: 8px;
+                }
+
+                .profile-distance, .profile-energy {
+                    padding-top: 5px;
+                }
+            }
+        }
+
+        .leaderboard-cta-container {
+            > a {
+                margin: 0 auto;
+                width: 300px;
+            }
+        }
+    }
+}

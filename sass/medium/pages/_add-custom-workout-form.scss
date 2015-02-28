@@ -1,0 +1,101 @@
+.page.add-custom-workout-form {
+
+
+
+ form fieldset {
+
+   > div.quarter {
+     width: 25%;
+   }
+
+   > div.half {
+     width: 50%;
+   }
+
+   .date-holder{
+     width: 33%;
+
+     .dropdown{
+       width: 33%;
+       float: left;
+     }
+
+   }/*fieldset*/
+
+   .hidden-fields{
+     fieldset{
+       height: 0px;
+       overflow: hidden;
+       &.active{
+         height: 265px;
+       }
+     }
+
+   }
+
+   #distance-holder {
+      label {
+        span {
+          &.is-mobile {
+            display: none !important;
+          }
+          &.is-tablet, &.is-desktop {
+            display: inline !important;
+          }
+        }
+      }
+    }
+
+ }/*form*/
+
+  .duration-holder{
+    width: 20%;
+
+    #workout-duration{
+      width: 70%;
+      float: left;
+    }
+    .min{
+      display: block;
+     position: relative;
+     top: 19px;
+     left: 15px;
+     width: 0;
+    }
+  }
+
+  .row-section{
+    float: left;
+  }
+
+  .time-holder {
+    margin-left: 2%;
+    width: 44%;
+
+    .time-section{
+
+      width: 28%;
+
+      &.separator-holder{
+        width: 4%;
+      }
+
+      &.am-pm{
+        width: 36%;
+        padding-top: 10px;
+        a{
+          font-size: 27px;
+        }
+        br{
+          display: none;
+        }
+      }
+
+    }
+  }
+
+  .duration-holder{
+    clear: none;
+  }
+
+}/*end page*/

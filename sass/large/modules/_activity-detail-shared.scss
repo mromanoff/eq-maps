@@ -1,0 +1,78 @@
+.activity-detail-shared {
+	.header-wrapper {
+		height: 202px;
+	}
+
+	.background-container {
+		padding: 30px 35px;
+		.main-container {
+			padding: 58px 94px;
+
+			.common-container {
+				padding: 0 0 52px;
+
+				h3 {
+					font-size: 45px;
+
+					small {
+						font-size: 16px;
+					}
+				}
+
+				&.milestone-tablet {
+					.logo-container {
+						img {
+							width: 120px;
+						}
+					}
+
+					.description-container {
+						p {
+							font-size: 14px;
+						}
+					}
+				}
+
+				&.stats {
+					padding: 60px 0 90px;
+
+					ul {
+						li {
+							p {
+								font-size: 36px
+
+								sub {
+									font-size: 26px;
+								}
+								
+								span {
+									font-size: 13px;
+								}
+							}
+						}
+					}
+				}
+
+				.rank {
+					li {
+						font-size: 13px;
+
+						&.position {
+							p {
+								font-size: 80px;
+
+								sup {
+									font-size: 30px;
+								}								
+							}
+						}
+
+						&:last-child {
+							font-size: 15px;
+						}
+					}	
+				}
+			}
+		}
+	}
+}

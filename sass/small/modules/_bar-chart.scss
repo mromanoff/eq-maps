@@ -1,0 +1,100 @@
+.bar-chart {
+	overflow: hidden;
+	clear: both;
+	text-align: center;
+
+	.chart {
+		height: 300px;
+		margin: 35px auto;
+		position: relative;
+
+		.bar-container {
+			height: 100%;
+			position: relative;
+			width: 14%;
+			padding-left: 4%;
+			padding-right: 4%;
+			display: inline-block;
+
+			.bar {
+				position: absolute;
+				height: 100%;
+				width: 64%;
+				background-color: #d0d3d3;
+				z-index: 20;
+				bottom: 0;
+
+				&.strength {
+					background-color: #d0d3d3;
+				}
+				&.cardio {
+					background-color: #7c878e;
+				}
+				&.flexibility {
+					background-color: #333f48;
+				}
+				&.regeneration {
+					background-color: #1d242a;
+				}
+			}
+
+			.label,
+			.tag {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-family: 'Graphik Web';
+				left: 0;
+			}
+
+			.label {
+				bottom: -30px;
+				font-size: 9px;
+			}
+			.tag {
+				top: -25px;
+				font-size: 12px;
+			}
+		}
+
+		.bg-lines span {
+			background: url('../images/dots-bg.png') repeat-x;
+			letter-spacing: 3px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #8E8E8D;
+			font-size: 14px;
+			width: 100%;
+			z-index: 10;
+			height: 2px;
+			line-height: 1px;
+
+			& + span {
+				top: 25%;
+
+				& + span {
+					top: 50%;
+
+					& + span {
+						top: 75%;
+
+						& + span {
+							top: auto;
+							bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	.description {
+		padding: 50px 30px 0;
+		font-size: 12px;
+		font-family: 'Graphik Web';
+		font-weight: 400;
+		margin-bottom: 50px;
+	}
+}

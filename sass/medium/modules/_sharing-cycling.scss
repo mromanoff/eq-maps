@@ -1,0 +1,22 @@
+.sharing-cycling {
+	p {
+		margin: 0 auto;
+		max-width: 600px;
+	}
+
+	a {
+		margin: 20px auto 0;
+		width: 280px;
+	}
+
+	.caption {
+		.buttons {
+			display: inline-block;
+			text-align: center;
+			a {
+				width: 240px;
+				margin-top: 0;
+			}
+		}
+	}
+}

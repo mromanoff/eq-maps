@@ -1,0 +1,126 @@
+.qblog {
+    padding: 130px 38px 0;
+    background-color: #e6e6e6;
+    position: relative;
+}
+
+.qblog-logo {
+    top: 130px;
+    left: 38px;
+    width: 166px;
+    height: 166px;
+    font-size: 120px;
+}
+
+.carousel {
+    .swipe-guide {
+        display: block;
+    }
+}
+
+.carousel-item {
+    .caption {
+        h2 {
+            font-size: 49px;
+            font-weight: 400;
+            letter-spacing: 8.82px;
+        }
+    }
+}
+
+.qblog-content {
+    padding: 22px 0;
+    @include clearfix;
+    .article-container {
+        float: left;
+        width: 66%;
+        @include box-sizing(border-box);
+        article {
+            .article-content {
+                padding: 25px 32px;
+                .article-category, .article-date, p {
+                    font-size: 14px;
+                    letter-spacing: 1.12px;
+                }
+                h2 {
+                    font-size: 24px;
+                    letter-spacing: 2.4px;
+                    margin: 10px 0;
+                }
+            }
+        }
+        .article-pager {
+            margin: 55px 0;
+            li {
+                margin-left: 25px;
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .main-article {
+        .main-article-text {
+            padding: 32px 40px;
+            h3 {
+                font-size: 35px;
+                letter-spacing: 5.95px;
+                margin-bottom: 10px;
+            }
+            small {
+                font-size: 14px;
+                letter-spacing: 1.4px;
+            }
+            .main-article-info {
+                font-size: 14px;
+                margin-bottom: 40px;
+                .author {
+                    text-transform: none;
+                }
+            }
+            p {
+                margin-bottom: 26px;
+            }
+            .tags {
+                margin-top: 57px;
+            }
+        }
+    }
+    aside {
+        float: right;
+        width: 34%;
+        padding-left: 32px;
+        @include box-sizing(border-box);
+        .subscribe, .article-excerpt {
+            p, h2 {
+                width: auto;
+            }
+            h2 {
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+            a {
+                text-align: center;
+            }
+        }
+        .subscribe {
+            p {
+                font-size: 14px;
+                font-weight: 700;
+            }
+            h2 {
+                margin-bottom: 6px;
+            }
+        }
+        .article-excerpt {
+            p {
+                font-size: 21px;
+            }
+            a {
+                position: absolute;
+                top: 50%;
+                @include css-translate(0, -50%);
+            }
+        }
+    }
+}

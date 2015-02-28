@@ -1,0 +1,72 @@
+.q-blog {
+	float: left;
+	padding-bottom: 2000px;
+	margin-bottom: -2000px;
+	width: 100%;
+
+	.article-image-wrapper {
+		position: relative;
+		height: 350px;
+		overflow: hidden;
+
+		.qblog-title {
+			color: #fff;
+			position: absolute;
+			top: 36px;
+			left: 28px;
+
+			h3 {
+				display: inline-block;
+				margin: 0;				
+			}
+
+			span {
+				margin-left: 10px;
+				font-size: 26px;
+			}
+		}
+	}
+
+	.blog-article-container {
+		border-right: 1px solid #d9d9d9;
+		float: left;
+		width: 49.8%;
+		position: relative;
+		padding-bottom: 2000px;
+		margin-bottom: -2000px;
+
+		.article-text-container {
+			padding: 37px 0px 37px 10px;
+			text-align: left;
+
+			.recommended {
+				font-size: 10px;
+			}
+
+			.category-font, p {
+				font-size: 11px
+			}
+
+			h4 {
+				font-size: 12px;
+			}
+		}
+
+		.selected-article {
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 0 11px 11px 11px;
+			border-color: transparent transparent #ffffff transparent;
+			position: absolute;
+			top: -11px;
+			left: 22px;
+		}
+	}
+	
+	a:last-child {
+	    .blog-article-container {
+		    border: none;
+		}
+	}
+}

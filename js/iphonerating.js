@@ -1,0 +1,3 @@
+﻿{
+    "userRatingPercentage":10
+}

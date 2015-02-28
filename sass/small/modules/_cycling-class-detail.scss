@@ -1,0 +1,183 @@
+.page.cycling-class-detail {
+	.header-wrapper {
+		height: 190px;
+		overflow: hidden;
+		position: relative;
+
+		> a {
+			font-size: 20px;
+			color: #fff;
+			position: absolute;
+			top: 18px;
+			left: 20px;
+		}
+	}
+
+	.title-cta-module {
+		text-align: center;
+		h3 {
+			font-size: 32px;
+			letter-spacing: 4px;
+			margin-bottom: 0;
+			small {
+				display: block;
+				font-size: 12px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				line-height: 6px;
+			}
+		}
+
+		.instructor {
+			display: block;
+			font-size: 14px;
+			letter-spacing: 1px;
+			margin-bottom: 28px;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 12px;
+			margin-bottom: 0;
+		}
+
+		nav {
+			margin-top: 23px;
+		}
+	}
+
+	.class-results {
+		border-top: 1px solid #b2b2b2;
+		
+		.results-columns {
+			.result-row {
+				padding: 0 30px;
+				ul {
+					border-bottom: 1px solid #b2b2b2;
+					padding: 34px 0;
+					text-align: center;
+
+					li {
+						font-size: 14px;
+						letter-spacing: 1px;
+						text-transform: uppercase;
+
+						&:first-child {
+							font-weight: 700;
+						}
+
+						&.position {
+							p {
+								font-size: 56px;
+								font-weight: 200;
+								margin-bottom: 8px;
+
+								sup {
+									font-size: 23px;
+									font-weight: 400;
+									vertical-align: super;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.secondary-info {
+				padding: 0 30px;
+				.secondary-info-container {
+					border-bottom: 1px solid #b2b2b2;
+					padding: 34px 0;
+					ul {
+						display: inline-block;
+						width: 49.2%;
+
+						&.upper-info {
+							margin-bottom: 36px;
+						}
+
+						li {
+							text-align: center;
+							p {
+								font-size: 30px;
+								font-weight: 200;
+								text-transform: uppercase;
+								margin-bottom: 0;
+								span {
+									display: block;
+									font-size: 14px;
+									font-weight: 700;
+									margin-bottom: 5px;
+								}
+
+								sub {
+									font-size: 20px;
+								}
+							}
+						}
+					}					
+				}
+			}
+
+			.class-award {
+				text-align: center;
+				p {
+					font-size: 12px;
+					margin-bottom: 16px;
+				}
+
+				> img {
+					width: 80px;
+					margin-bottom: 33px;
+				}
+
+				.sharing {
+					display: block;
+					p {
+						font-weight: 700;
+						text-transform: uppercase;
+						margin-bottom: 12px;						
+					}
+					
+					.sharing-icon {
+						padding: 0 10px;
+					}
+				}
+
+			}
+		}
+	}
+
+	.graphic {
+		background-color: grey;
+		margin: 27px 0 22px;
+		height: 290px;
+	}
+
+	.leaderboard-results {
+		padding: 45px 8px;
+
+		h3 {
+			font-size: 21px;
+			font-weight: 200;
+			margin-bottom: 23px;
+
+			small {
+				display: block;
+				font-size: 14px;
+				font-weight: 700;
+				letter-spacing: 1px;
+			}
+		}
+
+		.leaderboard-container {
+			display: block;
+			background-color: grey;
+			height: 350px;
+		}
+	}
+
+	.common-padding {
+		padding: 34px 28px;
+	}
+}

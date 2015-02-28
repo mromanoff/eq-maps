@@ -1,0 +1,135 @@
+.schedule-equifit {
+    text-align: center;
+
+    form {
+        overflow: visible;
+    }
+
+    h6 {
+        margin: 0 2.5em 2em;
+    }
+
+    .tpl-imagetextcallout {
+        margin-top: 10px;
+    }
+
+    .tpl-joinschedule {
+        border-top: 1px solid #4d4d4d;
+        margin-top: 20px;
+        padding-top: 40px;
+    }
+
+    .rich-content {
+        header {
+            min-height: 0;
+
+            h2 {
+                margin: 1em auto 0;
+                position: static;
+                @include transform(none);
+            }
+        }
+
+        .paragraph a {
+            color: #fff;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-decoration: underline;
+        }
+    }
+
+    form fieldset label {
+        font-weight: normal;
+        text-transform: none;
+    }
+
+    .question {
+        margin: 60px 0 0;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
+    .select-wrapper {
+        font-size: 20px;
+        margin: 0 20px;
+        max-width: initial;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .alternative-cta {
+        font-size: 11px;
+    }
+}
+
+.join-schedule-form {
+    padding: 0;
+}
+
+.multiple-select {
+    padding: 0 5% 40px;
+
+    li {
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+
+        section {
+            padding: 0;
+
+            label.check-selector {
+                cursor: pointer;
+
+                h6 {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: left;
+                    padding: 24px 0 24px 30px;
+                    position: relative;
+
+                    &:before {
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        width: 14px;
+                        height: 14px;
+                        border: 1px solid #FFF;
+                        border-radius: 100%;
+                        top: 50%;
+                        margin-top: -7px;
+                    }
+
+
+                }
+                img, input[type=checkbox] {
+                    display: none;
+                }
+
+                &.checked {
+                    h6:after {
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #FFF;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 5px;
+                        margin-top: -2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .column.half {
+        width: 100%;
+    }
+}

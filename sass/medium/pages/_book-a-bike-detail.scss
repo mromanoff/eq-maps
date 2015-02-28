@@ -1,0 +1,386 @@
+.page .book-a-bike-detail {
+	background: transparent;
+    min-height: 600px;
+    
+	h2, h3 {
+
+		small {
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 3px;
+		}
+		span {
+			font-size: 45px;
+			letter-spacing: 10px;
+		}
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	.message {
+		font-size: 14px;
+	}
+
+	.modals {
+		background-color: rgba(0, 0, 0, 0.4);
+
+        > div {
+            height: auto;
+            top: 50%;
+            @include css-translate(0, -50%);
+        }
+
+		.modal-wrapper {
+
+			h2 span {
+				display: inline;
+				padding-left: 15px;
+			}
+
+			small {
+				width: 75%;
+				margin: 0 auto;
+			}
+
+			.button-container a.button.box {
+				padding: 1.3em 3em;
+			}
+		}
+	}
+
+	.background {
+		top: 125px;
+	}
+
+	.head {
+		background-color: transparent;
+
+		.details {
+			.expand {
+				.expand-button {
+					display: none;
+				}
+				.more-details {
+					display: block;
+					border: none;
+
+					h2.title {
+						margin-bottom: 5px;
+
+						small {
+							font-size: 14px;
+						}
+						span {
+							font-size: 45px;
+							letter-spacing: 8px;
+						}
+					}
+
+					p {
+						font-size: 14px;
+						letter-spacing: 2px;
+					}
+
+					.date {
+						span {
+							display: inline;
+						}
+					}
+
+					.links {
+
+						a {
+							padding: 0 15px;
+							font-size: 14px;
+							letter-spacing: 2px;
+						}
+					}
+				}
+
+			}
+
+			.book-fav-bike {
+				width: 430px;
+                margin: 0 auto;
+				display: block;
+
+				a {
+					color: #000;
+
+					.icon-star {
+						margin-right: 5px;
+					}
+				}
+
+				&.disabled {
+					a {
+						background-color: #848589;
+						border-color: #848589;
+						color: #555;
+						cursor: default;
+					}
+				}
+			}
+
+			.reserved.message {
+				font-size: 14px;
+				width: 45%;
+				margin: 30px auto;
+                margin-bottom: 60px;
+
+				.options a {
+					font-size: 14px;
+				}
+			}
+
+			.bikes-graphic {
+				max-width: 960px;
+				max-height: 440px;
+
+				.bike {
+					text-align: center;
+					line-height: 41px;
+					font-weight: 700;
+					font-size: 13px;
+					cursor: pointer;
+					color: #fff;
+					width: 40px;
+					height: 40px;
+					padding: 3px;
+					background-color: transparent;
+					border-radius: 100%;
+					border: 2px solid #fff;
+					
+					&.favorite-bike {
+                    	border: 2px solid #848589;
+                    	&.selected {
+                    		border: 2px solid #fff;
+                    	}
+                    	&:hover {
+                    		border: 2px solid #fff;
+                    	}
+                    	&:before {
+                    		font-size: 16px;
+                    		margin-right: 3px;
+                    	}
+                    }
+                    
+					&:not(.unavailable):hover {
+						background-color: #fff;
+						color: #000;
+						font-size: 0;
+
+						&:before {
+							font-family: 'icomoon';
+							content: "\e60f";
+							font-size: 24px;
+						}
+					}
+
+					&.unavailable {
+						cursor: default;
+						border: none;
+						background-color: transparent;
+						color: rgba(255,255,255,.5);
+						width: 42px;
+						height: 42px;
+					}
+
+					&.selected {
+						background-color: #fff;
+						color: #000;
+						font-size: 0;
+
+						&:before {
+							font-family: 'icomoon';
+							content: "\e60f";
+							font-size: 24px;
+						}
+
+						&:hover {
+							background-color: transparent;
+							color: #fff;
+							font-size: 14px;
+							font-weight: 700;
+
+							&:before {
+								content: '';
+								display: none;
+							}
+						}
+					}
+
+					&.faved {
+						background-color: #848588;
+						border-color: #848588;
+						color: #FFF;
+						text-indent: 6px;
+
+						&:before {
+							font-family: 'icomoon';
+							content: "\e61d";
+							font-size: 10px;
+							top: 3px;
+							left: 1px;
+							position: absolute;
+						}
+					}
+				}
+
+				.door {
+					width: 20px;
+					height: 30px;
+
+					&:before {
+						font-size: 26px;
+						line-height: 1.25em;
+						display: block;
+						content: "\e61f";
+					}
+				}
+
+				.instructor-bike {
+					font-weight: 700;
+					letter-spacing: 0px;
+					width: 50px;
+					height:50px;
+					font-size: 9px;
+
+					.icon-bike-2 {
+						display: block;
+						font-size: 30px;
+						padding-bottom: 4px;
+					}
+				}
+			}
+		}
+
+		.class-full{
+			h2 span {
+				font-size: 14px;
+				font-weight: 400;
+				letter-spacing: 3px;
+				margin-top: 26px;
+			}
+		}
+
+	}
+
+	.content {
+		.confirmation {
+
+			.share {
+				font-size: 0;
+				text-indent: -9999px;
+
+				.social-icons {
+					text-indent: 0;
+				}
+			}
+
+			.export {
+				a {
+					font-size: 14px;
+					letter-spacing: 3px;
+				}
+			}
+
+			.reminder {
+				margin: 0 auto 50px;
+				width: 74%;
+			}
+
+			.options {
+				a {
+					font-size: 14px;
+					padding: 0 14px;
+				}
+			}
+			.opt-status {
+				max-width: 500px;
+				> p {
+					font-size: 14px;
+				}
+				.checkbox {
+					.label {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.countdown {
+
+			h3 {
+				color: #fff;
+				margin: 0;
+
+				small {
+					font-size: 14px;
+					font-weight: 400;
+				}
+
+				span.countdown-time {
+					font-size: 99px;
+				}
+
+				span.countdown-digit {
+					font-size: 120px;
+					line-height: 2.5em;
+				}
+			}
+
+			.message {
+				p {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.class-full {
+			color: #fff;
+
+			.message {
+				width: 75%;
+				margin: 0 auto;
+				line-height: 2.2em;
+				color: #fff;
+			}
+
+			.button-container a.button.box {
+				background-color: #fff;
+				font-size: 14px;
+				height: 45px;
+				padding: .9em 3em;
+				border: none;
+			}
+		}
+	}
+
+
+	/* Page views */
+	&.countdown .countdown {
+
+		.head {
+			background-color: transparent;
+		}
+
+		.content {
+			border: none;
+		}
+	}
+
+	&.pick-favorite .pick-favorite {
+		.head {
+			.description {
+				display: none;
+			}
+		}
+		.content {
+			display: none;
+		}
+	}
+}
+

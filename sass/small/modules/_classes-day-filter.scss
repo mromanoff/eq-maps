@@ -1,0 +1,95 @@
+.classes-calendar {
+    position: relative;
+    background-color: #efefef;
+	
+	#mobile-class-count {
+		text-align: center;
+		color: #ccc;
+		background-color: #000;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+
+    ul {
+        background-color: #000;
+        font-size: 0;
+        @include clearfix;
+        li {
+            font-size: initial;
+            text-align: center;
+            a {
+                position: relative;
+                display: block;
+                padding: 18px 12px;
+                width: 14.28%;
+                background: #000;
+                float: left;
+                @include box-sizing(border-box);
+                &.current {
+                    p {
+                        color: #fff;
+                    }
+                }
+                p {
+                    font-size: 10px;
+                    font-weight: 700;
+                    line-height: .8;
+                    margin: 0 0 -3px;
+                    color: rgba(255, 255, 255, .2);
+                }
+                small {
+                    font-size: 11px;
+                    color: white;
+                }
+                p, small {
+                    text-transform: uppercase;
+                }
+                &.mobile-current:after, &.mobile-first:after {
+                    position: absolute;
+                    content:" ";
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -10px;
+                    width: 0; 
+                    height: 0; 
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    
+                    border-bottom: 8px solid white;
+                }
+            }
+        }
+    }
+    .nav-arrows {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        background: #000;
+        color: white;
+
+        .current-week {
+            text-align: center;
+            padding-top: 7px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .icon-left-arrow, .icon-right-arrow {
+            color: inherit;
+            position: absolute;
+            top: 50%;
+            @include css-translate(0, -50%);
+        }
+        .icon-left-arrow {
+            left: 30px;
+        }
+        .icon-right-arrow {
+            right: 30px;
+        }
+    }
+    // Timeline
+    .classes-timeline {
+        display: none;
+    }
+}

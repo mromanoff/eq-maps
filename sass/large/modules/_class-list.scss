@@ -1,0 +1,37 @@
+.classes-list {
+    .classes-day-container {
+        .classes-day:nth-of-type(4) {
+            display: block;
+        }
+    }
+	.day-dates {
+		position: relative;
+
+		li {
+			width: 25%;
+            &:nth-child(-n+4) {
+                display: block;
+            }
+		}
+
+		&.fixedNav{
+			position: fixed;
+			width: 100%;
+			top: 60px;
+			z-index: 1;
+			transition: position 0.3s;
+		}
+
+	}
+	.classes-day {
+		width: 25%;
+	}
+
+	li {
+		.wrapper {
+			.class-info-hit-state {
+				margin-top: 7%;
+			}
+		}
+	}
+}

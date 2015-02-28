@@ -1,0 +1,35 @@
+<h1>Form Elements</h1>
+
+<p>In this section you will find everything related to forms such as lables, inputs and spacing styles</p>
+
+<% styleguide_block '2.0' do %>
+<form class="login simple-form">
+    <fieldset>
+        <a href="#" class="button box white small login-eq"/> Form submit button </a>
+    </fieldset>
+</form>
+<% end %>
+
+<% styleguide_block '2.0.1' do %>
+<form class="login simple-form">
+    <fieldset>
+        <p class="separator">Email address</p>
+        <input type="text" name="email" placeholder="Enter Email" />
+    </fieldset>
+</form>
+<% end %>
+
+<% styleguide_block '2.0.2' do %>
+<div class="extra">
+    <p> forgot your <a href="/Mock/Help/ForgotEmail">EMAIL</a>?</p>
+</div>
+<% end %>
+
+<% styleguide_block '2.0.3' do %>
+<form class="personal-information large module">
+    <fieldset class="$modifier_class">
+        <label for="firstName">Input Text Field</label>
+        <input type="text" name="firstName"/>
+    </fieldset>
+</form>
+<% end %>

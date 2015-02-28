@@ -1,0 +1,28 @@
+/* Share module medium */
+
+.main-social-icons {
+	li {
+        a {            
+            &:before {
+            	font-size: 26px;
+            }
+        }
+    }
+}
+
+// White - Black on .image landing pages.
+.page.image {
+    .main-social-icons {
+        li {
+            a {
+                border: 1px solid #fff;
+                color: #fff;
+
+                &:hover {
+                    background: rgba(255,255,255,0.4);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

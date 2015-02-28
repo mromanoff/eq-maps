@@ -1,0 +1,738 @@
+.module-container {
+	padding: 43px 40px 45px;
+
+	&.personal-info {
+		padding: 26px 33px 15px;
+		margin: 0 auto;
+		max-width: 1000px;
+		position: relative;
+	}
+
+	h3 {
+		font-size: 27px;
+
+		span.suffix {
+			top: -5px;
+		}
+	}
+
+	.half-container {
+		display: inline-block;
+		margin-right: 15px;
+		vertical-align: top;
+
+		.info {
+			.empty {
+				height: 33px;
+			}
+		}
+
+		&.editable {
+			display: inline-block;
+			margin: 0 10px;
+			vertical-align: top;
+			min-width: 140px;
+
+			label.suffix {
+				margin-top: -4px;
+			}
+		}
+
+		h3 {
+			font-size: 24px;
+			margin-bottom: 2px;
+		}
+
+		span {
+			font-size: 10px;
+		}
+
+		&.gender {
+			width: auto;
+			float: none;
+			position: static;
+			top: auto;
+			right: auto;
+		}
+
+		&.age {
+			float: none;
+			width: auto;
+		}
+
+		&.weight, &.height {
+			width: auto;
+			margin: 0 50px 0 0;
+			&.single {
+				margin: 0;
+			}
+		}
+
+		&.weight .input-container input,
+		&.height .input-container.metric input {
+			width: 85px;
+		}
+	}
+
+	.input-container {
+		display: inline-block;
+		margin-top: 0;
+		margin-right: 0;
+		text-align: left;
+
+		input {
+			font-size: 24px;
+			width: 85px;
+			padding: 2px;
+		}
+
+		span {
+			margin-top: 11px;
+			font-size: 12px;
+			width: 100%;
+			text-align: center;
+		}
+
+		&.imperial {
+			span {
+				width: 100%;
+			}
+		}
+
+
+		.select-wrapper {
+			font-size: 40px;
+			margin: 0 20px;
+
+			&.box {
+				border: 1px solid #c7c7c7;
+				height: 42px;
+				vertical-align: top;
+				width: 32%;
+				margin: 0 0 0 5px;
+				padding: 2px;
+				padding-right: 10px;
+				display: inline-block;
+
+				&:first-child {
+					margin: 0;
+				}
+				.option {
+					width: 100%;
+					font-size: 24px;
+					font-weight: 200;
+					letter-spacing: -1px;
+					margin-top: 2px;
+
+					&:after {
+						font-size: 12px;
+						margin-top: -4px;
+						position: absolute;
+						right: 3px;
+						top: 50%;
+						color: #c7c7c7;
+					}
+				}
+			}
+		}
+	}
+
+	.half-container.age {
+		.input-container {
+			width: 250px;
+		}
+	}
+
+	.half-container.gender {
+		.input-container {
+			width: auto;
+			font-size: 24px;
+			margin-top: 0;
+		}
+	}
+
+	.underlined-link {
+		position: absolute;
+		font-size: 11px;
+		vertical-align: top;
+		top: 45%;
+		right: 50px;
+	}
+
+	a.save-info {
+		position: absolute;
+		min-width: 0;
+	}
+
+	.circles-wrapper {
+		max-width: none;
+
+		.goals-container {
+			display: inline-block;
+			width: 85%;
+
+			.circles-container {
+				margin-bottom: 0;
+				width: 16.5%;
+
+				span {
+					font-size: 9px;
+					margin-top: 29px;
+				}
+
+				.rounded-button {
+					.rounded {
+						@include border-radius(40px);
+						width: 74px;
+						height: 74px;
+
+						> span {
+							display: block;
+							font-size: 22px;
+							padding: 27px 0;
+							text-align: center;
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.circles-container {
+			width: 13.7%;
+
+			span {
+				font-size: 9px;
+				margin-top: 29px;
+			}
+		}
+	}
+
+	
+
+	.title-container {
+		display: inline-block;
+		padding-right: 15px;
+		width: 48%;
+
+		h3 {
+			font-size: 22px;
+			margin: 0;
+			text-align: left;
+			vertical-align: middle;
+		}
+	}
+
+	.small-circles-wrapper {
+		display: inline-block;
+		max-width: none;
+		vertical-align: middle;
+		width: 48%;
+
+		.rounded-button {
+			margin-right: 8px;
+
+			.rounded {
+				width: 23px;
+				height: 23px;
+
+				&.color-circle {
+					span {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+
+		.small-circle-description {
+			width: 73%;
+
+			span {
+				font-size: 9px;
+			}
+		}
+	}
+}
+
+.profile {
+
+	.header-container {
+		border-top: none;
+		padding: 20px 100px;
+		margin: 0 0 50px 0;
+
+		h1 {
+			font-size: 38px;
+			margin-bottom: 0;
+		}
+
+		p {
+			font-size: 12px;
+			margin-bottom: 26px;
+		}
+
+		.rounded {
+			@include border-radius(80px);
+			width: 114px;
+			height: 114px;
+			margin: 18px auto -69px;
+		}
+	}
+
+	//Atlhete Level Module Styles
+	.athlete-level {
+		text-align: left;
+
+		.title-container {
+			padding-right: 10%;
+			width: 45%;
+		}
+
+		.range-selection {
+			width: 100%;
+			.track-wrapper {
+				display: inline-block;
+				float: right;
+				margin: 0 6% 0 0;
+				padding: 4px 0;
+				position: static;
+				width: 40%;
+
+				.track {
+					height: 3px;
+
+					.track-shadow {
+						.thumb {
+							height: 22px;
+							top: -5px;
+							margin-left: -9px;
+							width: 22px;
+						}
+					}
+
+					.reference {
+						height: 11px;
+						top: -4px;
+						width: 11px;
+					}
+				}
+			}
+
+			.answers {
+				display: inline-block;
+				padding-right: 10%;
+				vertical-align: top;
+				width: 40%;
+
+				.paragraph {
+					padding: 0;
+				}
+
+				h6 {
+					font-size: 13px;
+					text-align: left;
+				}
+
+				p {
+					font-size: 12px;
+					font-weight: 400;
+					color: #7c878e;
+					letter-spacing: 1px;
+					text-align: left;
+					max-width: none;
+				}
+			}
+		}
+	}
+
+	.bike-settings {
+
+		&.edit-mode {
+			
+			.bike-settings-container {
+
+				.steps {
+					display: none;
+				}
+
+				.settings-container { display: block; }
+
+				.containers-row {
+
+					&.seat-height {
+						.half-container.seat-height { display: inline-block; }
+					}
+
+					&.seat {
+						.half-container.seat { display: inline-block; }
+						.input {
+							span {
+								display: inline-block;;
+							}
+						}
+					}
+
+					&.handlebar-height {
+						.half-container.handlebar-height { display: inline-block; }
+
+					}
+
+					&.handlebar {
+						.half-container.handlebar { display: inline-block; }
+						.input {
+							span {
+								display: inline-block;;
+							}
+						}
+					}
+
+					.half-container {
+						display: inline-block;
+						width: auto;
+						margin: 0 10px;
+
+						.info {
+
+							span {
+								color: #c7c7c7;
+							}
+
+							.input {
+								border: 1px solid #ddd;
+
+								span {
+									color: #c7c7c7;
+								}
+							}
+
+							&.active {
+
+								span {
+									color: #000;
+								}
+
+								.input {
+									border: 1px solid #c7c7c7;
+
+									span {
+										color: #000;
+									}
+								}
+
+								.suffix {
+									color: #C7C7C7;
+								}
+							}
+						}
+
+						&.has-suffix {
+
+							.info {
+
+								span {
+									margin: 5px 0 0 -20px;
+
+									&.suffix {
+										margin: 0 0 0 5px;
+									}
+								}
+
+								.input {
+									span {
+										color: #c7c7c7;
+									}
+								}
+
+								&.active {
+
+									.input {
+										span {
+											color: #000;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.line {
+						display: inline-block;
+						height: 1px;
+						width: 76px;
+						background-color: #000;
+						margin-top: 20px;
+
+						&.short {
+							width: 60px;
+						}
+					}
+				}
+			}
+		}
+
+		.bike-settings-container {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 46px 33px 54px;
+
+			h3 {
+				font-size: 28px;
+				margin-bottom: 0.6em;
+			}
+	
+			.containers-row {
+				margin-top: 20px;
+				width: auto;
+				display: inline-block;
+				float: none;
+				position: relative;
+
+				.half-container {
+					float: none;
+					margin: 0 10px;
+					width: auto;
+					height: auto;
+					display: inline-block;
+					vertical-align: top;
+
+					.info {
+						span {
+							height: auto;
+							color: #000;
+							margin: 10px auto 0 auto;
+
+							&.suffix {
+								color: #ddd;
+							}
+						}
+
+						.input {
+							display: inline-block;
+							width: 50px;
+							height: 32px;
+							padding: 2px;
+							line-height: 38px;
+
+							span {
+								font: 200 25px/32px Arial, Helvetica, sans-serif;
+								letter-spacing: 2px;
+								margin: 0;
+								color: #000;
+							}
+						}
+					}
+
+					&.has-suffix {
+
+						.info {
+
+							span {
+								margin: 5px 0 0 -20px;
+
+								&.suffix {
+									margin: 0 0 0 5px;
+								}
+							}
+
+							.input {
+								span {
+									margin: 0;
+									color: #000;
+								}
+							}
+						}
+					}
+				}
+
+				.line {
+					display: inline-block;
+					height: 1px;
+					width: 76px;
+					margin-top: 20px;
+
+					&.short {
+						width: 60px;
+					}
+				}
+			}
+
+			.settings-container {
+				display: none;
+				margin: 20px auto 0 auto;
+				padding: 60px 0 0 0;
+				width: 580px;
+
+				.horizontal-selector {
+					margin: 0 auto;
+					width: 100%;
+					position: absolute;
+					top: 0;
+					z-index: 99;
+
+					.seat {
+						li {
+
+							&:first-child {
+							}
+
+							&:last-child {
+								
+							}
+						}
+					}
+
+					li {
+						width: 44px;
+						height: 45px;
+						margin: 0 12px;
+						line-height: 1.3;
+						&:after {
+							line-height: 45px;
+						}						
+					}
+				}
+
+				.steps-container {
+					width: 100%;
+
+					.seat-height, .handlebar-height{
+						left: 0;
+						position: relative;
+					}
+
+					> div {
+						background: url("/assets/images/bike-settings/BG.jpg") no-repeat top center;
+						height: 480px;
+						position: relative;
+						margin-bottom: 10px;
+
+						&.seat-height {
+							.step {
+								top: 10px;
+								left: -30px;
+							}
+						}
+
+						&.seat {
+							.step {
+								top: 30px;
+								left: -40px;
+							}
+						}
+
+						&.handlebar-height {
+							.step {
+								top: 10px;
+								right: -40px;
+							}
+						}
+
+						&.handlebar {
+							.step {
+								top: 0;
+								right: -60px;
+							}
+						}
+
+						.step {
+							height: auto;
+							width: auto;
+							position: absolute;
+							border: solid 1px #d0d3d3; 
+
+							img {
+								width: auto;
+								height: auto;
+								position: static;
+							}
+						}
+
+						.tip {
+							width: 560px;
+							position: absolute;
+							bottom: -10px;
+							margin: 0;
+							left: -30px;
+						}
+					}
+				}
+
+				.vertical-selector {
+					position: absolute;
+					top: 40px;
+					right: -116px;
+
+					.seat-height {
+						li {							
+							div {
+								width: 10px;
+								height: 10px;
+
+								&:before {
+									height: 10px;
+								}
+
+								&:hover, &.active {
+									&:after {
+										width: 11px;
+										height: 11px;
+									}
+								}								
+							}
+						}
+					}
+
+					.handlebar-height {						
+						li {
+							width: 5px;
+							height: 5px;
+							margin: 0 auto;
+							padding: 15px 0;
+
+							div {
+								&:before {
+									height: 30px;
+								}
+
+								span {
+									display: none;
+									position: relative;
+									top: -35px;
+									left: -24px;
+									font-size: 11px;
+								}								
+							}
+
+							&:hover, &.active {
+								&:after {
+									width: 15px;
+									height: 15px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.controls {
+				max-width: 400px;
+				margin: 20px auto;
+				@include clearfix;
+
+				#back-btn, #next-btn, #done-btn {
+					width: 50%;
+					float: left;
+					padding: 1.35em 3em;
+				}
+			}
+
+			.underlined-link {
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin-top: 50px;
+				margin-right: 50px;
+			}
+		}
+	}
+}

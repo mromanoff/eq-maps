@@ -1,0 +1,180 @@
+﻿.page.schedule-equifit {
+    $max-width: 480px;
+
+    form {
+        overflow: hidden;
+        max-width: none;
+    }
+
+    .rich-content header h2.rich-content-title {
+        width: auto;
+        font-size: 45px;
+    }
+
+    h3, p {
+        margin-left: auto;
+        margin-right: auto;
+        // Not the same as buttons
+        max-width: 625px;
+    }
+
+    h3 {
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .select-wrapper {
+        font-size: 40px;
+        letter-spacing: 12px;
+        margin: 0 20px;
+
+        select {
+            option {
+                letter-spacing: 0;
+            }
+        }
+
+        .option:after {
+            right: 0;
+            text-align: right;
+            width: 19px;
+        }
+
+        & + .select-wrapper {
+            margin-top: 0;
+        }
+
+        & + input {
+            display: inline-block;
+            font-size: 20px;
+            margin: 0 1%;
+            padding: 15px 0 19px;
+            width: 47%;
+        }
+
+        &.box {
+            border: 1px solid #fff;
+            font-size: 20px;
+            margin: 0 1%;
+            height: 75px;
+            padding: 24px 0 20px;
+            vertical-align: top;
+            width: 48%;
+
+            &.club {
+                margin: 15px 0 50px;
+                width: $max-width;
+            }
+
+            .option:after {
+                font-size: 16px;
+                margin-top: -8px;
+                position: absolute;
+                right: 13px;
+                top: 50%;
+            }
+        }
+    }
+
+    .checkbox {
+        margin: 20px 0 0;
+    }
+
+    .tpl-joinschedule {
+        border: 0;
+    }
+
+    textarea {
+        margin: 0 auto 40px;
+        width: $max-width;
+        text-align: center;
+        font-size: 13px;
+        padding-top: 25px;
+        letter-spacing: 2px;
+    }
+
+    .button.box {
+        @include box-sizing(border-box);
+        font-size: 14px;
+        height: 60px;
+        margin: 25px auto 30px;
+        width: $max-width;
+    }
+
+    .alternative-cta {
+        display: block;
+        margin-bottom: 40px;
+    }
+}
+
+.join-schedule-form {
+    max-width: initial;
+}
+
+.multiple-select {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px;
+    text-align: left;
+    width: auto;
+
+    li {
+        display: inline-block;
+        width: 49%;
+        box-sizing: border-box;
+
+        section {
+            padding: 0;
+
+            label.check-selector {
+                cursor: pointer;
+
+                h6 {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: left;
+                    padding: 18px 0  18px 30px;
+                    position: relative;
+
+                    &:before {
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        width: 14px;
+                        height: 14px;
+                        border: 1px solid #FFF;
+                        border-radius: 100%;
+                        top: 50%;
+                        margin-top: -7px;
+                    }
+
+
+                }
+                img, input[type=checkbox] {
+                    display: none;
+                }
+
+                &.checked {
+                    h6:after {
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #FFF;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 5px;
+                        margin-top: -2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .column.half {
+        width: 50%;
+    }
+}

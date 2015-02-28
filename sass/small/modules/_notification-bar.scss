@@ -1,0 +1,44 @@
+.notification-container {
+	display: block;
+	color: #000;
+	padding: 17px 46px;
+	position: relative;
+	@include transition(all 0.5s ease);
+
+	&.yellow {
+		background: #f4e10b;
+	}
+
+	&.red {
+		background: #ea1414;
+		color: #fff;
+	}
+
+	p {
+		font-size: 12px;
+		font-weight:  700;
+		letter-spacing: 1px;
+		margin: 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	a {
+		position: absolute;
+		top: 13px;
+		right: 20px;
+
+		span {
+			&:before {
+				color: rgba(0,0,0,0.6);
+				font-size: 11px;
+			}
+		}
+	}
+
+	&.closed {
+		color: #ffffff;
+		height: 0;
+		padding: 0;
+	}
+}

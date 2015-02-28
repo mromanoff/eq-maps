@@ -1,0 +1,51 @@
+.classes-filter {
+    h2 {
+        font-size: 50px;
+    }
+    .sub-header {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        a {
+            font-size: 12px;
+            text-align: right;
+            margin-bottom: 5px;
+            display: block;
+        }
+    }
+    .filters {
+        font-size: 0;
+        > li {
+            display: inline-block;
+            vertical-align: top;
+            width: 33.33%;
+            border-left: 5px solid #000;
+            @include box-sizing(border-box);
+            &:first-child {
+                border: 0;
+            }
+        }
+        li {
+            ul {
+                margin-top: -4px;
+            }
+            
+            .autocomplete {
+                padding: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .added-filters {
+        li {
+            display: inline-block;
+            margin: 5px 5px 0 0;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    .filter-edit {
+        display: block !important;
+    }
+}

@@ -1,0 +1,67 @@
+$club-padding: 5%;
+
+.club-list {
+  ul {
+    width: 80%;
+    margin: 0 auto;
+    li {
+      float: left;
+      width: 32%;
+      margin: 0 1% 1% 0;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(3n+4) {
+        clear: left;
+      }
+    }
+  }
+}
+
+.club-location {
+  .club-detail {
+    width: 60%;
+    margin: 0 auto;
+    &.club-detail-region {
+      width: 100%;
+    }
+
+    .club-title {
+      font-size: 14px;
+    }
+    .club-hours {
+      margin: 30px 0;
+
+      .period {
+        margin: 6px 0;
+
+        &.holiday {
+          span {
+            float: none;
+            display: block;
+          }
+
+          .labor-hours-container {
+            text-align: center;
+            span {
+              display: inline;
+            }
+
+            .day-name {
+              float: none;
+            }
+          }
+        }
+
+        span {
+          display: inline;
+          float: right;
+          &.day-name {
+            text-align: left;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}

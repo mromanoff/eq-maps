@@ -1,0 +1,35 @@
+.page.rewards {
+
+  hr {
+    border: 1px solid #444;
+    width: 50%;
+  }
+
+  h3.reward {
+    background-color: #7c878e;
+    color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    line-height: 150px;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .reward-module {
+    > div {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  .tpl-friendswhorecievedpasses {
+    background-color: black;
+    color: white;
+    margin-bottom: -40px;
+
+    .column {
+      width: 25%;
+    }
+  }
+}

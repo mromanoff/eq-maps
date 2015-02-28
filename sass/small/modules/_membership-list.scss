@@ -1,0 +1,136 @@
+.membership-list {
+    @include clearfix;
+    
+    .membership-container {
+        &.closed {
+            .membership-tab:after {
+                content: "+";
+                top: 20%;
+            }
+            .membership-tier {
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .membership-container.closed {
+        .membership-tab {
+            border-bottom: none;
+        }
+    }
+
+    .membership-container.closed:last-child {
+        .membership-tab {
+            border-bottom: 1px solid white;
+        }
+    }
+
+    .membership-tab {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        border: 1px solid white;
+        border-left: none;
+        border-right: none;
+
+        font-weight: bold;
+        font-size: 14px;
+
+        &:after {
+            content: "-";
+            position: absolute;
+            right: 15px;
+            top: 18%;
+            font-size: 25px;
+        }
+    }
+
+    .membership-tier {
+        padding: 50px 60px;
+        width: 100%;
+        @include box-sizing(border-box);
+
+        small {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .description {
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.16em;
+        }
+
+        hr {
+            border: none;
+            margin: 25px 0;
+        }
+
+        .membership-price-info {
+            display: table;
+            width: 100%;
+            .membership-price {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .membership-promotion {
+                display: table-row;
+            }
+        }
+
+        .membership-price {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            strong {
+                font-size: 16px;
+            }
+        }
+
+        .membership-promotion {
+            text-transform: uppercase; 
+            text-align: center; 
+            color: #E4C069; 
+            font-size: 13px; 
+            font-weight: bold;
+            p {
+                margin: 10px 0;
+                padding: 0 10px;
+            }
+        }
+
+        .total {
+            .item-due {
+                @include clearfix;
+                margin: 2px 0;
+            }
+            .total-due {
+                margin-top: 15px;
+            }
+
+            font-size: 14px;
+            span {
+                display: block;
+                float: left;
+                &.price {
+                    float: right;
+                }
+            }
+        }
+
+        a.button {
+            display: block;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+    }
+
+}

@@ -1,0 +1,121 @@
+﻿.page.leaderboard {
+    .rich-content header {
+        min-height: inherit;
+
+        .content {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+
+            h1 {
+                text-align: center;
+                color: #fff;
+                width: 100%;
+                font-weight: 500;
+                font-size: 1.7em;
+            }
+
+            ul {
+                width: 100%;
+                text-align: center;
+                padding-top: 15px;
+
+                li {
+                    display: inline;
+                    padding: 0 1em;
+                    border-left: 1px solid #7b6d65;
+
+                    &:first-child {
+                        border-left: none;
+                    }
+
+                    a {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-weight: 400;
+
+                        &.active {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #leaderboard-loader {
+        position: relative;
+        height: 100px;
+        display: none;
+    }
+
+    #leaderboard-container {
+        padding: 0 20px 45px 20px;
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 10px 0;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .energy {
+            display: none;
+        }
+
+        &.burn-class {
+            .energy {
+                display: table-cell;
+            }
+            .distance {
+                display: none;
+            }
+        }
+
+        th {
+            font-weight: 600;
+            font-size: .7em;
+            text-transform: uppercase;
+        }
+
+        th.name {
+            text-indent: 45px;
+            width: 98%;
+            text-align: left;
+        }
+
+        td {
+            font-size: .8em;
+        }
+
+        tr.odd-row td {
+            background: #eceded;
+        }
+
+        tr.me td {
+            background: #000;
+            color: #fff;
+        }
+
+        td.rank {
+            font-style: italic;
+        }
+
+        td.name {
+            text-transform: uppercase;
+            text-align: left;
+
+            img {
+                width: 40px;
+                height: 40px;
+                @include border-radius(40px);
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+    }
+}
