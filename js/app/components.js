@@ -25,8 +25,8 @@
             var $el = $(el),
                 component = $el.data('component'),
                 options = $el.data('component-options'),
-                devAssets = assetBaseUrl + '/assets/js/app/components/' + component + '.js' + version,
-                prodAssets = assetBaseUrl + '/assets/js/app/components/min/' + component + '.js' + version;
+                devAssets = assetBaseUrl + '/js/app/components/' + component + '.js' + version,
+                prodAssets = assetBaseUrl + '/js/app/components/min/' + component + '.js' + version;
 
             try {
                 debug('[DataComponent] Loading: ' + component + ' component.');
@@ -69,7 +69,7 @@
     App.loadComponent = function (component, $el, options, callback) {
         debug('[DataComponent] Loading: ' + component + ' component.');
 
-        require([assetBaseUrl + '/assets/js/app/components/min/' + component + '.js' + version], function () {
+        require([assetBaseUrl + '/js/app/components/min/' + component + '.js' + version], function () {
             createComponent(component, $el, options || {});
             if (callback && typeof callback === 'function') {
                 callback.call(component); // Call the callback and bind

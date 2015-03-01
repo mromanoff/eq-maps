@@ -22,7 +22,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'app.min.js.map',
-                    sourceMapRoot: '//local-web.equinox.com/assets/'
+                    sourceMapRoot: '//extend-group.codio.io/js/'
                 } : {},
                 src: [
                     'js/app.js',
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'lib.min.js.map',
-                    sourceMapRoot: '//local-web.equinox.com/assets/'
+                    sourceMapRoot: '//extend-group.codio.io/js/'
                 } : {},
                 src: [
                     'js/lib/**/*.js'
@@ -51,24 +51,14 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'vendor.min.js.map',
-                    sourceMapRoot: '//local-web.equinox.com/assets/'
+                    sourceMapRoot: '//extend-group.codio.io/js/'
                 } : {},
                 src: [
                     'js/vendor/_console.js',
-                    'js/vendor/bower_components/jquery/jquery.js',
-                    'js/vendor/bower_components/lodash/dist/lodash.js',
-                    'js/vendor/bower_components/backbone/backbone.js',
-                    'js/vendor/bower_components/jquery.autoGrowInput/jquery.autoGrowInput.js',
-                    'js/vendor/bower_components/jquery.stellar/jquery.stellar.js',
-                    'js/vendor/bower_components/spin.js/spin.js',
-                    'js/vendor/bower_components/video.js/video.js',
-                    'js/vendor/bower_components/zeroclipboard/ZeroClipboard.js',
-                    'js/vendor/bower_components/backgrid/lib/backgrid.js',
-                    'js/vendor/bower_components/backbone.paginator/lib/backbone.paginator.js',
-                    'js/vendor/bower_components/backgrid-paginator/backgrid-paginator.js',
-                    'js/vendor/bower_components/jquery-cookie/*.js',
-                    'js/vendor/bower_components/picturefill/dist/picturefill.js',
-                    'js/vendor/*.js' //Other non bower vendor scripts.
+                    'js/vendor/bower_components/jquery/dist/jquery.js',
+                    'js/vendor/bower_components/jquery.cookie/jquery.cookie.js',
+                    'js/vendor/bower_components/lodash/lodash.js',
+                    'js/vendor/bower_components/backbone/backbone.js'
                 ],
                 dest: 'js/vendor.min.js'
             },
@@ -81,7 +71,9 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        
         clean: ['js/app/components/min/*.js'],
+        
         jshint: {
             options: {
                 jshintrc: '.jshintrc'

@@ -1278,7 +1278,7 @@
             }
         })
         .error(function (d) {
-            img = '../../../assets/images/noimage.jpg';
+            img = '../../../images/noimage.jpg';
         });
         return img;
     };

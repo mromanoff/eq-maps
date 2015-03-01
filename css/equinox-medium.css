@@ -3345,7 +3345,7 @@ form.forms-spa .button-group div button {
   position: relative;
 }
 .profile .bike-settings .bike-settings-container .settings-container .steps-container > div {
-  background: url("/assets/images/bike-settings/BG.jpg") no-repeat top center;
+  background: url("/images/bike-settings/BG.jpg") no-repeat top center;
   height: 480px;
   position: relative;
   margin-bottom: 10px;
@@ -3519,7 +3519,7 @@ ul.autocompleteResults, ul.autocompleteDropdown {
   height: 32px;
   margin: 84px auto;
   display: block;
-  background: url(/assets/images/activity/loader.gif) no-repeat center center;
+  background: url(/images/activity/loader.gif) no-repeat center center;
 }
 .workout-box .mini-sessions .session-list {
   max-width: 400px;
@@ -5645,7 +5645,7 @@ ul.autocompleteResults, ul.autocompleteDropdown {
 
 #activity-app-tour {
   max-width: 100%;
-  background: #000 url(/assets/images/activity/tour_desktop.jpg) no-repeat center 100px;
+  background: #000 url(/images/activity/tour_desktop.jpg) no-repeat center 100px;
   background-size: 684px 315px;
   height: 545px;
 }
@@ -5767,7 +5767,7 @@ ul.autocompleteResults, ul.autocompleteDropdown {
 }
 
 #activity-app-page-visual .no-sessions-activity {
-  background: url(/assets/images/activity/zero_sessions_desktop.jpg) no-repeat top center;
+  background: url(/images/activity/zero_sessions_desktop.jpg) no-repeat top center;
   background-size: 398px 394px;
   height: 14px;
   margin: 20px 0 60px;

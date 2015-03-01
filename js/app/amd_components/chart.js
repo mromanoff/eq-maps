@@ -4,7 +4,7 @@ define(function (require, exports, module) {
 
     // Extended charts to chartjs
 
-    var Chart = require('/assets/js/vendor/bower_components/chartjs/chart.js'),
+    var Chart = require('/js/vendor/bower_components/chartjs/chart.js'),
         helpers = Chart.helpers,
         defaultConfig = {
             scaleBeginAtZero : true,
