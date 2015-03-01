@@ -23,4 +23,4 @@
         $el.data("expandible", new Expandible($el));
     };
 })(window.App);
-/*! local_env mindoro v0.7.0 - 2015-02-27 02:02:38 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-01 05:03:25 */

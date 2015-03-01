@@ -25,7 +25,6 @@
     "globals": {
         "console": false,
         "Error": false,
-        "require": true,
         "define": true,
         "Modernizr": true,
         "_satellite": true,
