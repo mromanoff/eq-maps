@@ -6,7 +6,9 @@
     var MAPS_API_URL = function (callback) {
             var mapUrl = 'https://maps.googleapis.com/maps/api/js';
             var mapUrlFragment = '&v=3.16&libraries=geometry&callback=' + callback;
-            var mapKey = 'AIzaSyALmAA_5_F2DcTKVRilfusfS1ULr_sB9T8';
+            //var mapKey = 'AIzaSyALmAA_5_F2DcTKVRilfusfS1ULr_sB9T8';
+            var mapKey = 'AIzaSyDy2_C0CnYm7HBfgGugr-vVOsPZPslcgpM';
+        
             var mapClientId = 'gme-equinoxfitness';
 
             var url = location.href;

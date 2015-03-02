@@ -1,4 +1,7 @@
-<div class="page {{classes}}">
+<div class="page {{classes}} {{regionName}}" data-region="{{regionName}}">
+    <section class="region-selector" data-component="region-selector"></section>
+    
+
     <div style="font-family: 'Graphik Web', sans-serif; letter-spacing: 2px; font-size: 17px; color: #ffffff; text-align: center; background-color: #f06725;"><strong><br>
     YOU JOIN. WE DONATE.<br>
     </strong>
@@ -15,12 +18,19 @@
     <br>
     </div>
     </div>
-        
-    <div class="module region-list-container">
-		<h4 class="horizontal-separator">Other Locations</h4>
-		<div class="region-list" data-component="region-list">
-            <ul>            
-            </ul>
+
+    <section class="club-finder-map">
+        <div class="map-wrapper" style="display:none;">
+            <div class="map-container" data-component="clubs-map"></div>
         </div>
-	</div>
+        <div class="buttons" style="display: block">    
+            <a href="#" id="loadMap" class="black box button small inline toggleMapContainer">Open Map</a>
+        </div>
+        <div class="buttons" style="display: none">
+            <a href="#" class="black box button small inline toggleMapContainer">Close Map</a>
+        </div>
+    </section>
+    
+    
+    <section data-component="club-list" class="club-list"></section>
 </div>
