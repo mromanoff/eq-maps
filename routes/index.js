@@ -24,7 +24,7 @@ router.get('/clubs/:region', function(req, res, next) {
   res.render('region', { 
       title: 'EQUINOX | Fitness Clubs Region',
       classes: 'clubs clubs-region',
-      regionName: req.params.region
+      urlName: req.params.region
   });
 });
 

@@ -58,8 +58,6 @@
         } catch (e) {
             console.error('data-component not found', e.stack);
         }
-
-
     };
 
     /*

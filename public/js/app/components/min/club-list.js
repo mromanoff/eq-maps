@@ -1,5 +1,6 @@
 (function(global, App) {
     "use strict";
+    console.log("loaded again");
     App.Components["club-list"] = function($el) {
         var regionName, region, $clubs, regionsData, clubList, isExpanded, scheduleTemplatePartial, clubsTemplate;
         regionName = $("[data-region]").data().region;
@@ -44,4 +45,4 @@
         });
     };
 })(window, window.App);
-/*! local_env equinox_maps v1.0.0 - 2015-03-02 06:03:06 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-02 06:03:44 */

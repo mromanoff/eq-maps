@@ -18,7 +18,7 @@
         regionName = $('[data-region]').data().region;
         $clubs = $('<ul></ul>');
         regionsData = global.allRegionsData;
-        region = _.findWhere(regionsData, {'ShortName': regionName});
+        region = _.findWhere(regionsData, {'UrlName': regionName});
 
 
         //regionTemplate = function (data, name) {

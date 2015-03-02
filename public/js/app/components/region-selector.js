@@ -11,7 +11,7 @@
             return $('[data-region]').data().region;
         };
 
-        selectedRegion = _.findWhere(regionsData, {'ShortName': getSelectedRegionName()});
+        selectedRegion = _.findWhere(regionsData, {'UrlName': getSelectedRegionName()});
 
         optionTemplatePartial = function (selectedRegion) {
             var selected;
