@@ -27,6 +27,7 @@
             },
             routes: {
                 '': App.Pages.Clubs.init,
+                'clubs': App.Pages.Clubs.init,
                 'clubs/:region': App.Pages.Clubs.init,
                 'clubs/:region/:club': App.Pages.Club.init,
                 'clubs/:region/:subregion/:club': App.Pages.Club.init

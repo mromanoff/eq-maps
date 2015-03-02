@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 
     var isDev = process.env.NODE_ENV === 'development';
-
     console.log('Current ENV is: ' + process.env.NODE_ENV);
 
     // Project configuration.
@@ -22,7 +21,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'app.min.js.map',
-                    sourceMapRoot: '//extend-group.codio.io/js/'
+                    sourceMapRoot: 'http://extend-group.codio.io:3000/js/'
                 } : {},
                 src: [
                     'js/app.js',
@@ -38,7 +37,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'lib.min.js.map',
-                    sourceMapRoot: '//extend-group.codio.io/js/'
+                    sourceMapRoot: 'http://extend-group.codio.io:3000/js/'
                 } : {},
                 src: [
                     'js/lib/**/*.js'
@@ -51,7 +50,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'vendor.min.js.map',
-                    sourceMapRoot: '//extend-group.codio.io/js/'
+                    sourceMapRoot: 'http://extend-group.codio.io:3000/js/'
                 } : {},
                 src: [
                     'js/vendor/_console.js',
@@ -87,6 +86,7 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        
         sass: {
             build: {
                 options: {
@@ -103,6 +103,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+        
         watch: {
             components: {
                 files: ['js/app/components/*.js'],
@@ -121,6 +122,7 @@ module.exports = function(grunt) {
                 livereload: false
             }
         },
+        
         build: {
             js: ['jshint', 'uglify:app', 'uglify:vendor', 'uglify:lib', 'clean', 'uglify:components'],
             css: ['sass']

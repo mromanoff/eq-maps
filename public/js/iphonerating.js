@@ -1,3 +1,0 @@
-﻿{
-    "userRatingPercentage":10
-}
