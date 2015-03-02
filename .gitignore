@@ -1,13 +1,3 @@
-# Created by https://www.gitignore.io
-
-### Bower ###
-bower_components
-.bower-cache
-.bower-registry
-.bower-tmp
-
-
-### Node ###
 # Logs
 logs
 *.log
@@ -33,10 +23,8 @@ coverage
 build/Release
 
 # Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 
-
-### Sass ###
-.sass-cache
-*.css.map
+# Debug log from npm
+npm-debug.log
