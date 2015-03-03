@@ -1,6 +1,8 @@
 module.exports = function(grunt) {
 
     var isDev = process.env.NODE_ENV === 'development';
+    var sourceMapRoot = 'http://0.0.0.0:3000/js/';
+
     console.log('Current ENV is: ' + process.env.NODE_ENV);
 
     // Project configuration.
@@ -21,7 +23,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'app.min.js.map',
-                    sourceMapRoot: 'http://extend-group.codio.io:3000/js/'
+                    sourceMapRoot: sourceMapRoot
                 } : {},
                 src: [
                     'js/app.js',
@@ -37,7 +39,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'lib.min.js.map',
-                    sourceMapRoot: 'http://extend-group.codio.io:3000/js/'
+                    sourceMapRoot: sourceMapRoot
                 } : {},
                 src: [
                     'js/lib/**/*.js'
@@ -50,7 +52,7 @@ module.exports = function(grunt) {
                         return path + '.map';
                     },
                     sourceMappingURL: 'vendor.min.js.map',
-                    sourceMapRoot: 'http://extend-group.codio.io:3000/js/'
+                    sourceMapRoot: sourceMapRoot
                 } : {},
                 src: [
                     'js/vendor/_console.js',

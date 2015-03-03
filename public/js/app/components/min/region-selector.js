@@ -7,7 +7,7 @@
             return $("[data-region]").data().region;
         };
         selectedRegion = _.findWhere(regionsData, {
-            ShortName: getSelectedRegionName()
+            UrlName: getSelectedRegionName()
         });
         optionTemplatePartial = function(selectedRegion) {
             var selected;
@@ -25,4 +25,4 @@
         });
     };
 })(window, window.App);
-/*! local_env equinox_maps v1.0.0 - 2015-03-02 06:03:44 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-03 01:03:55 */

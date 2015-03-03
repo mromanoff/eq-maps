@@ -1,13 +1,12 @@
 (function(global, App) {
     "use strict";
-    console.log("loaded again");
     App.Components["club-list"] = function($el) {
         var regionName, region, $clubs, regionsData, clubList, isExpanded, scheduleTemplatePartial, clubsTemplate;
         regionName = $("[data-region]").data().region;
         $clubs = $("<ul></ul>");
         regionsData = global.allRegionsData;
         region = _.findWhere(regionsData, {
-            ShortName: regionName
+            UrlName: regionName
         });
         scheduleTemplatePartial = function(club) {
             return _.map(club.Schedule, function(item) {
@@ -45,4 +44,4 @@
         });
     };
 })(window, window.App);
-/*! local_env equinox_maps v1.0.0 - 2015-03-02 06:03:44 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-03 01:03:55 */
