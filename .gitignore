@@ -94,6 +94,6 @@ crashlytics-build.properties
 
 ### JS ###
 *.js.map
-js/*.min.js
-components/min/
+*.min.js
+min/
 
