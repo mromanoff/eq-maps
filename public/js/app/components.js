@@ -3,7 +3,7 @@
     'use strict';
 
     /* global debug, require, Backbone, _ */
-    var isLocal = (location.host.indexOf('extend-group.codio.io:3000') === 0 || location.host.indexOf('local-web.equinox.com') === 0) ? true : false;
+    var isLocal = (location.host.indexOf('local') === 0 || location.host.indexOf('local-web.equinox.com') === 0) ? true : false;
         
     var assetBaseUrl = $('body').data('asset-base-url') || '',
         version = $('body').data('app-version') ? '?v=' + $('body').data('app-version') : '';

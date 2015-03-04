@@ -1,46 +1,51 @@
 (function (global, App) {
     'use strict';
 
-    /* global EQ */
+    /* global debug */
+
+    var RegionList = function ($el) {
+        this.$el = $el;
+        this.regionsData = global.allRegionsData;
+    };
+
+    RegionList.prototype = {
+        init: function () {
+            debug('[Region List Component] init()');
+            this.getRegionList();
+        },
+
+        getRegionList: function () {
+            var allRegions = '';
+            _.each(this.regionsData, function (region) {
+                var clubList = global.EQ.Helpers.getAllFacilities(region);
+                var link = _.isEqual(clubList.length, 1) ? App.Pages.Clubs.Club.getLink(clubList[0]) : '/clubs/' + region.ShortName.toLowerCase();
+                var count = _.isEqual(clubList.length, 1) ? '1 club' : clubList.length + ' clubs';
+                allRegions += this.JST.region({
+                    region: region,
+                    link: link,
+                    count: count
+                });
+
+            }, this);
+            this.render(allRegions);
+        },
+
+        render: function (data) {
+            return this.$el.html('<ul>').children().append(data);
+        },
+
+        JST: {
+            region: _.template(
+                '<li>\
+                    <img src="<%- region.BackgroundImageSmall %>"/>\
+                    <a href="<%- link %>"><%- region.CircleName %><small><%- count %></small></a>\
+                </li>'
+            )
+        }
+    };
 
     App.Components['region-list'] = function ($el) {
-        var $regions = $('<ul></ul>');
-        var regionsData = global.allRegionsData;
-
-        //Regions
-        var USRegions = [],
-            INTRegions = [];
-
-        $.each(regionsData, function (j, region) {
-            var $regionTemplate,
-                facilities = EQ.Helpers.getAllFacilities(region),
-                link,
-                clubCount;
-
-            if (facilities.length === 1) {
-                link = App.Pages.Clubs.Club.getLink(facilities[0]);
-                clubCount = '1 club';
-            } else {
-                link = '/clubs/' + region.ShortName.toLowerCase();
-                clubCount = facilities.length + ' clubs';
-            }
-
-            $regionTemplate = '\
-                <li>\
-                    <img src="' + region.BackgroundImageSmall + '"/>\
-                    <a href="' + link + '">' + region.CircleName + '<small>' + clubCount + '</small></a>\
-                </li>';
-
-            if (region.Country === 'US') {
-                USRegions.push($regionTemplate);
-            } else {
-                INTRegions.push($regionTemplate);
-            }
-        });
-
-        //All Regions
-        var ALLRegions = USRegions.concat(INTRegions);
-        $el.append($regions.append(ALLRegions));
+        new RegionList($el).init();
     };
 
 }(window, window.App));

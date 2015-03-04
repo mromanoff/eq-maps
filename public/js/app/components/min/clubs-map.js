@@ -64,4 +64,4 @@
         $el.data("clubsMap", new ClubsMap($el, options));
     };
 })(window.App);
-/*! local_env equinox_maps v1.0.0 - 2015-03-03 01:03:55 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-04 12:03:24 */

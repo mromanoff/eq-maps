@@ -1,28 +1,40 @@
 (function(global, App) {
     "use strict";
-    App.Components["region-selector"] = function($el) {
-        var regionsData, getSelectedRegionName, selectedRegion, optionTemplatePartial, selectTemplate;
-        regionsData = global.allRegionsData;
-        getSelectedRegionName = function() {
-            return $("[data-region]").data().region;
-        };
-        selectedRegion = _.findWhere(regionsData, {
-            UrlName: getSelectedRegionName()
-        });
-        optionTemplatePartial = function(selectedRegion) {
-            var selected;
-            return _.map(regionsData, function(region) {
-                selected = _.isEqual(selectedRegion.Name, region.Name) ? ' selected="selected"' : "";
-                return "<option" + selected + ' value="' + region.ShortName.toLowerCase() + '">' + region.Name + "</option>";
-            }, this);
-        };
-        selectTemplate = function(selectedRegion) {
-            return '<img src="' + selectedRegion.BackgroundImage + '" alt="' + selectedRegion.Name + '">                    <span class="select-wrapper select-regions" data-component="inline-select">                        <select name="regions">                            <option value="Select-Region">Select Region</option>' + optionTemplatePartial(selectedRegion).join("") + '                        </select>                        <span class="option" style="display: inline-block;">' + selectedRegion.Name + "</span>                    </span>";
-        };
-        $el.html(selectTemplate(selectedRegion));
-        $el.on("change", "select", function() {
-            window.location.href = "/clubs/" + $(this).find("option:selected").val();
+    var RegionSelector = function($el) {
+        this.$el = $el;
+        this.regionName = $("[data-region]").data().region;
+        this.regionsData = global.allRegionsData;
+        this.selectedRegion = _.findWhere(this.regionsData, {
+            UrlName: this.regionName
         });
     };
+    RegionSelector.prototype = {
+        init: function() {
+            debug("[Region Selector Component] init()");
+            this.getRegionSelector();
+            this.events();
+        },
+        getRegionSelector: function() {
+            this.render(this.JST.select({
+                regionsData: this.regionsData,
+                selectedRegion: this.selectedRegion
+            }));
+        },
+        events: function() {
+            this.$el.on("change", "select", function() {
+                window.location.href = "/clubs/" + $(this).find("option:selected").val();
+            });
+        },
+        render: function(data) {
+            return this.$el.append(data);
+        },
+        JST: {
+            select: _.template('<img src="<%- selectedRegion.BackgroundImage %>" alt="<%- selectedRegion.Name %>">                <span class="select-wrapper select-regions" data-component="inline-select">                    <select name="regions">                        <option value="Select-Region">Select Region</option>                        <%= this.option({regionsData: regionsData}) %>                    </select>                    <span class="option" style="display: inline-block;"><%- selectedRegion.Name %></span>                </span>'),
+            option: _.template('<% _.each(regionsData, function (region) { %>                    <option value="<%- region.ShortName.toLowerCase() %>"><%- region.Name %></option>                <% }, this); %>')
+        }
+    };
+    App.Components["region-selector"] = function($el) {
+        new RegionSelector($el).init();
+    };
 })(window, window.App);
-/*! local_env equinox_maps v1.0.0 - 2015-03-03 01:03:55 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-04 12:03:24 */

@@ -1,9 +1,10 @@
 module.exports = function(grunt) {
-
-    var isDev = process.env.NODE_ENV === 'development';
-    var sourceMapRoot = 'http://0.0.0.0:3000/js/';
+    'use strict';
 
     console.log('Current ENV is: ' + process.env.NODE_ENV);
+
+    var isDev = process.env.NODE_ENV === 'development';
+    var sourceMapRoot = 'http://localhost:3000/js/';
 
     // Project configuration.
     grunt.initConfig({
