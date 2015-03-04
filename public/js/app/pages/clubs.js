@@ -131,7 +131,9 @@
     /**
      * Clubs initialization
      */
-    Clubs.init = function () {
+    Clubs.init = function (region, subregion, club) {
+        debug('[ClubDetail] init:', region, subregion, club);
+
         Clubs.Data = global.allRegionsData;
         Clubs.mapLoaded = false;
         Clubs.events();
