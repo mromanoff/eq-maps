@@ -5,7 +5,6 @@
 
     var RegionList = function ($el) {
         this.$el = $el;
-        this.regionsData = global.allRegionsData;
     };
 
     RegionList.prototype = {
@@ -14,9 +13,13 @@
             this.getRegionList();
         },
 
+        getRegionsData: function () {
+            return global.allRegionsData;
+        },
+
         getRegionList: function () {
             var allRegions = '';
-            _.each(this.regionsData, function (region) {
+            _.each(this.getRegionsData(), function (region) {
                 var clubList = global.EQ.Helpers.getAllFacilities(region);
                 var link = _.isEqual(clubList.length, 1) ? App.Pages.Clubs.Club.getLink(clubList[0]) : '/clubs/' + region.ShortName.toLowerCase();
                 var count = _.isEqual(clubList.length, 1) ? '1 club' : clubList.length + ' clubs';

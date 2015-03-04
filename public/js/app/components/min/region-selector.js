@@ -2,11 +2,6 @@
     "use strict";
     var RegionSelector = function($el) {
         this.$el = $el;
-        this.regionName = $("[data-region]").data().region;
-        this.regionsData = global.allRegionsData;
-        this.selectedRegion = _.findWhere(this.regionsData, {
-            UrlName: this.regionName
-        });
     };
     RegionSelector.prototype = {
         init: function() {
@@ -14,10 +9,21 @@
             this.getRegionSelector();
             this.events();
         },
+        getRegionName: function() {
+            return $("[data-region]").data().region;
+        },
+        getRegionsData: function() {
+            return global.allRegionsData;
+        },
+        getSelectedRegion: function() {
+            return _.findWhere(this.getRegionsData(), {
+                UrlName: this.getRegionName()
+            });
+        },
         getRegionSelector: function() {
             this.render(this.JST.select({
-                regionsData: this.regionsData,
-                selectedRegion: this.selectedRegion
+                regionsData: this.getRegionsData(),
+                selectedRegion: this.getSelectedRegion()
             }));
         },
         events: function() {
@@ -37,4 +43,4 @@
         new RegionSelector($el).init();
     };
 })(window, window.App);
-/*! local_env equinox_maps v1.0.0 - 2015-03-04 12:03:24 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-04 09:03:02 */

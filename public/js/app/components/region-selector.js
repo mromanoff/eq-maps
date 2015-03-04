@@ -5,9 +5,6 @@
 
     var RegionSelector = function ($el) {
         this.$el = $el;
-        this.regionName = $('[data-region]').data().region;
-        this.regionsData = global.allRegionsData;
-        this.selectedRegion = _.findWhere(this.regionsData, {'UrlName': this.regionName});
     };
 
     RegionSelector.prototype = {
@@ -17,10 +14,22 @@
             this.events();
         },
 
+        getRegionName: function () {
+            return $('[data-region]').data().region;
+        },
+
+        getRegionsData: function () {
+            return global.allRegionsData;
+        },
+
+        getSelectedRegion: function () {
+            return  _.findWhere(this.getRegionsData(), {'UrlName': this.getRegionName()});
+        },
+
         getRegionSelector: function () {
             this.render(this.JST.select({
-                regionsData: this.regionsData,
-                selectedRegion: this.selectedRegion
+                regionsData: this.getRegionsData(),
+                selectedRegion: this.getSelectedRegion()
             }));
         },
 

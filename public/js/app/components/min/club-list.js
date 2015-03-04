@@ -2,13 +2,7 @@
     "use strict";
     var ClubList = function($el) {
         this.$el = $el;
-        this.regionName = $("[data-region]").data().region;
-        this.regionsData = global.allRegionsData;
-        this.region = _.findWhere(this.regionsData, {
-            UrlName: this.regionName
-        });
         this.expandLimit = 10;
-        this.clubList = null;
     };
     ClubList.prototype = {
         init: function() {
@@ -16,9 +10,20 @@
             this.getClubList();
             this.events();
         },
+        getRegionName: function() {
+            return $("[data-region]").data().region;
+        },
+        getRegionsData: function() {
+            return global.allRegionsData;
+        },
+        getSelectedRegion: function() {
+            return _.findWhere(this.getRegionsData(), {
+                UrlName: this.getRegionName()
+            });
+        },
         getClubList: function() {
-            if (this.region.SubRegions && this.region.SubRegions.length) {
-                _.each(this.region.SubRegions, function(subregion) {
+            if (this.getSelectedRegion().SubRegions && this.getSelectedRegion().SubRegions.length) {
+                _.each(this.getSelectedRegion().SubRegions, function(subregion) {
                     this.clubList = global.EQ.Helpers.getAllFacilities(subregion);
                     this.addViewState();
                     this.render(this.JST.subregions({
@@ -27,7 +32,7 @@
                     }));
                 }, this);
             } else {
-                this.clubList = global.EQ.Helpers.getAllFacilities(this.region);
+                this.clubList = global.EQ.Helpers.getAllFacilities(this.getSelectedRegion());
                 this.addViewState();
                 this.render(this.JST.clubs({
                     clubList: this.clubList
@@ -46,7 +51,7 @@
             });
         },
         getClubViewState: function() {
-            return global.EQ.Helpers.getAllFacilities(this.region).length <= this.expandLimit ? "expanded" : "collapsed";
+            return global.EQ.Helpers.getAllFacilities(this.getSelectedRegion()).length <= this.expandLimit ? "expanded" : "collapsed";
         },
         render: function(data) {
             return this.$el.append(data);
@@ -61,4 +66,4 @@
         new ClubList($el).init();
     };
 })(window, window.App);
-/*! local_env equinox_maps v1.0.0 - 2015-03-04 12:03:24 */
+/*! local_env equinox_maps v1.0.0 - 2015-03-04 09:03:02 */
