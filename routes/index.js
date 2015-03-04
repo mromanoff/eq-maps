@@ -21,7 +21,7 @@ router.get('/clubs', function(req, res, next) {
 
 /* GET clubs region page. */
 router.get('/clubs/:region', function(req, res, next) {
-  res.render('region', { 
+  res.render('region', {
       title: 'EQUINOX | Fitness Clubs Region',
       classes: 'clubs clubs-region',
       urlName: req.params.region
@@ -30,7 +30,7 @@ router.get('/clubs/:region', function(req, res, next) {
 
 /* GET club page. */
 router.get('/clubs/:region/:club', function(req, res, next) {
-  res.render('club', { 
+  res.render('club', {
       title: 'EQUINOX | Fitness Club',
       classes: 'club-detail'
   });

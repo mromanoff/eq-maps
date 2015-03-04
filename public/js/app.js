@@ -25,12 +25,23 @@
                 route = Backbone.Router.prototype._routeToRegExp.call(this, route);
                 return new RegExp(route.source, 'i');
             },
+
             routes: {
-                '': App.Pages.Clubs.init,
-                'clubs': App.Pages.Clubs.init,
-                'clubs/:region': App.Pages.Clubs.init,
-                'clubs/:region/:club': App.Pages.Club.init,
-                'clubs/:region/:subregion/:club': App.Pages.Club.init
+                'clubs/:region(/:club)': 'clubFinder'
+            },
+
+            clubFinder: function (region, club) {
+                console.info('Route Clubs:', region, club);
+                var page;
+
+                if(!club) {
+                    page = App.Pages.Clubs.init(region);
+                }
+
+                else {
+                    page = App.Pages.Club.init(region, club);
+                }
+                return page;
             }
         });
 
