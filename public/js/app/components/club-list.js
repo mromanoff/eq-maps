@@ -62,7 +62,7 @@
         },
 
         getClubViewState: function () {
-            return global.EQ.Helpers.getAllFacilities(this.getSelectedRegion()).length <= this.expandLimit ? 'expanded' : 'collapsed';
+            return global.EQ.Helpers.getAllFacilities(this.getSelectedRegion()).length <= this.expandLimit ? '' : 'collapsed';
         },
 
         render: function (data) {
@@ -76,7 +76,7 @@
                 <% }); %>'
             ),
 
-            // _.each(list, function(){}, context)!!!   Context needed for using schedule partial;
+            //NOTE: _.each(list, function(){}, context)!!!   Context needed for using schedule partial;
             clubs: _.template(
                 '<ul><% _.each(clubList, function (club) { %>\
                     <li class="<%- clubList.state %>">\

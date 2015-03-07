@@ -1,101 +1,51 @@
 (function (global, App) {
     'use strict';
-    /* global debug, EQ */
+    /* global debug */
 
     var Clubs = App.Pages.Clubs = {};
     debug('[CLUBS] page');
 
-    Clubs.Club = {
-        parse: function (facility) {
-            EQ.Helpers.setPositionGetter(facility);
-            Clubs.Map.markers.add({
-                lat: facility.Latitude,
-                lng: facility.Longitude,
-                content: Clubs.Icon.Marker.regular(),
-                click: function () {
-                    // Trigger marker click
-                    EQ.Maps.trigger('CLUB_MARKER_CLICK', {
-                        facility: facility,
-                        marker: this
-                    });
-                }
-            }, true);
-            return this;
-        },
-
-        showAll: function () {
-            if (!this._facilities) {
-                var facilities = [];
-                $.each(Clubs.Data, function (i, region) {
-                    facilities = facilities.concat(EQ.Helpers.getAllFacilities(region));
+    Clubs.parse = function (club) {
+        Clubs.Map.setPositionGetter(club);
+        Clubs.Map.markers.add({
+            lat: club.Latitude,
+            lng: club.Longitude,
+            click: function () {
+                // Trigger marker click
+                global.EQ.Maps.trigger('CLUB_MARKER_CLICK', {
+                    club: club,
+                    marker: this
                 });
-                this._facilities = facilities;
             }
-
-            $.each(this._facilities, function (i, club) {
-                Clubs.Club.parse(club);
-            });
-        },
-
-        getLink: function (facility) {
-            return facility.URL || ('/clubs/' + facility.ShortName);
-        }
+        });
+        return this;
     };
 
-    Clubs.Icon = {
-        Marker: {
-            regular: function () {
-                return '<div class="custom-marker"><span class="icon-marker-dot"></span></div>';
-            }
-        }
+    Clubs.showAll = function () {
+        return _.each(Clubs.clubs, function (club) {
+            Clubs.parse(club);
+        });
     };
 
-    Clubs.onMapsLoaded = function () {
-        Clubs.Map = new EQ.Maps.Map(Clubs.ui.$mapContainer[0]);
-        var region = EQ.Helpers.getRegionByTitle($('.clubs-region').data('region'));
+    Clubs.setRegionMap = function () {
+        var otherClubs = Clubs.Map.getChildrenPoints(Clubs.region);
+        var bounds = Clubs.Map.getBounds(otherClubs);
 
-        if (region) {
-            Clubs.Region.select(region);
-        }
+        Clubs.Map.fitBounds(bounds);
+        Clubs.showAll();
     };
 
-    Clubs.Region = {
-        select: function (region) {
-            if (!region.bounds) {
-                region.bounds = EQ.Maps.Bounds(Clubs.getChildrenPoints(region));
-            }
-            this.showClubs(region);
-        },
-
-        showClubs: function (region) {
-            Clubs.Map.fitBounds(region.bounds);
-            Clubs.Club.showAll();
-        }
+    Clubs.getRegion = function (regionName) {
+        return global.EQ.Helpers.getRegionByTitle(regionName);
     };
 
-    Clubs.getChildrenPoints = function (region) {
-        var that = this,
-            points = [];
+    Clubs.getClubs = function (region) {
+        return global.EQ.Helpers.getAllFacilities(region);
+    };
 
-        // either has facilities under subregions,
-        // or just facilities but not both.
-        if (region.SubRegions && region.SubRegions.length) {
-            $.each(region.SubRegions, function (i, subregion) {
-                points = points.concat(that.getChildrenPoints(subregion));
-            });
-        } else if (region.Facilities.length) {
-            points = $.map(region.Facilities, function (club) {
-                if (club.Latitude && club.Longitude) {
-                    return EQ.Maps.Point({
-                        lat: club.Latitude,
-                        lng: club.Longitude
-                    });
-                } else {
-                    console.error('A club doesn\'t have Lat Lng properties.', club);
-                }
-            });
-        }
-        return points;
+    Clubs.createMap = function () {
+        Clubs.Map = new global.EQ.Maps.Map(Clubs.ui.mapContainer);
+        Clubs.setRegionMap();
     };
 
     Clubs.toggleMapContainer = function (e) {
@@ -103,38 +53,37 @@
         $(e.currentTarget).closest('.club-finder-map').children('div').toggle();
 
         // check if map was already loaded in DOM
-        if (!this.mapLoaded) {
-            EQ.Maps.Load(this.onMapsLoaded);
+        if (!Clubs.mapLoaded) {
+            global.EQ.Maps.Load(Clubs.createMap);
             // Change state flag
-            this.mapLoaded = true;
+            Clubs.mapLoaded = true;
         }
     };
 
     /**
      * Events
-     * @public
      */
-
     Clubs.events = function () {
-        this.ui.$toggleMapContainer.on('click', _.bind(this.toggleMapContainer, this));
+        Clubs.ui.$toggleMapContainer.on('click', Clubs.toggleMapContainer);
     };
 
     /**
      * Views
      */
     Clubs.ui = {
-        $mapContainer: $('.map-container'),
+        mapContainer: $('.map-container').get(0), //convert to native DOM
         $toggleMapContainer: $('.toggleMapContainer')
     };
 
-
     /**
      * Clubs initialization
+     * @param regionName
      */
-    Clubs.init = function (region, subregion, club) {
-        debug('[ClubDetail] init:', region, subregion, club);
+    Clubs.init = function (regionName) {
+        debug('[Clubs Page] init() ', regionName);
 
-        Clubs.Data = global.allRegionsData;
+        Clubs.region = Clubs.getRegion(regionName);
+        Clubs.clubs = Clubs.getClubs(Clubs.region);
         Clubs.mapLoaded = false;
         Clubs.events();
     };

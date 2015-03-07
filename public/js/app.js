@@ -1,7 +1,7 @@
 (function (global) {
     'use strict';
 
-    /* global EQ, Backbone, user */
+    /* global debug, Backbone */
 
     var App = global.App = {};
 
@@ -31,7 +31,7 @@
             },
 
             clubFinder: function (region, club) {
-                console.info('Route Clubs:', region, club);
+                debug('[ROUTE] Clubs:', region, club);
                 var page;
 
                 if(!club) {
@@ -63,14 +63,14 @@
         $(document).ajaxError(function (e, xhr) {
             // If the user variable is defined (meaning the user was logged in)
             // but the status is 401, we can assume that the session expired
-            if (user !== null && xhr.status === 401) {
+            if (global.user !== null && xhr.status === 401) {
                 location.href = '/login?ReturnUrl=' + window.location.pathname;
             }
         });
 
-        if (user === null) {
+        if (global.user === null) {
             // Invalidate favs localStorage cache if user is null
-            EQ.Helpers.user.invalidateFavoritesCache();
+            global.EQ.Helpers.user.invalidateFavoritesCache();
         }
     });
 }(window));

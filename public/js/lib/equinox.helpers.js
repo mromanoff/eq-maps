@@ -197,7 +197,6 @@
             facilities = _.flatten(facilities, true);
 
         }
-
         return facilities;
     };
 
@@ -247,6 +246,22 @@
 
         return facilitiesLatLng[facilityId];
     };
+    /**
+     *  Get facility URL. Note Better create API param for UrlName (always lower case) ShortName is mixed case BAD!!
+     * @param facilityId
+     * @returns {*}
+     */
+    Helpers.getFacilityUrl = function (facilityId) {
+        var facilitiesArray = this.getAllFacilities(),
+            facilityUrl = null;
+
+        _.each(facilitiesArray, function (facility) {
+            if (parseInt(facility.Id) === parseInt(facilityId)) {
+                facilityUrl = facility.URL || ('/clubs/' + facility.ShortName);
+            }
+        });
+        return facilityUrl;
+    };
 
     Helpers.getFacilityById = function (facilityId) {
         var facilitiesArray = this.getAllFacilities(),
@@ -254,6 +269,18 @@
 
         $.each(facilitiesArray, function (i, facility) {
             if (parseInt(facility.Id) === parseInt(facilityId)) {
+                facilityFound = facility;
+            }
+        });
+        return facilityFound;
+    };
+
+    Helpers.getFacilityByUrlName = function (facilityUrlName) {
+        var facilitiesArray = this.getAllFacilities(),
+            facilityFound = null;
+
+        _.each(facilitiesArray, function (facility) {
+            if (facility.UrlName.toLowerCase() === facilityUrlName) {
                 facilityFound = facility;
             }
         });
@@ -343,28 +370,13 @@
     Helpers.getRegions = function () {
         var regions = {};
 
-        $.each(allRegionsData, function (i, region) {
+        _.each(allRegionsData, function (region) {
             if (EQ.Helpers.getAllFacilities(region).length) {
                 regions[region.ShortName] = region;
             }
         });
 
         return regions;
-    };
-
-    /**
-     * Bind `.getPosition()` into club object.
-     * @param {Object} club Contains Latitude and Longitude properties
-     */
-    Helpers.setPositionGetter = function (club) {
-        if (typeof club.getPosition !== 'function') {
-            club.getPosition = function () {
-                return EQ.Maps.Point({
-                    lat: this.Latitude,
-                    lng: this.Longitude
-                });
-            };
-        }
     };
 
     /**
@@ -1307,7 +1319,7 @@
             xhrFields: {
                 withCredentials: true
             }
-        }
+        };
 
         if (typeof opts === 'object') {
             $.extend(ajaxOpts, opts);

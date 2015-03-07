@@ -1,11 +1,10 @@
-(function (App) {
+(function (global, App) {
     'use strict';
-    /* global EQ, debug */
 
-    var ClubsMap = function ($el, options) {
+    /* global debug */
+
+    var ClubsMap = function ($el) {
         this.$el = $el;
-        this.options = options;
-        EQ.Maps.Load(_.bind(this.init, this));
     };
 
     ClubsMap.prototype = {
@@ -35,7 +34,7 @@
         },
 
         renderClubDetail: function (data) {
-            this.$el.append(this.clubDetailTemplate(data.facility));
+            this.$el.append(this.clubDetailTemplate(data.club));
             this.$el.find('.club-map-marker-detail').fadeIn(200);
             return this;
         },
@@ -85,8 +84,8 @@
                 this.removeClubDetail();
             }, this));
 
-            EQ.Maps.on('CLUB_MARKER_CLICK', _.bind(function (data) {
-                if (data.facility !== null) {
+            global.EQ.Maps.on('CLUB_MARKER_CLICK', _.bind(function (data) {
+                if (data.club !== null) {
                     this.removeClubDetail(data)
                         .resetIcons()
                         .renderClubDetail(data)
@@ -100,12 +99,13 @@
         },
 
         init: function () {
+            debug('[Club Map Component] init()');
             this.events();
         }
     };
 
-    App.Components['clubs-map'] = function ($el, options) {
-        $el.data('clubsMap', new ClubsMap($el, options));
+    App.Components['clubs-map'] = function ($el) {
+        new ClubsMap($el).init();
     };
 
-}(window.App));
+}(window, window.App));

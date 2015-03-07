@@ -21,7 +21,7 @@
             var allRegions = '';
             _.each(this.getRegionsData(), function (region) {
                 var clubList = global.EQ.Helpers.getAllFacilities(region);
-                var link = _.isEqual(clubList.length, 1) ? App.Pages.Clubs.Club.getLink(clubList[0]) : '/clubs/' + region.ShortName.toLowerCase();
+                var link = _.isEqual(clubList.length, 1) ? global.EQ.Helpers.getFacilityUrl(clubList[0].Id) : '/clubs/' + region.ShortName.toLowerCase();
                 var count = _.isEqual(clubList.length, 1) ? '1 club' : clubList.length + ' clubs';
                 allRegions += this.JST.region({
                     region: region,
