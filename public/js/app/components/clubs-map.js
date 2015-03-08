@@ -21,10 +21,7 @@
         },
 
         updateIcon: function (data) {
-            var template = '<div class="custom-marker active">\
-                            <span class="icon-marker-o"></span>\
-                          </div>';
-            data.marker.setContent(template);
+            data.marker.setContent(this.JST.marker.clubIcon());
             return this;
         },
 
@@ -33,62 +30,69 @@
             return this;
         },
 
-        renderClubDetail: function (data) {
-            this.$el.append(this.clubDetailTemplate(data.club));
+        renderClubInfoWindow: function (data) {
+            this.$el.append(this.JST.infoWindow.club({
+                club: data.club
+            }));
             this.$el.find('.club-map-marker-detail').fadeIn(200);
             return this;
         },
 
-        removeClubDetail: function () {
+        removeClubInfoWindow: function () {
             this.$el.find('.club-map-marker-detail').fadeOut(200, function () {
                 this.remove();
             });
             return this;
         },
 
-        scheduleTemplatePartial: function (club) {
-            return _.map(club.Schedule, function (item) {
-                // lodash and underscore _.keys and _.values are different
-                //console.log('item', _.keys(item) + ' --- ' + _.values(item));
-                return '<div class="period"><span class="day-name"><strong>' + _.values(item)[0] + '</strong></span><span>' + _.values(item)[1] + '</span></div>';
-            });
-        },
+        JST: {
+            marker: {
+                clubIcon: _.template('<div class="custom-marker active"><span class="icon-marker-o"></span><h5></h5></div>')
+            },
 
-        clubDetailTemplate: function (club) {
-            var template = '<section class="club-map-marker-detail club-location club-location-region">\
+            infoWindow: {
+                schedule: _.template(
+                    '<% _.each(club.Schedule, function (item) { %>\
+                    <div class="period"><span class="day-name"><strong><%- item.Key %></strong></span><span><%- item.Value %></span></div>\
+                    <% }); %>'
+                ),
+
+                club: _.template(
+                    '<section class="club-map-marker-detail club-location club-location-region">\
                         <div class="club-detail club-detail-region">\
-                        <h3 class="club-title">' + club.ClubName + '<a href="" class="icon-close"></a></h3>\
+                        <h3 class="club-title"><%- club.ClubName %><a href="" class="icon-close"></a></h3>\
                         <div class="club-body">\
                             <div class="club">\
-                                <p>' + club.GoogleAddress + '</p>\
-                                <p><a href="tel:' + club.Telephone + '">' + club.Telephone + '</a></p>\
+                                <p><%- club.GoogleAddress %></p>\
+                                <p><a href="tel:<%- club.Telephone %>"><%- club.Telephone %></a></p>\
                             </div>\
-                            <div class="club-hours">' + this.scheduleTemplatePartial(club).join('') + '</div>\
+                            <div class="club-hours"><%=  this.schedule({club: club}) %></div>\
                             <hr class="is-mobile">\
                             <div class="club">\
-                                <p>General Manager: ' + club.Manager + '</p>\
+                                <p>General Manager: <%- club.Manager %></p>\
                             </div>\
                             <nav class="buttons">\
-                                <a href="' + club.URL + '" data-club-href="' + club.URL + '" class="black box button small">View Club Page</a>\
-                                <a href="/classes/search?clubs=' + club.Id + '" class="white box button small">Browse Classes</a>\
+                                <a href="<%-  club.URL %>" data-club-href="<%-  club.URL %>" class="black box button small">View Club Page</a>\
+                                <a href="/classes/search?clubs=<%- club.Id %>" class="white box button small">Browse Classes</a>\
                             </nav>\
                         </div>\
                         </div>\
-                    </section>';
-            return template;
+                    </section>'
+                )
+            }
         },
 
         events: function () {
             this.$el.on('click', '.icon-close', _.bind(function (e) {
                 e.preventDefault();
-                this.removeClubDetail();
+                this.removeClubInfoWindow();
             }, this));
 
             global.EQ.Maps.on('CLUB_MARKER_CLICK', _.bind(function (data) {
                 if (data.club !== null) {
-                    this.removeClubDetail(data)
+                    this.removeClubInfoWindow(data)
                         .resetIcons()
-                        .renderClubDetail(data)
+                        .renderClubInfoWindow(data)
                         .centerMapToClubIcon(data)
                         .zoomInToClubIcon(data)
                         .updateIcon(data);

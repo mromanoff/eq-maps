@@ -9,11 +9,6 @@
     };
 
     ClubList.prototype = {
-        init: function () {
-            debug('[Club List Component] init()');
-            this.getClubList();
-            this.events();
-        },
 
         getRegionName: function () {
             return $('[data-region]').data().region;
@@ -52,13 +47,6 @@
 
         addViewState: function () {
             return _.extend(this.clubList, {state: this.getClubViewState()});
-        },
-
-        events: function () {
-            this.$el.on('click', 'h3', function (e) {
-                e.preventDefault();
-                $(this).closest('li').toggleClass('collapsed');
-            });
         },
 
         getClubViewState: function () {
@@ -109,6 +97,19 @@
                 <%= this.clubs({clubList: clubList})  %>\
                 </div>'
             )
+        },
+
+        events: function () {
+            this.$el.on('click', 'h3', function (e) {
+                e.preventDefault();
+                $(this).closest('li').toggleClass('collapsed');
+            });
+        },
+
+        init: function () {
+            debug('[Club List Component] init()');
+            this.getClubList();
+            this.events();
         }
     };
 

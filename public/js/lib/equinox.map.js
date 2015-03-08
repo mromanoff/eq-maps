@@ -89,7 +89,6 @@
 
     MapMarkers.prototype = {
         add: function (club) {
-
             if (typeof RichMarker === 'undefined') {
                 throw new Error('RichMarker library has not yet been loaded.');
             }
@@ -138,28 +137,6 @@
             }
             return candidate;
         }
-        //,
-
-        //get: function () {
-        //    return this.markers;
-        //},
-        //
-        //set: function (markers) {
-        //    this.markers = markers;
-        //    return this;
-        //},
-
-        //setIcon: function (url) {
-        //    for (var i = 0, marker; marker = this.markers[i]; i++) {
-        //        if (typeof marker.setIcon === 'function') {
-        //            marker.setIcon(url);
-        //        } else if (typeof marker.setContent === 'function') {
-        //            if (marker.getContent() !== url) {
-        //                marker.setContent(url);
-        //            }
-        //        }
-        //    }
-        //}
     };
 
     var Map = function (container, extra) {
@@ -191,34 +168,6 @@
     Map.prototype = {
         fitBounds: function (bounds) {
             return this.map.fitBounds(bounds);
-        },
-
-        fit: function (markersArr, diffZoom) {
-
-            console.log('markersArr, diffZoom', markersArr, diffZoom);
-
-            var bounds = new google.maps.LatLngBounds(),
-                that = this;
-
-            if (markersArr && !markersArr.length) {
-                throw new Error('Invalid markers array passed to fit.');
-            }
-
-            markersArr = markersArr || this.markers.get();
-
-            for (var i = 0, l = markersArr.length; i < l; i++) {
-                bounds.extend(markersArr[i].getPosition());
-            }
-
-            this.map.fitBounds(bounds);
-
-            if (diffZoom) {
-                var zoomlistener = google.maps.event.addListener(this.map, 'bounds_changed', function () {
-                    that.map.setZoom(that.map.getZoom() + diffZoom);
-                    google.maps.event.removeListener(zoomlistener);
-                });
-            }
-            return this;
         },
 
         point: function (obj) {

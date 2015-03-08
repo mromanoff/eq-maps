@@ -1,7 +1,7 @@
 (function (global) {
     'use strict';
 
-    /* global debug, Backbone */
+    /* global,  Backbone */
 
     var App = global.App = {};
 
@@ -27,21 +27,7 @@
             },
 
             routes: {
-                'clubs/:region(/:club)': 'clubFinder'
-            },
-
-            clubFinder: function (region, club) {
-                debug('[ROUTE] Clubs:', region, club);
-                var page;
-
-                if(!club) {
-                    page = App.Pages.Clubs.init(region);
-                }
-
-                else {
-                    page = App.Pages.Club.init(region, club);
-                }
-                return page;
+                'clubs/:region(/:club)': App.Pages.Clubs.init
             }
         });
 
