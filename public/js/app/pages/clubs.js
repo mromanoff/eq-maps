@@ -30,9 +30,6 @@
     Clubs.setClubMap = function () {
         var marker = Clubs.Map.markers.find(Clubs.club.Latitude, Clubs.club.Longitude);
 
-        //TODO:MR move this to events object Bind mobile native map trigger
-        //$('.native-map-trigger').attr('href', EQ.Helpers.getDeviceMapURL(club));
-
         // If there's a marker there, set icon to active state.
         if (marker) {
             marker.setAnchor(RichMarkerPosition.TOP);
@@ -84,6 +81,10 @@
      */
     Clubs.events = function () {
         Clubs.ui.$toggleMapContainer.on('click', Clubs.toggleMapContainer);
+
+        if (!_.isNull(Clubs.clubName)) {
+            Clubs.ui.$nativeMapTrigger.attr('href', global.EQ.Helpers.getDeviceMapURL(Clubs.club));
+        }
     };
 
     /**
@@ -91,27 +92,49 @@
      */
     Clubs.ui = {
         mapContainer: $('.map-container').get(0), //convert to native DOM
-        $toggleMapContainer: $('.toggleMapContainer')
+        $toggleMapContainer: $('.toggleMapContainer'),
+        $nativeMapTrigger: $('.native-map-trigger')
     };
 
     /**
      * Clubs initialization
      * @param regionName
+     * @param subRegionName
      * @param clubName
      */
-    Clubs.init = function (regionName, clubName) {
-        debug('[Clubs Page] init() ', regionName, clubName);
+    //Clubs.init = function (regionName, subRegionName, clubName) {
+    //    debug('[Clubs Page] init() ', regionName, subRegionName, clubName);
 
-        Clubs.regionName = regionName;
-        Clubs.clubName = clubName;
+    Clubs.init = function (regionName, subRegionName, clubName) {
+        debug('[Clubs Page] init() ', regionName, subRegionName, clubName);
+
+
+        var args = Array.prototype.slice.call(arguments);
+
+        console.log('arguments:', arguments.length, arguments);
+        console.log('args:', args.length, args);
+
+        Clubs.regionName = args[0]; //regionName;
+        Clubs.subregionName = !_.isNull(args[2]) ? args[1] : null;
+        Clubs.clubName = !_.isNull(args[2]) ? args[2] : args[1];
+
+
+
         Clubs.region = Clubs.getRegion(Clubs.regionName);
         Clubs.clubs = Clubs.getClubs(Clubs.region);
         Clubs.mapLoaded = false;
-        Clubs.events();
 
-        if(!_.isNull(Clubs.clubName)) {
-            Clubs.club = global.EQ.Helpers.getFacilityByUrlName(Clubs.clubName);
+        if (!_.isNull(Clubs.clubName)) {
+
+            //TODO: this method is too slow . searching throudg all facilities. we need to search though selected region.
+
+            Clubs.club =  _.findWhere(Clubs.clubs, {'UrlName': Clubs.clubName});
+
+            //Clubs.club = global.EQ.Helpers.getFacilityByUrlName(Clubs.clubName);
         }
+
+        // init events last. all data need to be set before kick in events.
+        Clubs.events();
     };
 
 }(window, window.App));

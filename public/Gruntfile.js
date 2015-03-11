@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
     console.log('Current ENV is: ' + process.env.NODE_ENV);
 
-    var isDev = process.env.NODE_ENV === 'development';
+    var isDev = process.env.NODE_ENV === 'local';
     var sourceMapRoot = 'http://localhost:3000/js/';
 
     // Project configuration.

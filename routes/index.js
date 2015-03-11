@@ -32,7 +32,8 @@ router.get('/clubs/:region', function(req, res) {
 router.get('/clubs/:region/:club', function(req, res) {
   res.render('club', {
       title: 'EQUINOX | Fitness Club',
-      classes: 'club-detail'
+      classes: 'club-detail',
+      urlName: req.params.club
   });
 });
 

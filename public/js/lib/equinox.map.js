@@ -114,8 +114,8 @@
                 return '<div class="custom-marker"><span class="icon-marker-dot"></span></div>';
             },
 
-            clubIcon: function (club) {
-                return '<div class="custom-marker active"><span class="icon-marker-o"></span><h5>' + club.ClubName + '</h5></div>';
+            clubIcon: function () {
+                return '<div class="custom-marker active"><span class="icon-marker-o"></span></div>';
             }
         },
 

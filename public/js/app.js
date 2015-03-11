@@ -27,7 +27,7 @@
             },
 
             routes: {
-                'clubs/:region(/:club)': App.Pages.Clubs.init
+                'clubs/:region(/:subregion)(/:club)': App.Pages.Clubs.init
             }
         });
 
