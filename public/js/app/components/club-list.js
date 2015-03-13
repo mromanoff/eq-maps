@@ -74,7 +74,8 @@
                             <div class="club-body">\
                                 <div class="club">\
                                     <p><%- club.GoogleAddress %></p>\
-                                    <p><a href="tel:<%- club.Telephone %>"><%- club.Telephone %></a></p>\
+                                    <p class="is-mobile is-tablet"><a href="tel:<%- club.Telephone %>"><%- club.Telephone %></a></p>\
+                                    <p class="is-desktop"><%- club.Telephone %></p>\
                                 </div>\
                                 <div class="club-hours"><%= this.schedule({club: club})  %></div>\
                                 <hr class="is-mobile">\

@@ -3,7 +3,6 @@
     /* global debug, RichMarkerPosition */
 
     var Clubs = App.Pages.Clubs = {};
-    debug('[CLUBS] page');
 
     Clubs.addMarker = function (club) {
         Clubs.Map.setPositionGetter(club);
@@ -63,17 +62,20 @@
         return _.isNull(Clubs.clubName) ? Clubs.setRegionMap() : Clubs.setClubMap();
     };
 
-    // TODO this function does two things. SEPARATE!!!
-    Clubs.toggleMapContainer = function (e) {
-        e.preventDefault();
-        $(e.currentTarget).closest('.club-finder-map').children('div').toggle();
-
+    Clubs.loadMap = function () {
         // check if map was already loaded in DOM
         if (!Clubs.mapLoaded) {
             global.EQ.Maps.Load(Clubs.setMap);
             // Change state flag
             Clubs.mapLoaded = true;
         }
+    };
+
+    // TODO this function does two things. SEPARATE!!!
+    Clubs.toggleMapContainer = function (e) {
+        e.preventDefault();
+        $(e.currentTarget).closest('.club-finder-map').children('div').toggle();
+        Clubs.loadMap();
     };
 
     /**
@@ -102,15 +104,12 @@
      * @param subRegionName
      * @param clubName
      */
-    //Clubs.init = function (regionName, subRegionName, clubName) {
-    //    debug('[Clubs Page] init() ', regionName, subRegionName, clubName);
-
     Clubs.init = function (regionName, subRegionName, clubName) {
         debug('[Clubs Page] init() ', regionName, subRegionName, clubName);
 
         Clubs.regionName = regionName;
         Clubs.subregionName = !_.isNull(clubName) ? subRegionName : null;
-        Clubs.clubName = _.isNull(clubName) ? Clubs.subregionName : clubName;
+        Clubs.clubName = _.isNull(clubName) ? subRegionName : clubName;
 
         Clubs.region = Clubs.getRegion(Clubs.regionName);
         Clubs.clubs = Clubs.getClubs(Clubs.region);

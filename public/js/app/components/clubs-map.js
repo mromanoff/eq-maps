@@ -31,9 +31,18 @@
         },
 
         renderClubInfoWindow: function (data) {
-            this.$el.append(this.JST.infoWindow.club({
-                club: data.club
-            }));
+
+            if(!_.isEmpty(App.Pages.Clubs.club)) {
+                this.$el.append(this.JST.infoWindow.clubMin({
+                    club: data.club
+                }));
+            }
+            else {
+                this.$el.append(this.JST.infoWindow.club({
+                    club: data.club
+                }));
+            }
+
             this.$el.find('.club-map-marker-detail').fadeIn(200);
             return this;
         },
@@ -64,16 +73,34 @@
                         <div class="club-body">\
                             <div class="club">\
                                 <p><%- club.GoogleAddress %></p>\
-                                <p><a href="tel:<%- club.Telephone %>"><%- club.Telephone %></a></p>\
+                                <p class="is-mobile is-tablet"><a href="tel:<%- club.Telephone %>"><%- club.Telephone %></a></p>\
+                                <p class="is-desktop"><%- club.Telephone %></p>\
                             </div>\
                             <div class="club-hours"><%=  this.schedule({club: club}) %></div>\
-                            <hr class="is-mobile">\
                             <div class="club">\
                                 <p>General Manager: <%- club.Manager %></p>\
                             </div>\
                             <nav class="buttons">\
                                 <a href="<%-  club.URL %>" data-club-href="<%-  club.URL %>" class="black box button small">View Club Page</a>\
                                 <a href="/classes/search?clubs=<%- club.Id %>" class="white box button small">Browse Classes</a>\
+                            </nav>\
+                        </div>\
+                        </div>\
+                    </section>'
+                ),
+
+                clubMin: _.template(
+                    '<section class="club-map-marker-detail club-location club-location-region">\
+                        <div class="club-detail club-detail-region">\
+                        <h3 class="club-title"><%- club.ClubName %><a href="" class="icon-close"></a></h3>\
+                        <div class="club-body">\
+                            <div class="club">\
+                                <p><%- club.GoogleAddress %></p>\
+                                <p class="is-mobile is-tablet"><a href="tel:<%- club.Telephone %>"><%- club.Telephone %></a></p>\
+                                <p class="is-desktop"><%- club.Telephone %></p>\
+                            </div>\
+                            <nav class="buttons">\
+                                <a href="<%-  club.URL %>" data-club-href="<%-  club.URL %>" class="white box button small">View Club Page</a>\
                             </nav>\
                         </div>\
                         </div>\
