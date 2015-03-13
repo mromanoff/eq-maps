@@ -108,29 +108,16 @@
     Clubs.init = function (regionName, subRegionName, clubName) {
         debug('[Clubs Page] init() ', regionName, subRegionName, clubName);
 
-
-        var args = Array.prototype.slice.call(arguments);
-
-        console.log('arguments:', arguments.length, arguments);
-        console.log('args:', args.length, args);
-
-        Clubs.regionName = args[0]; //regionName;
-        Clubs.subregionName = !_.isNull(args[2]) ? args[1] : null;
-        Clubs.clubName = !_.isNull(args[2]) ? args[2] : args[1];
-
-
+        Clubs.regionName = regionName;
+        Clubs.subregionName = !_.isNull(clubName) ? subRegionName : null;
+        Clubs.clubName = _.isNull(clubName) ? Clubs.subregionName : clubName;
 
         Clubs.region = Clubs.getRegion(Clubs.regionName);
         Clubs.clubs = Clubs.getClubs(Clubs.region);
         Clubs.mapLoaded = false;
 
         if (!_.isNull(Clubs.clubName)) {
-
-            //TODO: this method is too slow . searching throudg all facilities. we need to search though selected region.
-
             Clubs.club =  _.findWhere(Clubs.clubs, {'UrlName': Clubs.clubName});
-
-            //Clubs.club = global.EQ.Helpers.getFacilityByUrlName(Clubs.clubName);
         }
 
         // init events last. all data need to be set before kick in events.
